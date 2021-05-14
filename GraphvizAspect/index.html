@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Class: RelationConfiguration - Configuration for visualization of KGs and Ontologies</title>
+  <title>Class: GraphvizAspect - Configuration for visualization of KGs and Ontologies</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Class: RelationConfiguration";
-    var mkdocs_page_input_path = "RelationConfiguration.md";
+    var mkdocs_page_name = "Class: GraphvizAspect";
+    var mkdocs_page_input_path = "GraphvizAspect.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -80,7 +80,7 @@
     
       
     
-    <li>Class: RelationConfiguration</li>
+    <li>Class: GraphvizAspect</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -91,47 +91,36 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="class-relationconfiguration">Class: RelationConfiguration</h1>
-<p>style for a particular relation (e.g. part-of)</p>
-<p>URI: <a href="https://w3id.org/kgviz/RelationConfiguration">ex:RelationConfiguration</a></p>
-<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[StyleSheet]++-%20relationProperties%200..*&gt;[RelationConfiguration&#124;id:Node;color:Color%20%3F;penwidth:integer%20%3F;label:string%20%3F;arrowhead:ArrowType%20%3F;arrowtail:ArrowType%20%3F],[ElementConfiguration]^-[RelationConfiguration],[StyleSheet],[ElementConfiguration]" /></p>
-<h2 id="parents">Parents</h2>
+                <h1 id="class-graphvizaspect">Class: GraphvizAspect</h1>
+<p>URI: <a href="https://w3id.org/kgviz/GraphvizAspect">ex:GraphvizAspect</a></p>
+<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[SubgraphAspect],[RootGraphAspect],[NodeAspect],[GraphvizAspect]^-[SubgraphAspect],[GraphvizAspect]^-[RootGraphAspect],[GraphvizAspect]^-[NodeAspect],[GraphvizAspect]^-[EdgeAspect],[GraphvizAspect]^-[ClusterSubgraphAspect],[EdgeAspect],[ClusterSubgraphAspect]" /></p>
+<h2 id="children">Children</h2>
 <ul>
-<li>is_a: <a href="../ElementConfiguration/">ElementConfiguration</a></li>
+<li><a href="../ClusterSubgraphAspect/">ClusterSubgraphAspect</a></li>
+<li><a href="../EdgeAspect/">EdgeAspect</a></li>
+<li><a href="../NodeAspect/">NodeAspect</a></li>
+<li><a href="../RootGraphAspect/">RootGraphAspect</a></li>
+<li><a href="../SubgraphAspect/">SubgraphAspect</a></li>
 </ul>
 <h2 id="referenced-by-class">Referenced by class</h2>
-<ul>
-<li><strong>None</strong> <em><a href="../relationProperties/">relationProperties</a></em>  <sub>0..<em></sub>  </em><em><a href="./">RelationConfiguration</a></em>*</li>
-</ul>
 <h2 id="attributes">Attributes</h2>
-<h3 id="own">Own</h3>
-<ul>
-<li><a href="../arrowhead/">arrowhead</a>  <sub>OPT</sub><ul>
-<li>range: </li>
-</ul>
-</li>
-<li><a href="../arrowtail/">arrowtail</a>  <sub>OPT</sub><ul>
-<li>range: </li>
-</ul>
-</li>
-<li><a href="color.md">color</a>  <sub>OPT</sub><ul>
-<li>Description: Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.</li>
-<li>range: <a href="../Color/">Color</a></li>
-</ul>
-</li>
-<li><a href="../id/">id</a>  <sub>REQ</sub><ul>
-<li>range: <a href="../Node/">Node</a></li>
-</ul>
-</li>
-<li><a href="../label/">label</a>  <sub>OPT</sub><ul>
-<li>range: <a href="../String/">String</a></li>
-</ul>
-</li>
-<li><a href="../penwidth/">penwidth</a>  <sub>OPT</sub><ul>
-<li>range: <a href="../Integer/">Integer</a></li>
-</ul>
-</li>
-</ul>
+<h2 id="other-properties">Other properties</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>See also:</strong></td>
+<td></td>
+<td>https://graphviz.org/doc/info/attrs.html#h:uses</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>

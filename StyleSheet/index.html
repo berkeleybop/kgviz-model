@@ -93,35 +93,39 @@
               
                 <h1 id="class-stylesheet">Class: StyleSheet</h1>
 <p>URI: <a href="https://w3id.org/kgviz/StyleSheet">ex:StyleSheet</a></p>
-<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[RelationConfiguration]&lt;relationProperties%200..*-++[StyleSheet&#124;style:EntityStyle%20%3F;fillcolor:Color%20%3F;labelFrom:string%20%3F;highlightIds:Node%20*;reasoning:ReasoningType%20*;excludeSingletons:boolean%20%3F],[RelationConfiguration]" /></p>
+<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[ConditionalProperty]&lt;conditionalProperties%200..*-++[StyleSheet&#124;style:StyleType%20%3F;fillcolor:Color%20%3F;labelFrom:string%20%3F;highlightIds:Node%20*;reasoning:ReasoningType%20*;excludeSingletons:boolean%20%3F],[RelationConfiguration]&lt;relationProperties%200..*-++[StyleSheet],[RelationConfiguration],[ConditionalProperty]" /></p>
 <h2 id="attributes">Attributes</h2>
 <h3 id="own">Own</h3>
 <ul>
-<li><a href="../styleSheet__excludeSingletons/">➞excludeSingletons</a>  <sub>OPT</sub><ul>
+<li><a href="../conditionalProperties/">conditionalProperties</a>  <sub>0..*</sub><ul>
+<li>range: <a href="../ConditionalProperty/">ConditionalProperty</a></li>
+</ul>
+</li>
+<li><a href="../excludeSingletons/">excludeSingletons</a>  <sub>OPT</sub><ul>
 <li>range: <a href="../Boolean/">Boolean</a></li>
 </ul>
 </li>
-<li><a href="../styleSheet__fillcolor/">➞fillcolor</a>  <sub>OPT</sub><ul>
+<li><a href="../fillcolor/">fillcolor</a>  <sub>OPT</sub><ul>
 <li>range: <a href="../Color/">Color</a></li>
 </ul>
 </li>
-<li><a href="../styleSheet__highlightIds/">➞highlightIds</a>  <sub>0..*</sub><ul>
+<li><a href="../highlightIds/">highlightIds</a>  <sub>0..*</sub><ul>
 <li>range: <a href="../Node/">Node</a></li>
 </ul>
 </li>
-<li><a href="../styleSheet__labelFrom/">➞labelFrom</a>  <sub>OPT</sub><ul>
+<li><a href="../labelFrom/">labelFrom</a>  <sub>OPT</sub><ul>
 <li>range: <a href="../String/">String</a></li>
 </ul>
 </li>
-<li><a href="../styleSheet__reasoning/">➞reasoning</a>  <sub>0..*</sub><ul>
+<li><a href="../reasoning/">reasoning</a>  <sub>0..*</sub><ul>
 <li>range: </li>
 </ul>
 </li>
-<li><a href="../styleSheet__relationProperties/">➞relationProperties</a>  <sub>0..*</sub><ul>
+<li><a href="../relationProperties/">relationProperties</a>  <sub>0..*</sub><ul>
 <li>range: <a href="../RelationConfiguration/">RelationConfiguration</a></li>
 </ul>
 </li>
-<li><a href="../styleSheet__style/">➞style</a>  <sub>OPT</sub><ul>
+<li><a href="../style/">style</a>  <sub>OPT</sub><ul>
 <li>range: </li>
 </ul>
 </li>
