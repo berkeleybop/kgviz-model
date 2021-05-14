@@ -1,14 +1,14 @@
-model_organization:    # Name of github individual organization where this cone exists (e.g. linkml / mygithub
-model_name:            # Name of target repository (e.g. my-wonderful-model)
-root_schema: sample_model  # the name of the base schema file (w/o .yaml) 
-model_root_class: Person   # <name of the base class in the schema for testing
+model_organization: berkeleybop   # Name of github individual organization where this cone exists (e.g. linkml / mygithub
+model_name: kgviz-model           # Name of target repository (e.g. my-wonderful-model)
+root_schema: kgviz  # the name of the base schema file (w/o .yaml) 
+model_root_class: Configuration   # <name of the base class in the schema for testing
 
-model_author:              # Your name
-model_author_email:        # Your email
-model_synopsis:  A really nice model     # One liner about the model
+model_author: Chris Mungall             # Your name
+model_author_email: cjmungall@lbl.gov       # Your email
+model_synopsis:  Configuration for visualization of KGs and Ontologies     # One liner about the model
 model_description: |-      # Longer description of the model
-  This is a really nice model that
-  does stuff
+  Schema for configurations / stylesheets for visualizing ontology and KGs
+  See also...
 
 # Trove Classifiers (https://pypi.org/classifiers/) -- these can be omitted if the elemens below are sufficient
 classifiers:
@@ -24,7 +24,7 @@ classifiers:
     - "Programming Language :: Python :: 3.9"
 
 # Keywords -- these can also be omitted from this file if the below is ok
-keywords: [linkml, LOD, Modeling, Linked open data, model]
+keywords: [linkml, LOD, Modeling, Linked open data, model, ontologies, visualization, stylesheets]
 
 # Elements to be generated
 # See: https://github.com/linkml/linkml/generators/README.md for what the outputs look like
@@ -37,5 +37,5 @@ keywords: [linkml, LOD, Modeling, Linked open data, model]
 #                  shex -- LinkML model definition in ShEx
 #                  sqlddl -- SQL ddl of the model
 #                  model -- copy model/schema to distribution directory
-generate: [jsonld_context, json_schema, model]
+generate: [jsonld_context, json_schema, model, sqlddl, shex, owl, rdf]
 

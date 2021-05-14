@@ -1,3 +1,5 @@
-# Placeholder README
-This file will be replaced in the build process.  The details about how to use this template
-can be found in [ABOUT.md](./ABOUT.md).
+# LinkML Configuration for visualization of KGs and Ontologies
+Schema for configurations / stylesheets for visualizing ontology and KGs
+See also...
+
+## [Documentation](https://berkeleybop.github.io/kgviz-model/)
