@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="None">
   
-  
+  <link rel="canonical" href="https://berkeleybop.github.io/kgviz-model/">
   <link rel="shortcut icon" href="img/favicon.ico">
   <title>Configuration for visualization of KGs and Ontologies</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
@@ -20,7 +20,7 @@
     // Current page data
     var mkdocs_page_name = "Index";
     var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/kgviz-model/";
   </script>
   
   <script src="js/jquery-2.1.1.min.js" defer></script>
@@ -101,6 +101,9 @@
     <li>Index</li>
     <li class="wy-breadcrumbs-aside">
       
+        <a href="https://github.com/berkeleybop/kgviz-model/edit/master/docs/index.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
     </li>
   </ul>
   
@@ -109,19 +112,30 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="hello-world-schema">Hello-World schema</h1>
+                <h1 id="kgviz-schema">Kgviz schema</h1>
+<p>A data model for describing configurations / stylesheets for visualzing graphs, and in particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels, node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.
+An example of a use of this is https://github.com/cmungall/obographviz</p>
 <h3 id="classes">Classes</h3>
 <ul>
+<li><a href="Condition/">Condition</a> - a constraint or condition to be applied, e.g. type=Class</li>
 <li><a href="ConditionalProperty/">ConditionalProperty</a> - conditionally applied properties based on filters</li>
-<li><a href="ElementConfiguration/">ElementConfiguration</a><ul>
+<li><a href="ElementConfiguration/">ElementConfiguration</a> - Abstract parent for all coniguration classes<ul>
+<li><a href="AnyConfiguration/">AnyConfiguration</a> - Generic configuration that inherits all aspects of both node and edge configurations</li>
 <li><a href="PrefixConfiguration/">PrefixConfiguration</a> - style for a particular prefix (e.g. GO)</li>
 <li><a href="RelationConfiguration/">RelationConfiguration</a> - style for a particular relation (e.g. part-of)</li>
 </ul>
 </li>
-<li><a href="StyleSheet/">StyleSheet</a></li>
+<li><a href="StyleSheet/">StyleSheet</a> - A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically</li>
 </ul>
 <h3 id="mixins">Mixins</h3>
 <ul>
+<li><a href="EdgeProperty/">EdgeProperty</a> - a property object for an edge/relation</li>
+<li><a href="GeneralProperty/">GeneralProperty</a> - abstract grouping for properties/configs<ul>
+<li><a href="EdgeProperty/">EdgeProperty</a> - a property object for an edge/relation</li>
+<li><a href="NodeProperty/">NodeProperty</a></li>
+</ul>
+</li>
+<li><a href="NodeProperty/">NodeProperty</a></li>
 <li><a href="ClusterSubgraphAspect/">ClusterSubgraphAspect</a></li>
 <li><a href="EdgeAspect/">EdgeAspect</a></li>
 <li><a href="GraphvizAspect/">GraphvizAspect</a><ul>
@@ -140,12 +154,14 @@
 <ul>
 <li><a href="arrowhead/">arrowhead</a></li>
 <li><a href="arrowtail/">arrowtail</a></li>
+<li><a href="cliqueRelations/">cliqueRelations</a> - Set of properties that indicate identity relations and can be used in a clique</li>
 <li><a href="color.md">color</a> - Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.</li>
 <li><a href="conditionalProperties/">conditionalProperties</a></li>
-<li><a href="conditionalProperty__conditions/">➞conditions</a></li>
-<li><a href="conditionalProperty__properties/">➞properties</a></li>
-<li><a href="excludeSingletons/">excludeSingletons</a></li>
+<li><a href="conditions/">conditions</a></li>
+<li><a href="displayAnnotations/">displayAnnotations</a> - Display annotations for these selected properties</li>
+<li><a href="excludeSingletons/">excludeSingletons</a> - Remove nodes that have no incoming or outgoing edges</li>
 <li><a href="fillcolor/">fillcolor</a></li>
+<li><a href="fontcolor/">fontcolor</a></li>
 <li><a href="graphviz_slot/">graphviz slot</a><ul>
 <li><a href="cluster_property/">cluster property</a></li>
 <li><a href="edge_property/">edge property</a></li>
@@ -154,14 +170,20 @@
 <li><a href="subgraph_property/">subgraph property</a></li>
 </ul>
 </li>
-<li><a href="highlightIds/">highlightIds</a></li>
+<li><a href="highlightIds/">highlightIds</a> - List of nodes to be visually demarcated</li>
 <li><a href="id/">id</a></li>
 <li><a href="label/">label</a></li>
 <li><a href="labelFrom/">labelFrom</a></li>
+<li><a href="nodeFilter/">nodeFilter</a></li>
 <li><a href="penwidth/">penwidth</a></li>
-<li><a href="reasoning/">reasoning</a></li>
-<li><a href="relationProperties/">relationProperties</a></li>
+<li><a href="prefixProperties/">prefixProperties</a> - Collection of styles keyed by ID prefix</li>
+<li><a href="properties/">properties</a></li>
+<li><a href="reasoning/">reasoning</a> - Set of reasoning or processing steps to be applied to graph</li>
+<li><a href="relationProperties/">relationProperties</a> - Collection of styles keyed by predicate ID</li>
 <li><a href="style/">style</a></li>
+<li><a href="styles/">styles</a></li>
+<li><a href="subset/">subset</a> - the subset to which the node belongs</li>
+<li><a href="type/">type</a> - the logical type, eg INDIVIDUAL, CLASS, etc</li>
 </ul>
 <h3 id="enums">Enums</h3>
 <ul>
@@ -189,7 +211,7 @@
 <h4 id="defined">Defined</h4>
 <ul>
 <li><a href="Color/">Color</a>  (<strong>str</strong>)  - e.g. red, green</li>
-<li><a href="Node/">Node</a>  (<strong>str</strong>)  - e.g. UBERON:nnnnn</li>
+<li><a href="Node/">Node</a>  (<strong>str</strong>)  - e.g. UBERON:0002101</li>
 <li><a href="Boolean/">Boolean</a>  (<strong>Bool</strong>)  - A binary (true or false) value</li>
 <li><a href="Date/">Date</a>  (<strong>XSDDate</strong>)  - a date (year, month and day) in an idealized calendar</li>
 <li><a href="Datetime/">Datetime</a>  (<strong>XSDDateTime</strong>)  - The combination of a date and time</li>
@@ -240,6 +262,8 @@
   <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
+          <a href="https://github.com/berkeleybop/kgviz-model/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
       
         <span><a href="home/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
@@ -262,5 +286,5 @@
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2021-05-14 20:59:04.157212+00:00
+Build Date UTC : 2021-05-17 14:56:40.921404+00:00
 -->

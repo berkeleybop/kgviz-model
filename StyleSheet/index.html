@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  
+  <link rel="canonical" href="https://berkeleybop.github.io/kgviz-model/StyleSheet/">
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Class: StyleSheet - Configuration for visualization of KGs and Ontologies</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
@@ -20,7 +20,7 @@
     // Current page data
     var mkdocs_page_name = "Class: StyleSheet";
     var mkdocs_page_input_path = "StyleSheet.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/kgviz-model/StyleSheet/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -83,6 +83,9 @@
     <li>Class: StyleSheet</li>
     <li class="wy-breadcrumbs-aside">
       
+        <a href="https://github.com/berkeleybop/kgviz-model/edit/master/docs/StyleSheet.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
     </li>
   </ul>
   
@@ -92,16 +95,30 @@
             <div class="section">
               
                 <h1 id="class-stylesheet">Class: StyleSheet</h1>
+<p>A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically</p>
 <p>URI: <a href="https://w3id.org/kgviz/StyleSheet">ex:StyleSheet</a></p>
-<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[ConditionalProperty]&lt;conditionalProperties%200..*-++[StyleSheet&#124;style:StyleType%20%3F;fillcolor:Color%20%3F;labelFrom:string%20%3F;highlightIds:Node%20*;reasoning:ReasoningType%20*;excludeSingletons:boolean%20%3F],[RelationConfiguration]&lt;relationProperties%200..*-++[StyleSheet],[RelationConfiguration],[ConditionalProperty]" /></p>
+<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[Condition]&lt;nodeFilter%200..1-++[StyleSheet&#124;style:StyleType%20%3F;styles:StyleType%20*;fillcolor:Color%20%3F;labelFrom:string%20%3F;highlightIds:Node%20*;displayAnnotations:Node%20*;cliqueRelations:Node%20*;reasoning:ReasoningType%20*;excludeSingletons:boolean%20%3F],[ConditionalProperty]&lt;conditionalProperties%200..*-++[StyleSheet],[PrefixConfiguration]&lt;prefixProperties%200..*-++[StyleSheet],[RelationConfiguration]&lt;relationProperties%200..*-++[StyleSheet],[RelationConfiguration],[PrefixConfiguration],[ConditionalProperty],[Condition]" /></p>
 <h2 id="attributes">Attributes</h2>
 <h3 id="own">Own</h3>
 <ul>
+<li><a href="../cliqueRelations/">cliqueRelations</a>  <sub>0..*</sub><ul>
+<li>Description: Set of properties that indicate identity relations and can be used in a clique</li>
+<li>range: <a href="../Node/">Node</a></li>
+<li>Example: owl:equivalentClass None</li>
+<li>Example: skos:exactMatch None</li>
+</ul>
+</li>
 <li><a href="../conditionalProperties/">conditionalProperties</a>  <sub>0..*</sub><ul>
 <li>range: <a href="../ConditionalProperty/">ConditionalProperty</a></li>
 </ul>
 </li>
+<li><a href="../displayAnnotations/">displayAnnotations</a>  <sub>0..*</sub><ul>
+<li>Description: Display annotations for these selected properties</li>
+<li>range: <a href="../Node/">Node</a></li>
+</ul>
+</li>
 <li><a href="../excludeSingletons/">excludeSingletons</a>  <sub>OPT</sub><ul>
+<li>Description: Remove nodes that have no incoming or outgoing edges</li>
 <li>range: <a href="../Boolean/">Boolean</a></li>
 </ul>
 </li>
@@ -110,6 +127,7 @@
 </ul>
 </li>
 <li><a href="../highlightIds/">highlightIds</a>  <sub>0..*</sub><ul>
+<li>Description: List of nodes to be visually demarcated</li>
 <li>range: <a href="../Node/">Node</a></li>
 </ul>
 </li>
@@ -117,15 +135,30 @@
 <li>range: <a href="../String/">String</a></li>
 </ul>
 </li>
+<li><a href="../nodeFilter/">nodeFilter</a>  <sub>OPT</sub><ul>
+<li>range: <a href="../Condition/">Condition</a></li>
+</ul>
+</li>
+<li><a href="../prefixProperties/">prefixProperties</a>  <sub>0..*</sub><ul>
+<li>Description: Collection of styles keyed by ID prefix</li>
+<li>range: <a href="../PrefixConfiguration/">PrefixConfiguration</a></li>
+</ul>
+</li>
 <li><a href="../reasoning/">reasoning</a>  <sub>0..*</sub><ul>
+<li>Description: Set of reasoning or processing steps to be applied to graph</li>
 <li>range: </li>
 </ul>
 </li>
 <li><a href="../relationProperties/">relationProperties</a>  <sub>0..*</sub><ul>
+<li>Description: Collection of styles keyed by predicate ID</li>
 <li>range: <a href="../RelationConfiguration/">RelationConfiguration</a></li>
 </ul>
 </li>
 <li><a href="../style/">style</a>  <sub>OPT</sub><ul>
+<li>range: </li>
+</ul>
+</li>
+<li><a href="../styles/">styles</a>  <sub>0..*</sub><ul>
 <li>range: </li>
 </ul>
 </li>
@@ -155,6 +188,8 @@
 
   <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/berkeleybop/kgviz-model/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
       

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  
+  <link rel="canonical" href="https://berkeleybop.github.io/kgviz-model/home/">
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Home - Configuration for visualization of KGs and Ontologies</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
@@ -20,7 +20,7 @@
     // Current page data
     var mkdocs_page_name = "Home";
     var mkdocs_page_input_path = "home.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/kgviz-model/home/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -50,6 +50,16 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Home</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#global-styling">Global styling</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#styling-predicates-relations">Styling predicates (relations</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#graphviz-vocabulary">Graphviz vocabulary</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -85,6 +95,9 @@
     <li>Home</li>
     <li class="wy-breadcrumbs-aside">
       
+        <a href="https://github.com/berkeleybop/kgviz-model/edit/master/docs/home.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
     </li>
   </ul>
   
@@ -94,7 +107,55 @@
             <div class="section">
               
                 <h1 id="introduction">Introduction</h1>
-<p>about my_schema</p>
+<p>A data model for describing configurations / stylesheets for visualzing graphs, and
+in particular Knowledge Graphs or Ontologies. These graphs are characterized by features such as</p>
+<ul>
+<li>having meaningful edge labels (subClassOf, partOf, developsFrom)</li>
+<li>node IDs/URIs in addition to names/labels</li>
+<li>node categories</li>
+<li>additional rich metadata on the nodes or edges</li>
+</ul>
+<p>An example of a use of this specification is <a href="https://github.com/cmungall/obographviz">obographviz</a></p>
+<p>The main way in which this specification is intended to be used to to
+specify stylesheets for graphical applications in the form of a JSON
+document, so examples here are in JSON</p>
+<p>These should conform to the JSON-Schema</p>
+<p>However, other serializations are possible - e.g. RDF. See further on for details</p>
+<h2 id="examples">Examples</h2>
+<h3 id="global-styling">Global styling</h3>
+<p>An example of a minimal JSON file instantiating a <a href="https://berkeleybop.github.io/kgviz-model/StyleSheet/">StyleSheet</a> class:</p>
+<pre><code class="json">{
+    &quot;style&quot;: &quot;filled&quot;,
+    &quot;fillcolor&quot;: &quot;green&quot;
+}
+</code></pre>
+
+<p>This uses two properties:</p>
+<ul>
+<li><a href="https://berkeleybop.github.io/kgviz-model/style/">style</a></li>
+<li><a href="https://berkeleybop.github.io/kgviz-model/fillcolor/">fillcolor</a></li>
+</ul>
+<p>Each of these properties are mapped to the URIs in the GraphViz documentation</p>
+<p>These indicate that boxes should be filled and colored green</p>
+<h3 id="styling-predicates-relations">Styling predicates (relations</h3>
+<p><a href="https://berkeleybop.github.io/kgviz-model/relationProperties/">relationProperties</a> maps a set of predicate CURIEs to edge properties:</p>
+<pre><code class="json">{
+    &quot;relationProperties&quot;: {
+        &quot;rdfs:subClassOf&quot;: {
+            &quot;color&quot;: &quot;black&quot;,
+            &quot;penwith&quot;: 3,
+            &quot;arrowhead&quot;: &quot;open&quot;,
+            &quot;label&quot;: &quot;&quot;
+        },
+        &quot;BFO:0000050&quot;: {
+            &quot;arrowhead&quot;: &quot;tee&quot;,
+            &quot;color&quot;: &quot;blue&quot;
+        }
+    }
+}
+</code></pre>
+
+<h2 id="graphviz-vocabulary">Graphviz vocabulary</h2>
               
             </div>
           </div>
@@ -127,6 +188,8 @@
 
   <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/berkeleybop/kgviz-model/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
       

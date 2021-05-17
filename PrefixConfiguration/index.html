@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  
+  <link rel="canonical" href="https://berkeleybop.github.io/kgviz-model/PrefixConfiguration/">
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Class: PrefixConfiguration - Configuration for visualization of KGs and Ontologies</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
@@ -20,7 +20,7 @@
     // Current page data
     var mkdocs_page_name = "Class: PrefixConfiguration";
     var mkdocs_page_input_path = "PrefixConfiguration.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/kgviz-model/PrefixConfiguration/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -83,6 +83,9 @@
     <li>Class: PrefixConfiguration</li>
     <li class="wy-breadcrumbs-aside">
       
+        <a href="https://github.com/berkeleybop/kgviz-model/edit/master/docs/PrefixConfiguration.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
     </li>
   </ul>
   
@@ -94,10 +97,18 @@
                 <h1 id="class-prefixconfiguration">Class: PrefixConfiguration</h1>
 <p>style for a particular prefix (e.g. GO)</p>
 <p>URI: <a href="https://w3id.org/kgviz/PrefixConfiguration">ex:PrefixConfiguration</a></p>
-<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[ElementConfiguration]^-[PrefixConfiguration&#124;id:Node;fillcolor:Color%20%3F],[ElementConfiguration]" /></p>
+<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[StyleSheet]++-%20prefixProperties%200..*&gt;[PrefixConfiguration&#124;id:Node;fillcolor:Color%20%3F;penwidth:integer%20%3F;label:string%20%3F;color:Color%20%3F;fontcolor:Color%20%3F],[PrefixConfiguration]uses%20-.-&gt;[NodeProperty],[ElementConfiguration]^-[PrefixConfiguration],[StyleSheet],[NodeProperty],[ElementConfiguration]" /></p>
 <h2 id="parents">Parents</h2>
 <ul>
-<li>is_a: <a href="../ElementConfiguration/">ElementConfiguration</a></li>
+<li>is_a: <a href="../ElementConfiguration/">ElementConfiguration</a> - Abstract parent for all coniguration classes</li>
+</ul>
+<h2 id="uses-mixins">Uses Mixins</h2>
+<ul>
+<li>mixin: <a href="../NodeProperty/">NodeProperty</a></li>
+</ul>
+<h2 id="referenced-by-class">Referenced by class</h2>
+<ul>
+<li><strong>None</strong> <em><a href="../prefixProperties/">prefixProperties</a></em>  <sub>0..<em></sub>  </em><em><a href="./">PrefixConfiguration</a></em>*</li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <h3 id="own">Own</h3>
@@ -108,6 +119,42 @@
 </li>
 <li><a href="../id/">id</a>  <sub>REQ</sub><ul>
 <li>range: <a href="../Node/">Node</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="mixed-in-from-nodeproperty">Mixed in from NodeProperty:</h3>
+<ul>
+<li><a href="color.md">color</a>  <sub>OPT</sub><ul>
+<li>Description: Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.</li>
+<li>range: <a href="../Color/">Color</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="mixed-in-from-generalproperty">Mixed in from GeneralProperty:</h3>
+<ul>
+<li><a href="../fontcolor/">fontcolor</a>  <sub>OPT</sub><ul>
+<li>range: <a href="../Color/">Color</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="mixed-in-from-nodeproperty_1">Mixed in from NodeProperty:</h3>
+<ul>
+<li><a href="../fontcolor/">fontcolor</a>  <sub>OPT</sub><ul>
+<li>range: <a href="../Color/">Color</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="mixed-in-from-generalproperty_1">Mixed in from GeneralProperty:</h3>
+<ul>
+<li><a href="../label/">label</a>  <sub>OPT</sub><ul>
+<li>range: <a href="../String/">String</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="mixed-in-from-generalproperty_2">Mixed in from GeneralProperty:</h3>
+<ul>
+<li><a href="../penwidth/">penwidth</a>  <sub>OPT</sub><ul>
+<li>range: <a href="../Integer/">Integer</a></li>
 </ul>
 </li>
 </ul>
@@ -136,6 +183,8 @@
 
   <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/berkeleybop/kgviz-model/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
       

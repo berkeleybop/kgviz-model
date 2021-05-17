@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  
+  <link rel="canonical" href="https://berkeleybop.github.io/kgviz-model/ConditionalProperty/">
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Class: ConditionalProperty - Configuration for visualization of KGs and Ontologies</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
@@ -20,7 +20,7 @@
     // Current page data
     var mkdocs_page_name = "Class: ConditionalProperty";
     var mkdocs_page_input_path = "ConditionalProperty.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/kgviz-model/ConditionalProperty/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -83,6 +83,9 @@
     <li>Class: ConditionalProperty</li>
     <li class="wy-breadcrumbs-aside">
       
+        <a href="https://github.com/berkeleybop/kgviz-model/edit/master/docs/ConditionalProperty.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
     </li>
   </ul>
   
@@ -94,7 +97,7 @@
                 <h1 id="class-conditionalproperty">Class: ConditionalProperty</h1>
 <p>conditionally applied properties based on filters</p>
 <p>URI: <a href="https://w3id.org/kgviz/ConditionalProperty">ex:ConditionalProperty</a></p>
-<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[StyleSheet]++-%20conditionalProperties%200..*&gt;[ConditionalProperty&#124;id:Node;fillcolor:Color%20%3F;conditions:string%20*;properties:string%20%3F],[StyleSheet]" /></p>
+<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[AnyConfiguration]&lt;properties%200..1-++[ConditionalProperty&#124;fillcolor:Color%20%3F],[Condition]&lt;conditions%200..1-++[ConditionalProperty],[StyleSheet]++-%20conditionalProperties%200..*&gt;[ConditionalProperty],[StyleSheet],[Condition],[AnyConfiguration]" /></p>
 <h2 id="referenced-by-class">Referenced by class</h2>
 <ul>
 <li><strong>None</strong> <em><a href="../conditionalProperties/">conditionalProperties</a></em>  <sub>0..<em></sub>  </em><em><a href="./">ConditionalProperty</a></em>*</li>
@@ -102,20 +105,16 @@
 <h2 id="attributes">Attributes</h2>
 <h3 id="own">Own</h3>
 <ul>
-<li><a href="../conditionalProperty__conditions/">➞conditions</a>  <sub>0..*</sub><ul>
-<li>range: <a href="../String/">String</a></li>
-</ul>
-</li>
-<li><a href="../conditionalProperty__properties/">➞properties</a>  <sub>OPT</sub><ul>
-<li>range: <a href="../String/">String</a></li>
+<li><a href="../conditions/">conditions</a>  <sub>OPT</sub><ul>
+<li>range: <a href="../Condition/">Condition</a></li>
 </ul>
 </li>
 <li><a href="../fillcolor/">fillcolor</a>  <sub>OPT</sub><ul>
 <li>range: <a href="../Color/">Color</a></li>
 </ul>
 </li>
-<li><a href="../id/">id</a>  <sub>REQ</sub><ul>
-<li>range: <a href="../Node/">Node</a></li>
+<li><a href="../properties/">properties</a>  <sub>OPT</sub><ul>
+<li>range: <a href="../AnyConfiguration/">AnyConfiguration</a></li>
 </ul>
 </li>
 </ul>
@@ -144,6 +143,8 @@
 
   <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/berkeleybop/kgviz-model/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
       
