@@ -1,0 +1,172 @@
+id: https://w3id.org/kgviz/graphviz
+title: Graphviz (INCOMPLETE)
+name: GraphViz
+license: https://creativecommons.org/publicdomain/zero/1.0/
+version: 0.0.1
+see_also:
+  - https://graphviz.org/doc/info/attrs.html
+
+prefixes:
+ linkml: https://w3id.org/linkml/
+ sdo: https://schema.org/
+ gv: https://w3id.org/kgviz/graphviz
+
+default_prefix: gv
+default_curi_maps:
+ - semweb_context
+
+imports:
+ - linkml:types
+
+types:
+
+  Color:
+    uri: xsd:string
+    base: str
+    description: e.g. red, green
+    todos:
+      - Could be replaced by an enum
+    see_also:
+      - https://graphviz.org/doc/info/colors.html
+
+classes:
+  graphviz aspect:
+    abstract: true
+    mixin: true
+    see_also:
+      - https://graphviz.org/doc/info/attrs.html#h:uses
+  edge aspect:
+    aliases:
+      - E
+    is_a: graphviz aspect
+    mixin: true
+  node aspect:
+    aliases:
+      - N
+    is_a: graphviz aspect
+    mixin: true
+  root graph aspect:
+    aliases:
+      - G
+    is_a: graphviz aspect
+    mixin: true
+  subgraph aspect:
+    aliases:
+      - S
+    is_a: graphviz aspect
+    mixin: true
+  cluster subgraph aspect:
+    aliases:
+      - C
+    is_a: graphviz aspect
+    mixin: true
+      
+slots:
+
+  
+  graphviz slot:
+    abstract: true
+    mixin: true
+    see_also:
+      - https://graphviz.org/doc/info/attrs.html#h:uses
+  edge property:
+    aliases:
+      - E
+    is_a: graphviz slot
+    mixin: true
+  node property:
+    aliases:
+      - N
+    is_a: graphviz slot
+    mixin: true
+  graph property:
+    aliases:
+      - G
+    is_a: graphviz slot
+    mixin: true
+  subgraph property:
+    aliases:
+      - S
+    is_a: graphviz slot
+    mixin: true
+  cluster property:
+    aliases:
+      - C
+    is_a: graphviz slot
+    mixin: true
+  
+  color:
+    range: Color
+    slot_uri: https://graphviz.org/doc/info/attrs.html#d:color
+    description: >-
+      Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.
+    mixins:
+      - edge property
+      - node property
+      - cluster property
+  fontcolor:
+    range: Color
+  penwidth:
+    range: integer
+    slot_uri: https://graphviz.org/doc/info/attrs.html#d:penwidth
+  label:
+    range: string
+  arrowhead:
+    range: ArrowType
+  arrowtail:
+    range: ArrowType
+  styles:
+    range: StyleType
+    multivalued: true
+    mixins:
+      - edge property
+      - node property
+      - graph property
+      - cluster property
+  style:
+    range: StyleType
+    deprecated: use styles
+    deprecated_element_has_possible_replacement: styles
+  fillcolor:
+    range: Color
+  labelFrom:
+  
+ 
+enums:
+  StyleType:
+    permissible_values:
+      dashed:
+      dotted:
+      solid:
+      invis:
+      bold:
+      tapered:
+      filled:
+      striped:
+      wedged:
+      diagonals:
+      rounded:
+  ArrowType:
+    see_also:
+      - https://graphviz.org/doc/info/attrs.html#k:arrowType
+    permissible_values:
+      normal:
+      inv:
+      dot:
+      invdot:
+      odot:
+      invodot:
+      none:
+      tee:
+      empty:
+      invempty:
+      diamond:
+      odiamond:
+      ediamond:
+      crow:
+      box:
+      obox:
+      open:
+      halfopen:
+      vee:
+
