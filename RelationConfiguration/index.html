@@ -95,7 +95,24 @@
             <div class="section">
               
                 <h1 id="class-relationconfiguration">Class: RelationConfiguration</h1>
-<p>style for a particular relation (e.g. part-of)</p>
+<p>style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).</p>
+<p>Example of usage, where <a href="../relationProperties/">relationProperties</a>
+specifies a collection of RelationConfigurations keyed by property.</p>
+<pre><code class="language-json">{
+    &quot;relationProperties&quot;: {
+        &quot;rdfs:subClassOf&quot;: {
+            &quot;color&quot;: &quot;black&quot;,
+            &quot;penwith&quot;: 3,
+            &quot;arrowhead&quot;: &quot;open&quot;,
+            &quot;label&quot;: &quot;&quot;
+        },
+        &quot;BFO:0000050&quot;: {
+            &quot;arrowhead&quot;: &quot;tee&quot;,
+            &quot;color&quot;: &quot;blue&quot;
+        }
+    }
+}
+</code></pre>
 <p>URI: <a href="https://w3id.org/kgviz/RelationConfiguration">ex:RelationConfiguration</a></p>
 <p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[StyleSheet]++-%20relationProperties%200..*&gt;[RelationConfiguration&#124;id:Node;color:Color%20%3F;penwidth:integer%20%3F;label:string%20%3F;fontcolor:Color%20%3F;arrowhead:ArrowType%20%3F;arrowtail:ArrowType%20%3F],[RelationConfiguration]uses%20-.-&gt;[EdgeProperty],[ElementConfiguration]^-[RelationConfiguration],[StyleSheet],[ElementConfiguration],[EdgeProperty]" /></p>
 <h2 id="parents">Parents</h2>
