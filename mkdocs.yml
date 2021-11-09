@@ -1,0 +1,13 @@
+site_name: "Configuration for visualization of KGs and Ontologies"
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-2SYBSJVZ23
+docs_dir: target/docs
+site_dir: docs
+nav:
+  - Home: home.md
+  - Index: index.md
+  - Credits: credits.md
+site_url: https://berkeleybop.github.io/kgviz-model/
+repo_url: https://github.com/berkeleybop/kgviz-model
