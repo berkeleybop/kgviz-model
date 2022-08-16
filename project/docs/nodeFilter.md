@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:nodeFilter](https://w3id.org/kgviz/nodeFilter)
+URI: [kgviz:nodeFilter](https://w3id.org/kgviz/nodeFilter)
 
 
 ## Domain and Range

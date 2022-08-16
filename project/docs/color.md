@@ -4,7 +4,7 @@
 
 Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.
 
-URI: [ex:color](https://w3id.org/kgviz/color)
+URI: [kgviz:color](https://w3id.org/kgviz/color)
 
 
 ## Domain and Range

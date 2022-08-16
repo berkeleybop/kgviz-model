@@ -4,7 +4,7 @@
 
 Abstract parent for all coniguration classes
 
-URI: [ex:ElementConfiguration](https://w3id.org/kgviz/ElementConfiguration)
+URI: [kgviz:ElementConfiguration](https://w3id.org/kgviz/ElementConfiguration)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[RelationConfiguration],[PrefixConfiguration],[ElementConfiguration]^-[RelationConfiguration],[ElementConfiguration]^-[PrefixConfiguration],[ElementConfiguration]^-[AnyConfiguration],[AnyConfiguration])](https://yuml.me/diagram/nofunky;dir:TB/class/[RelationConfiguration],[PrefixConfiguration],[ElementConfiguration]^-[RelationConfiguration],[ElementConfiguration]^-[PrefixConfiguration],[ElementConfiguration]^-[AnyConfiguration],[AnyConfiguration])

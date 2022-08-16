@@ -52,11 +52,12 @@ CREATE TABLE "StyleSheet" (
 	"highlightIds" TEXT, 
 	"displayAnnotations" TEXT, 
 	"cliqueRelations" TEXT, 
+	"containmentRelations" TEXT, 
 	reasoning VARCHAR(20), 
 	"excludeSingletons" BOOLEAN, 
 	"relationProperties" TEXT, 
 	"prefixProperties" TEXT, 
 	"conditionalProperties" TEXT, 
 	"nodeFilter" TEXT, 
-	PRIMARY KEY (style, styles, fillcolor, "labelFrom", "highlightIds", "displayAnnotations", "cliqueRelations", reasoning, "excludeSingletons", "relationProperties", "prefixProperties", "conditionalProperties", "nodeFilter")
+	PRIMARY KEY (style, styles, fillcolor, "labelFrom", "highlightIds", "displayAnnotations", "cliqueRelations", "containmentRelations", reasoning, "excludeSingletons", "relationProperties", "prefixProperties", "conditionalProperties", "nodeFilter")
 );

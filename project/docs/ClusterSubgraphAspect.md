@@ -1,10 +1,10 @@
 
-# Class: cluster subgraph aspect
+# Class: ClusterSubgraphAspect
 
 
 
 
-URI: [ex:ClusterSubgraphAspect](https://w3id.org/kgviz/ClusterSubgraphAspect)
+URI: [kgviz:ClusterSubgraphAspect](https://w3id.org/kgviz/ClusterSubgraphAspect)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[GraphvizAspect],[GraphvizAspect]^-[ClusterSubgraphAspect])](https://yuml.me/diagram/nofunky;dir:TB/class/[GraphvizAspect],[GraphvizAspect]^-[ClusterSubgraphAspect])

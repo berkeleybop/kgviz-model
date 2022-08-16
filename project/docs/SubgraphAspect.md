@@ -1,10 +1,10 @@
 
-# Class: subgraph aspect
+# Class: SubgraphAspect
 
 
 
 
-URI: [ex:SubgraphAspect](https://w3id.org/kgviz/SubgraphAspect)
+URI: [kgviz:SubgraphAspect](https://w3id.org/kgviz/SubgraphAspect)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[GraphvizAspect]^-[SubgraphAspect],[GraphvizAspect])](https://yuml.me/diagram/nofunky;dir:TB/class/[GraphvizAspect]^-[SubgraphAspect],[GraphvizAspect])

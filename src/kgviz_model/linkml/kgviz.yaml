@@ -3,21 +3,21 @@ title: Knowledge Graph Visualization Configuration
 name: kgviz
 license: https://creativecommons.org/publicdomain/zero/1.0/
 version: 0.0.1
-description: >-
+description: |-
   A data model for describing configurations / stylesheets for visualzing graphs, and
   in particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels,
   node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.
 
-  An example of a use of this is https://github.com/cmungall/obographviz
+  An example of a use of this is https://github.com/INCATools/obographviz
 
 prefixes:
  linkml: https://w3id.org/linkml/
  sdo: https://schema.org/
- ex: https://w3id.org/kgviz/
+ kgviz: https://w3id.org/kgviz/
 see_also:
-  - https://github.com/cmungall/obographviz
+  - https://github.com/INCATools/obographviz
  
-default_prefix: ex
+default_prefix: kgviz
 default_curi_maps:
  - semweb_context
 
@@ -44,6 +44,7 @@ classes:
       - highlightIds
       - displayAnnotations
       - cliqueRelations
+      - containmentRelations
       - reasoning
       - excludeSingletons
       - relationProperties
@@ -80,6 +81,8 @@ classes:
           }
       }
       ```
+
+      This will render subclass links in black and part-of links in blue
     mixins:
       - EdgeProperty
     slots:
@@ -193,10 +196,19 @@ slots:
     multivalued: true
     range: Node
     description: >-
-      Set of properties that indicate identity relations and can be used in a clique
+      Set of properties that indicate identity relations whose symmetric reflexive transitive closure form a clique
     examples:
       - value: owl:equivalentClass
       - value: skos:exactMatch
+  containmentRelations:
+    aliases:
+      - nestRelations
+    multivalued: true
+    range: Node
+    description: >-
+      Set of properties that indicate identity relations and can be used to create nesting boxes in displays
+    examples:
+      - value: rdfs:isDefinedBy
   conditions:
     range: Condition
     inlined: true

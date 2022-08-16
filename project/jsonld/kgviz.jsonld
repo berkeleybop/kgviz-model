@@ -1,9 +1,9 @@
 {
   "name": "kgviz",
-  "description": "A data model for describing configurations / stylesheets for visualzing graphs, and in particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels, node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.\nAn example of a use of this is https://github.com/cmungall/obographviz",
+  "description": "A data model for describing configurations / stylesheets for visualzing graphs, and\nin particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels,\nnode categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.\n\nAn example of a use of this is https://github.com/INCATools/obographviz",
   "title": "Knowledge Graph Visualization Configuration",
   "see_also": [
-    "https://github.com/cmungall/obographviz"
+    "https://github.com/INCATools/obographviz"
   ],
   "id": "https://w3id.org/kgviz/",
   "version": "0.0.1",
@@ -22,14 +22,14 @@
       "prefix_reference": "https://schema.org/"
     },
     {
-      "prefix_prefix": "ex",
+      "prefix_prefix": "kgviz",
       "prefix_reference": "https://w3id.org/kgviz/"
     }
   ],
   "default_curi_maps": [
     "semweb_context"
   ],
-  "default_prefix": "ex",
+  "default_prefix": "kgviz",
   "default_range": "string",
   "types": [
     {
@@ -212,7 +212,7 @@
     },
     {
       "name": "Color",
-      "definition_uri": "https://w3id.org/kgviz/graphvizColor",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/Color",
       "description": "e.g. red, green",
       "todos": [
         "Could be replaced by an enum"
@@ -242,7 +242,7 @@
     },
     {
       "name": "StyleType",
-      "definition_uri": "https://w3id.org/kgviz/graphvizStyleType",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/StyleType",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "permissible_values": [
         {
@@ -282,7 +282,7 @@
     },
     {
       "name": "ArrowType",
-      "definition_uri": "https://w3id.org/kgviz/graphvizArrowType",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/ArrowType",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "see_also": [
         "https://graphviz.org/doc/info/attrs.html#k:arrowType"
@@ -479,7 +479,7 @@
     {
       "name": "cliqueRelations",
       "definition_uri": "https://w3id.org/kgviz/cliqueRelations",
-      "description": "Set of properties that indicate identity relations and can be used in a clique",
+      "description": "Set of properties that indicate identity relations whose symmetric reflexive transitive closure form a clique",
       "examples": [
         {
           "value": "owl:equivalentClass",
@@ -492,6 +492,29 @@
       ],
       "from_schema": "https://w3id.org/kgviz/",
       "slot_uri": "https://w3id.org/kgviz/cliqueRelations",
+      "multivalued": true,
+      "owner": "StyleSheet",
+      "domain_of": [
+        "StyleSheet"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "containmentRelations",
+      "definition_uri": "https://w3id.org/kgviz/containmentRelations",
+      "description": "Set of properties that indicate identity relations and can be used to create nesting boxes in displays",
+      "examples": [
+        {
+          "value": "rdfs:isDefinedBy",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/kgviz/",
+      "aliases": [
+        "nestRelations"
+      ],
+      "slot_uri": "https://w3id.org/kgviz/containmentRelations",
       "multivalued": true,
       "owner": "StyleSheet",
       "domain_of": [
@@ -553,95 +576,95 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "graphviz_slot",
-      "definition_uri": "https://w3id.org/kgviz/graphvizgraphviz_slot",
+      "name": "graphvizSlot",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/graphvizSlot",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "see_also": [
         "https://graphviz.org/doc/info/attrs.html#h:uses"
       ],
       "abstract": true,
       "mixin": true,
-      "slot_uri": "https://w3id.org/kgviz/graphvizgraphviz_slot",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/graphvizSlot",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "edge_property",
-      "definition_uri": "https://w3id.org/kgviz/graphvizedge_property",
+      "name": "edgeProperty",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/edgeProperty",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "aliases": [
         "E"
       ],
-      "is_a": "graphviz_slot",
+      "is_a": "graphvizSlot",
       "mixin": true,
-      "slot_uri": "https://w3id.org/kgviz/graphvizedge_property",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/edgeProperty",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "node_property",
-      "definition_uri": "https://w3id.org/kgviz/graphviznode_property",
+      "name": "nodeProperty",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/nodeProperty",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "aliases": [
         "N"
       ],
-      "is_a": "graphviz_slot",
+      "is_a": "graphvizSlot",
       "mixin": true,
-      "slot_uri": "https://w3id.org/kgviz/graphviznode_property",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/nodeProperty",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "graph_property",
-      "definition_uri": "https://w3id.org/kgviz/graphvizgraph_property",
+      "name": "graphProperty",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/graphProperty",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "aliases": [
         "G"
       ],
-      "is_a": "graphviz_slot",
+      "is_a": "graphvizSlot",
       "mixin": true,
-      "slot_uri": "https://w3id.org/kgviz/graphvizgraph_property",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/graphProperty",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "subgraph_property",
-      "definition_uri": "https://w3id.org/kgviz/graphvizsubgraph_property",
+      "name": "subgraphProperty",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/subgraphProperty",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "aliases": [
         "S"
       ],
-      "is_a": "graphviz_slot",
+      "is_a": "graphvizSlot",
       "mixin": true,
-      "slot_uri": "https://w3id.org/kgviz/graphvizsubgraph_property",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/subgraphProperty",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "cluster_property",
-      "definition_uri": "https://w3id.org/kgviz/graphvizcluster_property",
+      "name": "clusterProperty",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/clusterProperty",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "aliases": [
         "C"
       ],
-      "is_a": "graphviz_slot",
+      "is_a": "graphvizSlot",
       "mixin": true,
-      "slot_uri": "https://w3id.org/kgviz/graphvizcluster_property",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/clusterProperty",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
       "name": "color",
-      "definition_uri": "https://w3id.org/kgviz/graphvizcolor",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/color",
       "description": "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "mappings": [
         "https://graphviz.org/doc/info/attrs.html#d:color"
       ],
       "mixins": [
-        "edge_property",
-        "node_property",
-        "cluster_property"
+        "edgeProperty",
+        "nodeProperty",
+        "clusterProperty"
       ],
       "slot_uri": "https://graphviz.org/doc/info/attrs.html#d:color",
       "owner": "NodeProperty",
@@ -654,9 +677,9 @@
     },
     {
       "name": "fontcolor",
-      "definition_uri": "https://w3id.org/kgviz/graphvizfontcolor",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/fontcolor",
       "from_schema": "https://w3id.org/kgviz/graphviz",
-      "slot_uri": "https://w3id.org/kgviz/graphvizfontcolor",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/fontcolor",
       "owner": "NodeProperty",
       "domain_of": [
         "GeneralProperty",
@@ -667,7 +690,7 @@
     },
     {
       "name": "penwidth",
-      "definition_uri": "https://w3id.org/kgviz/graphvizpenwidth",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/penwidth",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "mappings": [
         "https://graphviz.org/doc/info/attrs.html#d:penwidth"
@@ -683,9 +706,9 @@
     },
     {
       "name": "label",
-      "definition_uri": "https://w3id.org/kgviz/graphvizlabel",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/label",
       "from_schema": "https://w3id.org/kgviz/graphviz",
-      "slot_uri": "https://w3id.org/kgviz/graphvizlabel",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/label",
       "owner": "GeneralProperty",
       "domain_of": [
         "RelationConfiguration",
@@ -696,9 +719,9 @@
     },
     {
       "name": "arrowhead",
-      "definition_uri": "https://w3id.org/kgviz/graphvizarrowhead",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/arrowhead",
       "from_schema": "https://w3id.org/kgviz/graphviz",
-      "slot_uri": "https://w3id.org/kgviz/graphvizarrowhead",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/arrowhead",
       "owner": "EdgeProperty",
       "domain_of": [
         "EdgeProperty"
@@ -708,9 +731,9 @@
     },
     {
       "name": "arrowtail",
-      "definition_uri": "https://w3id.org/kgviz/graphvizarrowtail",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/arrowtail",
       "from_schema": "https://w3id.org/kgviz/graphviz",
-      "slot_uri": "https://w3id.org/kgviz/graphvizarrowtail",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/arrowtail",
       "owner": "EdgeProperty",
       "domain_of": [
         "EdgeProperty"
@@ -720,15 +743,15 @@
     },
     {
       "name": "styles",
-      "definition_uri": "https://w3id.org/kgviz/graphvizstyles",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/styles",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "mixins": [
-        "edge_property",
-        "node_property",
-        "graph_property",
-        "cluster_property"
+        "edgeProperty",
+        "nodeProperty",
+        "graphProperty",
+        "clusterProperty"
       ],
-      "slot_uri": "https://w3id.org/kgviz/graphvizstyles",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/styles",
       "multivalued": true,
       "owner": "StyleSheet",
       "domain_of": [
@@ -739,11 +762,11 @@
     },
     {
       "name": "style",
-      "definition_uri": "https://w3id.org/kgviz/graphvizstyle",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/style",
       "deprecated": "use styles",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "deprecated_element_has_possible_replacement": "styles",
-      "slot_uri": "https://w3id.org/kgviz/graphvizstyle",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/style",
       "owner": "StyleSheet",
       "domain_of": [
         "StyleSheet"
@@ -753,9 +776,9 @@
     },
     {
       "name": "fillcolor",
-      "definition_uri": "https://w3id.org/kgviz/graphvizfillcolor",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/fillcolor",
       "from_schema": "https://w3id.org/kgviz/graphviz",
-      "slot_uri": "https://w3id.org/kgviz/graphvizfillcolor",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/fillcolor",
       "owner": "ConditionalProperty",
       "domain_of": [
         "StyleSheet",
@@ -767,9 +790,9 @@
     },
     {
       "name": "labelFrom",
-      "definition_uri": "https://w3id.org/kgviz/graphvizlabelFrom",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/labelFrom",
       "from_schema": "https://w3id.org/kgviz/graphviz",
-      "slot_uri": "https://w3id.org/kgviz/graphvizlabelFrom",
+      "slot_uri": "https://w3id.org/kgviz/graphviz/labelFrom",
       "owner": "StyleSheet",
       "domain_of": [
         "StyleSheet"
@@ -792,6 +815,7 @@
         "highlightIds",
         "displayAnnotations",
         "cliqueRelations",
+        "containmentRelations",
         "reasoning",
         "excludeSingletons",
         "relationProperties",
@@ -816,7 +840,7 @@
     {
       "name": "RelationConfiguration",
       "definition_uri": "https://w3id.org/kgviz/RelationConfiguration",
-      "description": "style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).\n\nExample of usage, where [relationProperties](relationProperties.md)\nspecifies a collection of RelationConfigurations keyed by property.\n\n```json\n{\n    \"relationProperties\": {\n        \"rdfs:subClassOf\": {\n            \"color\": \"black\",\n            \"penwith\": 3,\n            \"arrowhead\": \"open\",\n            \"label\": \"\"\n        },\n        \"BFO:0000050\": {\n            \"arrowhead\": \"tee\",\n            \"color\": \"blue\"\n        }\n    }\n}\n```",
+      "description": "style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).\n\nExample of usage, where [relationProperties](relationProperties.md)\nspecifies a collection of RelationConfigurations keyed by property.\n\n```json\n{\n    \"relationProperties\": {\n        \"rdfs:subClassOf\": {\n            \"color\": \"black\",\n            \"penwith\": 3,\n            \"arrowhead\": \"open\",\n            \"label\": \"\"\n        },\n        \"BFO:0000050\": {\n            \"arrowhead\": \"tee\",\n            \"color\": \"blue\"\n        }\n    }\n}\n```\n\nThis will render ",
       "from_schema": "https://w3id.org/kgviz/",
       "is_a": "ElementConfiguration",
       "mixins": [
@@ -956,7 +980,7 @@
     },
     {
       "name": "GraphvizAspect",
-      "definition_uri": "https://w3id.org/kgviz/graphvizGraphvizAspect",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/GraphvizAspect",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "see_also": [
         "https://graphviz.org/doc/info/attrs.html#h:uses"
@@ -964,12 +988,12 @@
       "abstract": true,
       "mixin": true,
       "slot_usage": {},
-      "class_uri": "https://w3id.org/kgviz/graphvizGraphvizAspect",
+      "class_uri": "https://w3id.org/kgviz/graphviz/GraphvizAspect",
       "@type": "ClassDefinition"
     },
     {
       "name": "EdgeAspect",
-      "definition_uri": "https://w3id.org/kgviz/graphvizEdgeAspect",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/EdgeAspect",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "aliases": [
         "E"
@@ -977,12 +1001,12 @@
       "is_a": "GraphvizAspect",
       "mixin": true,
       "slot_usage": {},
-      "class_uri": "https://w3id.org/kgviz/graphvizEdgeAspect",
+      "class_uri": "https://w3id.org/kgviz/graphviz/EdgeAspect",
       "@type": "ClassDefinition"
     },
     {
       "name": "NodeAspect",
-      "definition_uri": "https://w3id.org/kgviz/graphvizNodeAspect",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/NodeAspect",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "aliases": [
         "N"
@@ -990,12 +1014,12 @@
       "is_a": "GraphvizAspect",
       "mixin": true,
       "slot_usage": {},
-      "class_uri": "https://w3id.org/kgviz/graphvizNodeAspect",
+      "class_uri": "https://w3id.org/kgviz/graphviz/NodeAspect",
       "@type": "ClassDefinition"
     },
     {
       "name": "RootGraphAspect",
-      "definition_uri": "https://w3id.org/kgviz/graphvizRootGraphAspect",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/RootGraphAspect",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "aliases": [
         "G"
@@ -1003,12 +1027,12 @@
       "is_a": "GraphvizAspect",
       "mixin": true,
       "slot_usage": {},
-      "class_uri": "https://w3id.org/kgviz/graphvizRootGraphAspect",
+      "class_uri": "https://w3id.org/kgviz/graphviz/RootGraphAspect",
       "@type": "ClassDefinition"
     },
     {
       "name": "SubgraphAspect",
-      "definition_uri": "https://w3id.org/kgviz/graphvizSubgraphAspect",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/SubgraphAspect",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "aliases": [
         "S"
@@ -1016,12 +1040,12 @@
       "is_a": "GraphvizAspect",
       "mixin": true,
       "slot_usage": {},
-      "class_uri": "https://w3id.org/kgviz/graphvizSubgraphAspect",
+      "class_uri": "https://w3id.org/kgviz/graphviz/SubgraphAspect",
       "@type": "ClassDefinition"
     },
     {
       "name": "ClusterSubgraphAspect",
-      "definition_uri": "https://w3id.org/kgviz/graphvizClusterSubgraphAspect",
+      "definition_uri": "https://w3id.org/kgviz/graphviz/ClusterSubgraphAspect",
       "from_schema": "https://w3id.org/kgviz/graphviz",
       "aliases": [
         "C"
@@ -1029,15 +1053,15 @@
       "is_a": "GraphvizAspect",
       "mixin": true,
       "slot_usage": {},
-      "class_uri": "https://w3id.org/kgviz/graphvizClusterSubgraphAspect",
+      "class_uri": "https://w3id.org/kgviz/graphviz/ClusterSubgraphAspect",
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "kgviz.yaml",
-  "source_file_date": "2022-08-16T15:34:46",
-  "source_file_size": 5180,
-  "generation_date": "2022-08-16T16:13:24",
+  "source_file_date": "2022-08-16T16:41:48",
+  "source_file_size": 5545,
+  "generation_date": "2022-08-16T16:41:52",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/kgviz.context.jsonld",

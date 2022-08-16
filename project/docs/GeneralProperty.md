@@ -4,7 +4,7 @@
 
 abstract grouping for properties/configs
 
-URI: [ex:GeneralProperty](https://w3id.org/kgviz/GeneralProperty)
+URI: [kgviz:GeneralProperty](https://w3id.org/kgviz/GeneralProperty)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NodeProperty],[GeneralProperty&#124;penwidth:integer%20%3F;label:string%20%3F;fontcolor:Color%20%3F]^-[NodeProperty],[GeneralProperty]^-[EdgeProperty],[EdgeProperty])](https://yuml.me/diagram/nofunky;dir:TB/class/[NodeProperty],[GeneralProperty&#124;penwidth:integer%20%3F;label:string%20%3F;fontcolor:Color%20%3F]^-[NodeProperty],[GeneralProperty]^-[EdgeProperty],[EdgeProperty])

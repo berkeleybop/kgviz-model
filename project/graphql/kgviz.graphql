@@ -99,6 +99,7 @@ type StyleSheet
     highlightIds: [Node]
     displayAnnotations: [Node]
     cliqueRelations: [Node]
+    containmentRelations: [Node]
     reasoning: [ReasoningType]
     excludeSingletons: Boolean
     relationProperties: [RelationConfiguration]

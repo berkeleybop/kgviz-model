@@ -1,10 +1,10 @@
 
-# Class: node aspect
+# Class: NodeAspect
 
 
 
 
-URI: [ex:NodeAspect](https://w3id.org/kgviz/NodeAspect)
+URI: [kgviz:NodeAspect](https://w3id.org/kgviz/NodeAspect)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[GraphvizAspect]^-[NodeAspect],[GraphvizAspect])](https://yuml.me/diagram/nofunky;dir:TB/class/[GraphvizAspect]^-[NodeAspect],[GraphvizAspect])

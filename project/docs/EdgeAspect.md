@@ -1,10 +1,10 @@
 
-# Class: edge aspect
+# Class: EdgeAspect
 
 
 
 
-URI: [ex:EdgeAspect](https://w3id.org/kgviz/EdgeAspect)
+URI: [kgviz:EdgeAspect](https://w3id.org/kgviz/EdgeAspect)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[GraphvizAspect],[GraphvizAspect]^-[EdgeAspect])](https://yuml.me/diagram/nofunky;dir:TB/class/[GraphvizAspect],[GraphvizAspect]^-[EdgeAspect])

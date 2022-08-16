@@ -4,7 +4,7 @@
 
 style for a particular prefix (e.g. GO)
 
-URI: [ex:PrefixConfiguration](https://w3id.org/kgviz/PrefixConfiguration)
+URI: [kgviz:PrefixConfiguration](https://w3id.org/kgviz/PrefixConfiguration)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[StyleSheet]++-%20prefixProperties%200..*>[PrefixConfiguration&#124;id:Node;fillcolor:Color%20%3F;penwidth:integer%20%3F;label:string%20%3F;color:Color%20%3F;fontcolor:Color%20%3F],[PrefixConfiguration]uses%20-.->[NodeProperty],[ElementConfiguration]^-[PrefixConfiguration],[StyleSheet],[NodeProperty],[ElementConfiguration])](https://yuml.me/diagram/nofunky;dir:TB/class/[StyleSheet]++-%20prefixProperties%200..*>[PrefixConfiguration&#124;id:Node;fillcolor:Color%20%3F;penwidth:integer%20%3F;label:string%20%3F;color:Color%20%3F;fontcolor:Color%20%3F],[PrefixConfiguration]uses%20-.->[NodeProperty],[ElementConfiguration]^-[PrefixConfiguration],[StyleSheet],[NodeProperty],[ElementConfiguration])

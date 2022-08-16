@@ -1,6 +1,6 @@
 {
-   "ex": "https://w3id.org/kgviz/",
-   "gv": "https://w3id.org/kgviz/graphviz",
+   "gv": "https://w3id.org/kgviz/graphviz/",
+   "kgviz": "https://w3id.org/kgviz/",
    "linkml": "https://w3id.org/linkml/",
    "sdo": "https://schema.org/",
    "ClusterSubgraphAspect": {

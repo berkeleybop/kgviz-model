@@ -4,7 +4,7 @@
 
 a constraint or condition to be applied, e.g. type=Class
 
-URI: [ex:Condition](https://w3id.org/kgviz/Condition)
+URI: [kgviz:Condition](https://w3id.org/kgviz/Condition)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[ConditionalProperty]++-%20conditions%200..1>[Condition&#124;type:string%20%3F;subset:string%20%3F],[StyleSheet]++-%20nodeFilter%200..1>[Condition],[StyleSheet],[ConditionalProperty])](https://yuml.me/diagram/nofunky;dir:TB/class/[ConditionalProperty]++-%20conditions%200..1>[Condition&#124;type:string%20%3F;subset:string%20%3F],[StyleSheet]++-%20nodeFilter%200..1>[Condition],[StyleSheet],[ConditionalProperty])

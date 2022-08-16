@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:fontcolor](https://w3id.org/kgviz/fontcolor)
+URI: [kgviz:fontcolor](https://w3id.org/kgviz/fontcolor)
 
 
 ## Domain and Range

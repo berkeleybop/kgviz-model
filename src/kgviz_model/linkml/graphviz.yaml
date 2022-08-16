@@ -9,7 +9,7 @@ see_also:
 prefixes:
  linkml: https://w3id.org/linkml/
  sdo: https://schema.org/
- gv: https://w3id.org/kgviz/graphviz
+ gv: https://w3id.org/kgviz/graphviz/
 
 default_prefix: gv
 default_curi_maps:
@@ -30,69 +30,68 @@ types:
       - https://graphviz.org/doc/info/colors.html
 
 classes:
-  graphviz aspect:
+  GraphvizAspect:
     abstract: true
     mixin: true
     see_also:
       - https://graphviz.org/doc/info/attrs.html#h:uses
-  edge aspect:
+  EdgeAspect:
     aliases:
       - E
-    is_a: graphviz aspect
+    is_a: GraphvizAspect
     mixin: true
-  node aspect:
+  NodeAspect:
     aliases:
       - N
-    is_a: graphviz aspect
+    is_a: GraphvizAspect
     mixin: true
-  root graph aspect:
+  RootGraphAspect:
     aliases:
       - G
-    is_a: graphviz aspect
+    is_a: GraphvizAspect
     mixin: true
-  subgraph aspect:
+  SubgraphAspect:
     aliases:
       - S
-    is_a: graphviz aspect
+    is_a: GraphvizAspect
     mixin: true
-  cluster subgraph aspect:
+  ClusterSubgraphAspect:
     aliases:
       - C
-    is_a: graphviz aspect
+    is_a: GraphvizAspect
     mixin: true
       
 slots:
-
   
-  graphviz slot:
+  graphvizSlot:
     abstract: true
     mixin: true
     see_also:
       - https://graphviz.org/doc/info/attrs.html#h:uses
-  edge property:
+  edgeProperty:
     aliases:
       - E
-    is_a: graphviz slot
+    is_a: graphvizSlot
     mixin: true
-  node property:
+  nodeProperty:
     aliases:
       - N
-    is_a: graphviz slot
+    is_a: graphvizSlot
     mixin: true
-  graph property:
+  graphProperty:
     aliases:
       - G
-    is_a: graphviz slot
+    is_a: graphvizSlot
     mixin: true
-  subgraph property:
+  subgraphProperty:
     aliases:
       - S
-    is_a: graphviz slot
+    is_a: graphvizSlot
     mixin: true
-  cluster property:
+  clusterProperty:
     aliases:
       - C
-    is_a: graphviz slot
+    is_a: graphvizSlot
     mixin: true
   
   color:
@@ -101,9 +100,9 @@ slots:
     description: >-
       Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.
     mixins:
-      - edge property
-      - node property
-      - cluster property
+      - edgeProperty
+      - nodeProperty
+      - clusterProperty
   fontcolor:
     range: Color
   penwidth:
@@ -119,10 +118,10 @@ slots:
     range: StyleType
     multivalued: true
     mixins:
-      - edge property
-      - node property
-      - graph property
-      - cluster property
+      - edgeProperty
+      - nodeProperty
+      - graphProperty
+      - clusterProperty
   style:
     range: StyleType
     deprecated: use styles

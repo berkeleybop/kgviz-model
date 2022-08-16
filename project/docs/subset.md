@@ -4,7 +4,7 @@
 
 the subset to which the node belongs
 
-URI: [ex:subset](https://w3id.org/kgviz/subset)
+URI: [kgviz:subset](https://w3id.org/kgviz/subset)
 
 
 ## Domain and Range

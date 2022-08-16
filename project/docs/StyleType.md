@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:StyleType](https://w3id.org/kgviz/StyleType)
+URI: [kgviz:StyleType](https://w3id.org/kgviz/StyleType)
 
 
 ## Other properties

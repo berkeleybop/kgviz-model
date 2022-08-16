@@ -158,7 +158,7 @@
       },
       "RelationConfiguration": {
          "additionalProperties": false,
-         "description": "style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).\n\nExample of usage, where [relationProperties](relationProperties.md)\nspecifies a collection of RelationConfigurations keyed by property.\n\n```json\n{\n    \"relationProperties\": {\n        \"rdfs:subClassOf\": {\n            \"color\": \"black\",\n            \"penwith\": 3,\n            \"arrowhead\": \"open\",\n            \"label\": \"\"\n        },\n        \"BFO:0000050\": {\n            \"arrowhead\": \"tee\",\n            \"color\": \"blue\"\n        }\n    }\n}\n```",
+         "description": "style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).\n\nExample of usage, where [relationProperties](relationProperties.md)\nspecifies a collection of RelationConfigurations keyed by property.\n\n```json\n{\n    \"relationProperties\": {\n        \"rdfs:subClassOf\": {\n            \"color\": \"black\",\n            \"penwith\": 3,\n            \"arrowhead\": \"open\",\n            \"label\": \"\"\n        },\n        \"BFO:0000050\": {\n            \"arrowhead\": \"tee\",\n            \"color\": \"blue\"\n        }\n    }\n}\n```\n\nThis will render",
          "properties": {
             "arrowhead": {
                "$ref": "#/$defs/ArrowType"
@@ -191,7 +191,7 @@
       },
       "RelationConfiguration__identifier_optional": {
          "additionalProperties": false,
-         "description": "style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).\n\nExample of usage, where [relationProperties](relationProperties.md)\nspecifies a collection of RelationConfigurations keyed by property.\n\n```json\n{\n    \"relationProperties\": {\n        \"rdfs:subClassOf\": {\n            \"color\": \"black\",\n            \"penwith\": 3,\n            \"arrowhead\": \"open\",\n            \"label\": \"\"\n        },\n        \"BFO:0000050\": {\n            \"arrowhead\": \"tee\",\n            \"color\": \"blue\"\n        }\n    }\n}\n```",
+         "description": "style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).\n\nExample of usage, where [relationProperties](relationProperties.md)\nspecifies a collection of RelationConfigurations keyed by property.\n\n```json\n{\n    \"relationProperties\": {\n        \"rdfs:subClassOf\": {\n            \"color\": \"black\",\n            \"penwith\": 3,\n            \"arrowhead\": \"open\",\n            \"label\": \"\"\n        },\n        \"BFO:0000050\": {\n            \"arrowhead\": \"tee\",\n            \"color\": \"blue\"\n        }\n    }\n}\n```\n\nThis will render",
          "properties": {
             "arrowhead": {
                "$ref": "#/$defs/ArrowType"
@@ -225,7 +225,7 @@
          "description": "A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically",
          "properties": {
             "cliqueRelations": {
-               "description": "Set of properties that indicate identity relations and can be used in a clique",
+               "description": "Set of properties that indicate identity relations whose symmetric reflexive transitive closure form a clique",
                "items": {
                   "type": "string"
                },
@@ -234,6 +234,13 @@
             "conditionalProperties": {
                "items": {
                   "$ref": "#/$defs/ConditionalProperty"
+               },
+               "type": "array"
+            },
+            "containmentRelations": {
+               "description": "Set of properties that indicate identity relations and can be used to create nesting boxes in displays",
+               "items": {
+                  "type": "string"
                },
                "type": "array"
             },

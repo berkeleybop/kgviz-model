@@ -4,7 +4,7 @@
 
 Collection of styles keyed by ID prefix
 
-URI: [ex:prefixProperties](https://w3id.org/kgviz/prefixProperties)
+URI: [kgviz:prefixProperties](https://w3id.org/kgviz/prefixProperties)
 
 
 ## Domain and Range

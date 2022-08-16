@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:NodeProperty](https://w3id.org/kgviz/NodeProperty)
+URI: [kgviz:NodeProperty](https://w3id.org/kgviz/NodeProperty)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[PrefixConfiguration]uses%20-.->[NodeProperty&#124;color:Color%20%3F;penwidth(i):integer%20%3F;label(i):string%20%3F;fontcolor(i):Color%20%3F],[AnyConfiguration]uses%20-.->[NodeProperty],[GeneralProperty]^-[NodeProperty],[PrefixConfiguration],[GeneralProperty],[AnyConfiguration])](https://yuml.me/diagram/nofunky;dir:TB/class/[PrefixConfiguration]uses%20-.->[NodeProperty&#124;color:Color%20%3F;penwidth(i):integer%20%3F;label(i):string%20%3F;fontcolor(i):Color%20%3F],[AnyConfiguration]uses%20-.->[NodeProperty],[GeneralProperty]^-[NodeProperty],[PrefixConfiguration],[GeneralProperty],[AnyConfiguration])

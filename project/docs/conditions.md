@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:conditions](https://w3id.org/kgviz/conditions)
+URI: [kgviz:conditions](https://w3id.org/kgviz/conditions)
 
 
 ## Domain and Range

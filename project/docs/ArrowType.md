@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:ArrowType](https://w3id.org/kgviz/ArrowType)
+URI: [kgviz:ArrowType](https://w3id.org/kgviz/ArrowType)
 
 
 ## Other properties

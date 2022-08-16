@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:properties](https://w3id.org/kgviz/properties)
+URI: [kgviz:properties](https://w3id.org/kgviz/properties)
 
 
 ## Domain and Range

@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:penwidth](https://w3id.org/kgviz/penwidth)
+URI: [kgviz:penwidth](https://w3id.org/kgviz/penwidth)
 
 
 ## Domain and Range

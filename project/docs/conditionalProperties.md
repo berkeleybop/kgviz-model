@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:conditionalProperties](https://w3id.org/kgviz/conditionalProperties)
+URI: [kgviz:conditionalProperties](https://w3id.org/kgviz/conditionalProperties)
 
 
 ## Domain and Range

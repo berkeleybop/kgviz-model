@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:styles](https://w3id.org/kgviz/styles)
+URI: [kgviz:styles](https://w3id.org/kgviz/styles)
 
 
 ## Domain and Range

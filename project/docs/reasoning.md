@@ -4,7 +4,7 @@
 
 Set of reasoning or processing steps to be applied to graph
 
-URI: [ex:reasoning](https://w3id.org/kgviz/reasoning)
+URI: [kgviz:reasoning](https://w3id.org/kgviz/reasoning)
 
 
 ## Domain and Range

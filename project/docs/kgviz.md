@@ -7,8 +7,11 @@
 **version:** 0.0.1
 
 
-A data model for describing configurations / stylesheets for visualzing graphs, and in particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels, node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.
-An example of a use of this is https://github.com/cmungall/obographviz
+A data model for describing configurations / stylesheets for visualzing graphs, and
+in particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels,
+node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.
+
+An example of a use of this is https://github.com/INCATools/obographviz
 
 
 ### Classes
@@ -23,13 +26,12 @@ An example of a use of this is https://github.com/cmungall/obographviz
 
 ### Mixins
 
+ * [ClusterSubgraphAspect](ClusterSubgraphAspect.md)
+ * [EdgeAspect](EdgeAspect.md)
  * [EdgeProperty](EdgeProperty.md) - a property object for an edge/relation
  * [GeneralProperty](GeneralProperty.md) - abstract grouping for properties/configs
      * [EdgeProperty](EdgeProperty.md) - a property object for an edge/relation
      * [NodeProperty](NodeProperty.md)
- * [NodeProperty](NodeProperty.md)
- * [ClusterSubgraphAspect](ClusterSubgraphAspect.md)
- * [EdgeAspect](EdgeAspect.md)
  * [GraphvizAspect](GraphvizAspect.md)
      * [ClusterSubgraphAspect](ClusterSubgraphAspect.md)
      * [EdgeAspect](EdgeAspect.md)
@@ -37,6 +39,7 @@ An example of a use of this is https://github.com/cmungall/obographviz
      * [RootGraphAspect](RootGraphAspect.md)
      * [SubgraphAspect](SubgraphAspect.md)
  * [NodeAspect](NodeAspect.md)
+ * [NodeProperty](NodeProperty.md)
  * [RootGraphAspect](RootGraphAspect.md)
  * [SubgraphAspect](SubgraphAspect.md)
 
@@ -44,20 +47,21 @@ An example of a use of this is https://github.com/cmungall/obographviz
 
  * [arrowhead](arrowhead.md)
  * [arrowtail](arrowtail.md)
- * [cliqueRelations](cliqueRelations.md) - Set of properties that indicate identity relations and can be used in a clique
+ * [cliqueRelations](cliqueRelations.md) - Set of properties that indicate identity relations whose symmetric reflexive transitive closure form a clique
  * [color](color.md) - Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.
  * [conditionalProperties](conditionalProperties.md)
  * [conditions](conditions.md)
+ * [containmentRelations](containmentRelations.md) - Set of properties that indicate identity relations and can be used to create nesting boxes in displays
  * [displayAnnotations](displayAnnotations.md) - Display annotations for these selected properties
  * [excludeSingletons](excludeSingletons.md) - Remove nodes that have no incoming or outgoing edges
  * [fillcolor](fillcolor.md)
  * [fontcolor](fontcolor.md)
- * [graphviz slot](graphviz_slot.md)
-     * [cluster property](cluster_property.md)
-     * [edge property](edge_property.md)
-     * [graph property](graph_property.md)
-     * [node property](node_property.md)
-     * [subgraph property](subgraph_property.md)
+ * [graphvizSlot](graphvizSlot.md)
+     * [clusterProperty](clusterProperty.md)
+     * [edgeProperty](edgeProperty.md)
+     * [graphProperty](graphProperty.md)
+     * [nodeProperty](nodeProperty.md)
+     * [subgraphProperty](subgraphProperty.md)
  * [highlightIds](highlightIds.md) - List of nodes to be visually demarcated
  * [id](id.md)
  * [label](label.md)

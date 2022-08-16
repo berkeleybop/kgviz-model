@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:ReasoningType](https://w3id.org/kgviz/ReasoningType)
+URI: [kgviz:ReasoningType](https://w3id.org/kgviz/ReasoningType)
 
 
 ## Other properties

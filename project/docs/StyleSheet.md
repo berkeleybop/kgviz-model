@@ -4,10 +4,10 @@
 
 A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically
 
-URI: [ex:StyleSheet](https://w3id.org/kgviz/StyleSheet)
+URI: [kgviz:StyleSheet](https://w3id.org/kgviz/StyleSheet)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[Condition]<nodeFilter%200..1-++[StyleSheet&#124;style:StyleType%20%3F;styles:StyleType%20*;fillcolor:Color%20%3F;labelFrom:string%20%3F;highlightIds:Node%20*;displayAnnotations:Node%20*;cliqueRelations:Node%20*;reasoning:ReasoningType%20*;excludeSingletons:boolean%20%3F],[ConditionalProperty]<conditionalProperties%200..*-++[StyleSheet],[PrefixConfiguration]<prefixProperties%200..*-++[StyleSheet],[RelationConfiguration]<relationProperties%200..*-++[StyleSheet],[RelationConfiguration],[PrefixConfiguration],[ConditionalProperty],[Condition])](https://yuml.me/diagram/nofunky;dir:TB/class/[Condition]<nodeFilter%200..1-++[StyleSheet&#124;style:StyleType%20%3F;styles:StyleType%20*;fillcolor:Color%20%3F;labelFrom:string%20%3F;highlightIds:Node%20*;displayAnnotations:Node%20*;cliqueRelations:Node%20*;reasoning:ReasoningType%20*;excludeSingletons:boolean%20%3F],[ConditionalProperty]<conditionalProperties%200..*-++[StyleSheet],[PrefixConfiguration]<prefixProperties%200..*-++[StyleSheet],[RelationConfiguration]<relationProperties%200..*-++[StyleSheet],[RelationConfiguration],[PrefixConfiguration],[ConditionalProperty],[Condition])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[Condition]<nodeFilter%200..1-++[StyleSheet&#124;style:StyleType%20%3F;styles:StyleType%20*;fillcolor:Color%20%3F;labelFrom:string%20%3F;highlightIds:Node%20*;displayAnnotations:Node%20*;cliqueRelations:Node%20*;containmentRelations:Node%20*;reasoning:ReasoningType%20*;excludeSingletons:boolean%20%3F],[ConditionalProperty]<conditionalProperties%200..*-++[StyleSheet],[PrefixConfiguration]<prefixProperties%200..*-++[StyleSheet],[RelationConfiguration]<relationProperties%200..*-++[StyleSheet],[RelationConfiguration],[PrefixConfiguration],[ConditionalProperty],[Condition])](https://yuml.me/diagram/nofunky;dir:TB/class/[Condition]<nodeFilter%200..1-++[StyleSheet&#124;style:StyleType%20%3F;styles:StyleType%20*;fillcolor:Color%20%3F;labelFrom:string%20%3F;highlightIds:Node%20*;displayAnnotations:Node%20*;cliqueRelations:Node%20*;containmentRelations:Node%20*;reasoning:ReasoningType%20*;excludeSingletons:boolean%20%3F],[ConditionalProperty]<conditionalProperties%200..*-++[StyleSheet],[PrefixConfiguration]<prefixProperties%200..*-++[StyleSheet],[RelationConfiguration]<relationProperties%200..*-++[StyleSheet],[RelationConfiguration],[PrefixConfiguration],[ConditionalProperty],[Condition])
 
 ## Attributes
 
@@ -29,10 +29,14 @@ URI: [ex:StyleSheet](https://w3id.org/kgviz/StyleSheet)
      * Description: Display annotations for these selected properties
      * Range: [Node](types/Node.md)
  * [cliqueRelations](cliqueRelations.md)  <sub>0..\*</sub>
-     * Description: Set of properties that indicate identity relations and can be used in a clique
+     * Description: Set of properties that indicate identity relations whose symmetric reflexive transitive closure form a clique
      * Range: [Node](types/Node.md)
      * Example: owl:equivalentClass None
      * Example: skos:exactMatch None
+ * [containmentRelations](containmentRelations.md)  <sub>0..\*</sub>
+     * Description: Set of properties that indicate identity relations and can be used to create nesting boxes in displays
+     * Range: [Node](types/Node.md)
+     * Example: rdfs:isDefinedBy None
  * [reasoning](reasoning.md)  <sub>0..\*</sub>
      * Description: Set of reasoning or processing steps to be applied to graph
      * Range: [ReasoningType](ReasoningType.md)

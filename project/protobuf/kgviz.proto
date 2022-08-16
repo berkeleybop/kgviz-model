@@ -52,6 +52,8 @@ message PrefixConfiguration
 //     }
 // }
 // ```
+// 
+// This will render 
 message RelationConfiguration
  {
   node id = 0
@@ -72,6 +74,7 @@ message StyleSheet
  repeated  node highlightIds = 0
  repeated  node displayAnnotations = 0
  repeated  node cliqueRelations = 0
+ repeated  node containmentRelations = 0
  repeated  reasoningType reasoning = 0
   boolean excludeSingletons = 0
  repeated  relationConfiguration relationProperties = 0

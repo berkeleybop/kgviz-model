@@ -4,7 +4,7 @@
 
 Generic configuration that inherits all aspects of both node and edge configurations
 
-URI: [ex:AnyConfiguration](https://w3id.org/kgviz/AnyConfiguration)
+URI: [kgviz:AnyConfiguration](https://w3id.org/kgviz/AnyConfiguration)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NodeProperty],[ElementConfiguration],[EdgeProperty],[ConditionalProperty]++-%20properties%200..1>[AnyConfiguration&#124;penwidth:integer%20%3F;label:string%20%3F;color:Color%20%3F;fontcolor:Color%20%3F;arrowhead:ArrowType%20%3F;arrowtail:ArrowType%20%3F],[AnyConfiguration]uses%20-.->[NodeProperty],[AnyConfiguration]uses%20-.->[EdgeProperty],[ElementConfiguration]^-[AnyConfiguration],[ConditionalProperty])](https://yuml.me/diagram/nofunky;dir:TB/class/[NodeProperty],[ElementConfiguration],[EdgeProperty],[ConditionalProperty]++-%20properties%200..1>[AnyConfiguration&#124;penwidth:integer%20%3F;label:string%20%3F;color:Color%20%3F;fontcolor:Color%20%3F;arrowhead:ArrowType%20%3F;arrowtail:ArrowType%20%3F],[AnyConfiguration]uses%20-.->[NodeProperty],[AnyConfiguration]uses%20-.->[EdgeProperty],[ElementConfiguration]^-[AnyConfiguration],[ConditionalProperty])

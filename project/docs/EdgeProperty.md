@@ -4,7 +4,7 @@
 
 a property object for an edge/relation
 
-URI: [ex:EdgeProperty](https://w3id.org/kgviz/EdgeProperty)
+URI: [kgviz:EdgeProperty](https://w3id.org/kgviz/EdgeProperty)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[GeneralProperty],[RelationConfiguration]uses%20-.->[EdgeProperty&#124;arrowhead:ArrowType%20%3F;arrowtail:ArrowType%20%3F;penwidth(i):integer%20%3F;label(i):string%20%3F;fontcolor(i):Color%20%3F],[AnyConfiguration]uses%20-.->[EdgeProperty],[GeneralProperty]^-[EdgeProperty],[RelationConfiguration],[AnyConfiguration])](https://yuml.me/diagram/nofunky;dir:TB/class/[GeneralProperty],[RelationConfiguration]uses%20-.->[EdgeProperty&#124;arrowhead:ArrowType%20%3F;arrowtail:ArrowType%20%3F;penwidth(i):integer%20%3F;label(i):string%20%3F;fontcolor(i):Color%20%3F],[AnyConfiguration]uses%20-.->[EdgeProperty],[GeneralProperty]^-[EdgeProperty],[RelationConfiguration],[AnyConfiguration])

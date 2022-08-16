@@ -1,11 +1,8 @@
 {
-   "_comments": "Auto generated from kgviz.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-08-16T16:13:23\n    Schema: kgviz\n    metamodel version: 1.7.0\n    model version: 0.0.1\n    \n    id: https://w3id.org/kgviz/\n    description: A data model for describing configurations / stylesheets for visualzing graphs, and in particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels, node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.\nAn example of a use of this is https://github.com/cmungall/obographviz\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "_comments": "Auto generated from kgviz.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-08-16T16:41:51\n    Schema: kgviz\n    metamodel version: 1.7.0\n    model version: 0.0.1\n    \n    id: https://w3id.org/kgviz/\n    description: A data model for describing configurations / stylesheets for visualzing graphs, and\nin particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels,\nnode categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.\n\nAn example of a use of this is https://github.com/INCATools/obographviz\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
    "@context": {
-      "ex": "https://w3id.org/kgviz/",
-      "gv": {
-         "@id": "https://w3id.org/kgviz/graphviz",
-         "@prefix": true
-      },
+      "gv": "https://w3id.org/kgviz/graphviz/",
+      "kgviz": "https://w3id.org/kgviz/",
       "linkml": "https://w3id.org/linkml/",
       "sdo": "https://schema.org/",
       "skos": "http://www.w3.org/2004/02/skos/core#",
@@ -28,8 +25,8 @@
          },
          "@id": "gv:arrowtail"
       },
-      "cluster_property": {
-         "@id": "gv:cluster_property"
+      "clusterProperty": {
+         "@id": "gv:clusterProperty"
       },
       "color": {
          "@id": "https://graphviz.org/doc/info/attrs.html#d:color"
@@ -40,8 +37,8 @@
       "conditions": {
          "@type": "@id"
       },
-      "edge_property": {
-         "@id": "gv:edge_property"
+      "edgeProperty": {
+         "@id": "gv:edgeProperty"
       },
       "excludeSingletons": {
          "@type": "xsd:boolean"
@@ -52,11 +49,11 @@
       "fontcolor": {
          "@id": "gv:fontcolor"
       },
-      "graph_property": {
-         "@id": "gv:graph_property"
+      "graphProperty": {
+         "@id": "gv:graphProperty"
       },
-      "graphviz_slot": {
-         "@id": "gv:graphviz_slot"
+      "graphvizSlot": {
+         "@id": "gv:graphvizSlot"
       },
       "id": "@id",
       "label": {
@@ -65,11 +62,11 @@
       "labelFrom": {
          "@id": "gv:labelFrom"
       },
-      "node_property": {
-         "@id": "gv:node_property"
-      },
       "nodeFilter": {
          "@type": "@id"
+      },
+      "nodeProperty": {
+         "@id": "gv:nodeProperty"
       },
       "penwidth": {
          "@type": "xsd:integer",
@@ -110,8 +107,8 @@
          },
          "@id": "gv:styles"
       },
-      "subgraph_property": {
-         "@id": "gv:subgraph_property"
+      "subgraphProperty": {
+         "@id": "gv:subgraphProperty"
       },
       "ClusterSubgraphAspect": {
          "@id": "gv:ClusterSubgraphAspect"

@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:label](https://w3id.org/kgviz/label)
+URI: [kgviz:label](https://w3id.org/kgviz/label)
 
 
 ## Domain and Range

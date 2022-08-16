@@ -4,7 +4,7 @@
 
 Remove nodes that have no incoming or outgoing edges
 
-URI: [ex:excludeSingletons](https://w3id.org/kgviz/excludeSingletons)
+URI: [kgviz:excludeSingletons](https://w3id.org/kgviz/excludeSingletons)
 
 
 ## Domain and Range

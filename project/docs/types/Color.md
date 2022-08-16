@@ -4,7 +4,7 @@
 
 e.g. red, green
 
-URI: [gv:Color](https://w3id.org/kgviz/graphvizColor)
+URI: [gv:Color](https://w3id.org/kgviz/graphviz/Color)
 
 |  |  |  |
 | --- | --- | --- |

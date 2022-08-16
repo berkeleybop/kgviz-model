@@ -1,10 +1,10 @@
 
-# Class: graphviz aspect
+# Class: GraphvizAspect
 
 
 
 
-URI: [ex:GraphvizAspect](https://w3id.org/kgviz/GraphvizAspect)
+URI: [kgviz:GraphvizAspect](https://w3id.org/kgviz/GraphvizAspect)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[SubgraphAspect],[RootGraphAspect],[NodeAspect],[GraphvizAspect]^-[SubgraphAspect],[GraphvizAspect]^-[RootGraphAspect],[GraphvizAspect]^-[NodeAspect],[GraphvizAspect]^-[EdgeAspect],[GraphvizAspect]^-[ClusterSubgraphAspect],[EdgeAspect],[ClusterSubgraphAspect])](https://yuml.me/diagram/nofunky;dir:TB/class/[SubgraphAspect],[RootGraphAspect],[NodeAspect],[GraphvizAspect]^-[SubgraphAspect],[GraphvizAspect]^-[RootGraphAspect],[GraphvizAspect]^-[NodeAspect],[GraphvizAspect]^-[EdgeAspect],[GraphvizAspect]^-[ClusterSubgraphAspect],[EdgeAspect],[ClusterSubgraphAspect])

@@ -1,12 +1,12 @@
 # Auto generated from kgviz.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-08-16T16:13:29
+# Generation date: 2022-08-16T16:41:57
 # Schema: kgviz
 #
 # id: https://w3id.org/kgviz/
 # description: A data model for describing configurations / stylesheets for visualzing graphs, and in particular
 #              Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels,
 #              node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or
-#              edges. An example of a use of this is https://github.com/cmungall/obographviz
+#              edges. An example of a use of this is https://github.com/INCATools/obographviz
 # license: https://creativecommons.org/publicdomain/zero/1.0/
 
 import dataclasses
@@ -35,12 +35,12 @@ version = "0.0.1"
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
-EX = CurieNamespace('ex', 'https://w3id.org/kgviz/')
-GV = CurieNamespace('gv', 'https://w3id.org/kgviz/graphviz')
+GV = CurieNamespace('gv', 'https://w3id.org/kgviz/graphviz/')
+KGVIZ = CurieNamespace('kgviz', 'https://w3id.org/kgviz/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 SDO = CurieNamespace('sdo', 'https://schema.org/')
 XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
-DEFAULT_ = EX
+DEFAULT_ = KGVIZ
 
 
 # Types
@@ -49,7 +49,7 @@ class Node(str):
     type_class_uri = XSD.string
     type_class_curie = "xsd:string"
     type_name = "Node"
-    type_model_uri = EX.Node
+    type_model_uri = KGVIZ.Node
 
 
 class Color(str):
@@ -57,7 +57,7 @@ class Color(str):
     type_class_uri = XSD.string
     type_class_curie = "xsd:string"
     type_name = "Color"
-    type_model_uri = EX.Color
+    type_model_uri = KGVIZ.Color
 
 
 # Class references
@@ -77,10 +77,10 @@ class StyleSheet(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = EX.StyleSheet
-    class_class_curie: ClassVar[str] = "ex:StyleSheet"
+    class_class_uri: ClassVar[URIRef] = KGVIZ.StyleSheet
+    class_class_curie: ClassVar[str] = "kgviz:StyleSheet"
     class_name: ClassVar[str] = "StyleSheet"
-    class_model_uri: ClassVar[URIRef] = EX.StyleSheet
+    class_model_uri: ClassVar[URIRef] = KGVIZ.StyleSheet
 
     style: Optional[Union[str, "StyleType"]] = None
     styles: Optional[Union[Union[str, "StyleType"], List[Union[str, "StyleType"]]]] = empty_list()
@@ -89,6 +89,7 @@ class StyleSheet(YAMLRoot):
     highlightIds: Optional[Union[str, List[str]]] = empty_list()
     displayAnnotations: Optional[Union[str, List[str]]] = empty_list()
     cliqueRelations: Optional[Union[str, List[str]]] = empty_list()
+    containmentRelations: Optional[Union[str, List[str]]] = empty_list()
     reasoning: Optional[Union[Union[str, "ReasoningType"], List[Union[str, "ReasoningType"]]]] = empty_list()
     excludeSingletons: Optional[Union[bool, Bool]] = None
     relationProperties: Optional[Union[Dict[Union[str, RelationConfigurationId], Union[dict, "RelationConfiguration"]], List[Union[dict, "RelationConfiguration"]]]] = empty_dict()
@@ -122,6 +123,10 @@ class StyleSheet(YAMLRoot):
             self.cliqueRelations = [self.cliqueRelations] if self.cliqueRelations is not None else []
         self.cliqueRelations = [v if isinstance(v, str) else str(v) for v in self.cliqueRelations]
 
+        if not isinstance(self.containmentRelations, list):
+            self.containmentRelations = [self.containmentRelations] if self.containmentRelations is not None else []
+        self.containmentRelations = [v if isinstance(v, str) else str(v) for v in self.containmentRelations]
+
         if not isinstance(self.reasoning, list):
             self.reasoning = [self.reasoning] if self.reasoning is not None else []
         self.reasoning = [v if isinstance(v, ReasoningType) else ReasoningType(v) for v in self.reasoning]
@@ -149,10 +154,10 @@ class ElementConfiguration(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = EX.ElementConfiguration
-    class_class_curie: ClassVar[str] = "ex:ElementConfiguration"
+    class_class_uri: ClassVar[URIRef] = KGVIZ.ElementConfiguration
+    class_class_curie: ClassVar[str] = "kgviz:ElementConfiguration"
     class_name: ClassVar[str] = "ElementConfiguration"
-    class_model_uri: ClassVar[URIRef] = EX.ElementConfiguration
+    class_model_uri: ClassVar[URIRef] = KGVIZ.ElementConfiguration
 
 
 @dataclass
@@ -179,13 +184,15 @@ class RelationConfiguration(ElementConfiguration):
     }
     }
     ```
+
+    This will render
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = EX.RelationConfiguration
-    class_class_curie: ClassVar[str] = "ex:RelationConfiguration"
+    class_class_uri: ClassVar[URIRef] = KGVIZ.RelationConfiguration
+    class_class_curie: ClassVar[str] = "kgviz:RelationConfiguration"
     class_name: ClassVar[str] = "RelationConfiguration"
-    class_model_uri: ClassVar[URIRef] = EX.RelationConfiguration
+    class_model_uri: ClassVar[URIRef] = KGVIZ.RelationConfiguration
 
     id: Union[str, RelationConfigurationId] = None
     color: Optional[str] = None
@@ -225,10 +232,10 @@ class PrefixConfiguration(ElementConfiguration):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = EX.PrefixConfiguration
-    class_class_curie: ClassVar[str] = "ex:PrefixConfiguration"
+    class_class_uri: ClassVar[URIRef] = KGVIZ.PrefixConfiguration
+    class_class_curie: ClassVar[str] = "kgviz:PrefixConfiguration"
     class_name: ClassVar[str] = "PrefixConfiguration"
-    class_model_uri: ClassVar[URIRef] = EX.PrefixConfiguration
+    class_model_uri: ClassVar[URIRef] = KGVIZ.PrefixConfiguration
 
     id: Union[str, PrefixConfigurationId] = None
     fillcolor: Optional[str] = None
@@ -260,10 +267,10 @@ class AnyConfiguration(ElementConfiguration):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = EX.AnyConfiguration
-    class_class_curie: ClassVar[str] = "ex:AnyConfiguration"
+    class_class_uri: ClassVar[URIRef] = KGVIZ.AnyConfiguration
+    class_class_curie: ClassVar[str] = "kgviz:AnyConfiguration"
     class_name: ClassVar[str] = "AnyConfiguration"
-    class_model_uri: ClassVar[URIRef] = EX.AnyConfiguration
+    class_model_uri: ClassVar[URIRef] = KGVIZ.AnyConfiguration
 
     color: Optional[str] = None
     fontcolor: Optional[str] = None
@@ -293,10 +300,10 @@ class ConditionalProperty(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = EX.ConditionalProperty
-    class_class_curie: ClassVar[str] = "ex:ConditionalProperty"
+    class_class_uri: ClassVar[URIRef] = KGVIZ.ConditionalProperty
+    class_class_curie: ClassVar[str] = "kgviz:ConditionalProperty"
     class_name: ClassVar[str] = "ConditionalProperty"
-    class_model_uri: ClassVar[URIRef] = EX.ConditionalProperty
+    class_model_uri: ClassVar[URIRef] = KGVIZ.ConditionalProperty
 
     fillcolor: Optional[str] = None
     conditions: Optional[Union[dict, "Condition"]] = None
@@ -322,10 +329,10 @@ class Condition(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = EX.Condition
-    class_class_curie: ClassVar[str] = "ex:Condition"
+    class_class_uri: ClassVar[URIRef] = KGVIZ.Condition
+    class_class_curie: ClassVar[str] = "kgviz:Condition"
     class_name: ClassVar[str] = "Condition"
-    class_model_uri: ClassVar[URIRef] = EX.Condition
+    class_model_uri: ClassVar[URIRef] = KGVIZ.Condition
 
     type: Optional[str] = None
     subset: Optional[str] = None
@@ -347,10 +354,10 @@ class GeneralProperty(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = EX.GeneralProperty
-    class_class_curie: ClassVar[str] = "ex:GeneralProperty"
+    class_class_uri: ClassVar[URIRef] = KGVIZ.GeneralProperty
+    class_class_curie: ClassVar[str] = "kgviz:GeneralProperty"
     class_name: ClassVar[str] = "GeneralProperty"
-    class_model_uri: ClassVar[URIRef] = EX.GeneralProperty
+    class_model_uri: ClassVar[URIRef] = KGVIZ.GeneralProperty
 
     penwidth: Optional[int] = None
     label: Optional[str] = None
@@ -376,10 +383,10 @@ class EdgeProperty(GeneralProperty):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = EX.EdgeProperty
-    class_class_curie: ClassVar[str] = "ex:EdgeProperty"
+    class_class_uri: ClassVar[URIRef] = KGVIZ.EdgeProperty
+    class_class_curie: ClassVar[str] = "kgviz:EdgeProperty"
     class_name: ClassVar[str] = "EdgeProperty"
-    class_model_uri: ClassVar[URIRef] = EX.EdgeProperty
+    class_model_uri: ClassVar[URIRef] = KGVIZ.EdgeProperty
 
     arrowhead: Optional[Union[str, "ArrowType"]] = None
     arrowtail: Optional[Union[str, "ArrowType"]] = None
@@ -398,10 +405,10 @@ class EdgeProperty(GeneralProperty):
 class NodeProperty(GeneralProperty):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = EX.NodeProperty
-    class_class_curie: ClassVar[str] = "ex:NodeProperty"
+    class_class_uri: ClassVar[URIRef] = KGVIZ.NodeProperty
+    class_class_curie: ClassVar[str] = "kgviz:NodeProperty"
     class_name: ClassVar[str] = "NodeProperty"
-    class_model_uri: ClassVar[URIRef] = EX.NodeProperty
+    class_model_uri: ClassVar[URIRef] = KGVIZ.NodeProperty
 
     color: Optional[str] = None
     fontcolor: Optional[str] = None
@@ -421,8 +428,8 @@ class GraphvizAspect(YAMLRoot):
 
     class_class_uri: ClassVar[URIRef] = GV.GraphvizAspect
     class_class_curie: ClassVar[str] = "gv:GraphvizAspect"
-    class_name: ClassVar[str] = "graphviz aspect"
-    class_model_uri: ClassVar[URIRef] = EX.GraphvizAspect
+    class_name: ClassVar[str] = "GraphvizAspect"
+    class_model_uri: ClassVar[URIRef] = KGVIZ.GraphvizAspect
 
 
 class EdgeAspect(GraphvizAspect):
@@ -430,8 +437,8 @@ class EdgeAspect(GraphvizAspect):
 
     class_class_uri: ClassVar[URIRef] = GV.EdgeAspect
     class_class_curie: ClassVar[str] = "gv:EdgeAspect"
-    class_name: ClassVar[str] = "edge aspect"
-    class_model_uri: ClassVar[URIRef] = EX.EdgeAspect
+    class_name: ClassVar[str] = "EdgeAspect"
+    class_model_uri: ClassVar[URIRef] = KGVIZ.EdgeAspect
 
 
 class NodeAspect(GraphvizAspect):
@@ -439,8 +446,8 @@ class NodeAspect(GraphvizAspect):
 
     class_class_uri: ClassVar[URIRef] = GV.NodeAspect
     class_class_curie: ClassVar[str] = "gv:NodeAspect"
-    class_name: ClassVar[str] = "node aspect"
-    class_model_uri: ClassVar[URIRef] = EX.NodeAspect
+    class_name: ClassVar[str] = "NodeAspect"
+    class_model_uri: ClassVar[URIRef] = KGVIZ.NodeAspect
 
 
 class RootGraphAspect(GraphvizAspect):
@@ -448,8 +455,8 @@ class RootGraphAspect(GraphvizAspect):
 
     class_class_uri: ClassVar[URIRef] = GV.RootGraphAspect
     class_class_curie: ClassVar[str] = "gv:RootGraphAspect"
-    class_name: ClassVar[str] = "root graph aspect"
-    class_model_uri: ClassVar[URIRef] = EX.RootGraphAspect
+    class_name: ClassVar[str] = "RootGraphAspect"
+    class_model_uri: ClassVar[URIRef] = KGVIZ.RootGraphAspect
 
 
 class SubgraphAspect(GraphvizAspect):
@@ -457,8 +464,8 @@ class SubgraphAspect(GraphvizAspect):
 
     class_class_uri: ClassVar[URIRef] = GV.SubgraphAspect
     class_class_curie: ClassVar[str] = "gv:SubgraphAspect"
-    class_name: ClassVar[str] = "subgraph aspect"
-    class_model_uri: ClassVar[URIRef] = EX.SubgraphAspect
+    class_name: ClassVar[str] = "SubgraphAspect"
+    class_model_uri: ClassVar[URIRef] = KGVIZ.SubgraphAspect
 
 
 class ClusterSubgraphAspect(GraphvizAspect):
@@ -466,8 +473,8 @@ class ClusterSubgraphAspect(GraphvizAspect):
 
     class_class_uri: ClassVar[URIRef] = GV.ClusterSubgraphAspect
     class_class_curie: ClassVar[str] = "gv:ClusterSubgraphAspect"
-    class_name: ClassVar[str] = "cluster subgraph aspect"
-    class_model_uri: ClassVar[URIRef] = EX.ClusterSubgraphAspect
+    class_name: ClassVar[str] = "ClusterSubgraphAspect"
+    class_model_uri: ClassVar[URIRef] = KGVIZ.ClusterSubgraphAspect
 
 
 # Enumerations
@@ -528,92 +535,95 @@ class ArrowType(EnumDefinitionImpl):
 class slots:
     pass
 
-slots.id = Slot(uri=EX.id, name="id", curie=EX.curie('id'),
-                   model_uri=EX.id, domain=None, range=URIRef)
+slots.id = Slot(uri=KGVIZ.id, name="id", curie=KGVIZ.curie('id'),
+                   model_uri=KGVIZ.id, domain=None, range=URIRef)
 
-slots.highlightIds = Slot(uri=EX.highlightIds, name="highlightIds", curie=EX.curie('highlightIds'),
-                   model_uri=EX.highlightIds, domain=None, range=Optional[Union[str, List[str]]])
+slots.highlightIds = Slot(uri=KGVIZ.highlightIds, name="highlightIds", curie=KGVIZ.curie('highlightIds'),
+                   model_uri=KGVIZ.highlightIds, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.relationProperties = Slot(uri=EX.relationProperties, name="relationProperties", curie=EX.curie('relationProperties'),
-                   model_uri=EX.relationProperties, domain=None, range=Optional[Union[Dict[Union[str, RelationConfigurationId], Union[dict, RelationConfiguration]], List[Union[dict, RelationConfiguration]]]])
+slots.relationProperties = Slot(uri=KGVIZ.relationProperties, name="relationProperties", curie=KGVIZ.curie('relationProperties'),
+                   model_uri=KGVIZ.relationProperties, domain=None, range=Optional[Union[Dict[Union[str, RelationConfigurationId], Union[dict, RelationConfiguration]], List[Union[dict, RelationConfiguration]]]])
 
-slots.prefixProperties = Slot(uri=EX.prefixProperties, name="prefixProperties", curie=EX.curie('prefixProperties'),
-                   model_uri=EX.prefixProperties, domain=None, range=Optional[Union[Dict[Union[str, PrefixConfigurationId], Union[dict, PrefixConfiguration]], List[Union[dict, PrefixConfiguration]]]])
+slots.prefixProperties = Slot(uri=KGVIZ.prefixProperties, name="prefixProperties", curie=KGVIZ.curie('prefixProperties'),
+                   model_uri=KGVIZ.prefixProperties, domain=None, range=Optional[Union[Dict[Union[str, PrefixConfigurationId], Union[dict, PrefixConfiguration]], List[Union[dict, PrefixConfiguration]]]])
 
-slots.conditionalProperties = Slot(uri=EX.conditionalProperties, name="conditionalProperties", curie=EX.curie('conditionalProperties'),
-                   model_uri=EX.conditionalProperties, domain=None, range=Optional[Union[Union[dict, ConditionalProperty], List[Union[dict, ConditionalProperty]]]])
+slots.conditionalProperties = Slot(uri=KGVIZ.conditionalProperties, name="conditionalProperties", curie=KGVIZ.curie('conditionalProperties'),
+                   model_uri=KGVIZ.conditionalProperties, domain=None, range=Optional[Union[Union[dict, ConditionalProperty], List[Union[dict, ConditionalProperty]]]])
 
-slots.nodeFilter = Slot(uri=EX.nodeFilter, name="nodeFilter", curie=EX.curie('nodeFilter'),
-                   model_uri=EX.nodeFilter, domain=None, range=Optional[Union[dict, Condition]])
+slots.nodeFilter = Slot(uri=KGVIZ.nodeFilter, name="nodeFilter", curie=KGVIZ.curie('nodeFilter'),
+                   model_uri=KGVIZ.nodeFilter, domain=None, range=Optional[Union[dict, Condition]])
 
-slots.reasoning = Slot(uri=EX.reasoning, name="reasoning", curie=EX.curie('reasoning'),
-                   model_uri=EX.reasoning, domain=None, range=Optional[Union[Union[str, "ReasoningType"], List[Union[str, "ReasoningType"]]]])
+slots.reasoning = Slot(uri=KGVIZ.reasoning, name="reasoning", curie=KGVIZ.curie('reasoning'),
+                   model_uri=KGVIZ.reasoning, domain=None, range=Optional[Union[Union[str, "ReasoningType"], List[Union[str, "ReasoningType"]]]])
 
-slots.excludeSingletons = Slot(uri=EX.excludeSingletons, name="excludeSingletons", curie=EX.curie('excludeSingletons'),
-                   model_uri=EX.excludeSingletons, domain=None, range=Optional[Union[bool, Bool]])
+slots.excludeSingletons = Slot(uri=KGVIZ.excludeSingletons, name="excludeSingletons", curie=KGVIZ.curie('excludeSingletons'),
+                   model_uri=KGVIZ.excludeSingletons, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.displayAnnotations = Slot(uri=EX.displayAnnotations, name="displayAnnotations", curie=EX.curie('displayAnnotations'),
-                   model_uri=EX.displayAnnotations, domain=None, range=Optional[Union[str, List[str]]])
+slots.displayAnnotations = Slot(uri=KGVIZ.displayAnnotations, name="displayAnnotations", curie=KGVIZ.curie('displayAnnotations'),
+                   model_uri=KGVIZ.displayAnnotations, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.cliqueRelations = Slot(uri=EX.cliqueRelations, name="cliqueRelations", curie=EX.curie('cliqueRelations'),
-                   model_uri=EX.cliqueRelations, domain=None, range=Optional[Union[str, List[str]]])
+slots.cliqueRelations = Slot(uri=KGVIZ.cliqueRelations, name="cliqueRelations", curie=KGVIZ.curie('cliqueRelations'),
+                   model_uri=KGVIZ.cliqueRelations, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.conditions = Slot(uri=EX.conditions, name="conditions", curie=EX.curie('conditions'),
-                   model_uri=EX.conditions, domain=None, range=Optional[Union[dict, Condition]])
+slots.containmentRelations = Slot(uri=KGVIZ.containmentRelations, name="containmentRelations", curie=KGVIZ.curie('containmentRelations'),
+                   model_uri=KGVIZ.containmentRelations, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.properties = Slot(uri=EX.properties, name="properties", curie=EX.curie('properties'),
-                   model_uri=EX.properties, domain=None, range=Optional[Union[dict, AnyConfiguration]])
+slots.conditions = Slot(uri=KGVIZ.conditions, name="conditions", curie=KGVIZ.curie('conditions'),
+                   model_uri=KGVIZ.conditions, domain=None, range=Optional[Union[dict, Condition]])
 
-slots.type = Slot(uri=EX.type, name="type", curie=EX.curie('type'),
-                   model_uri=EX.type, domain=None, range=Optional[str])
+slots.properties = Slot(uri=KGVIZ.properties, name="properties", curie=KGVIZ.curie('properties'),
+                   model_uri=KGVIZ.properties, domain=None, range=Optional[Union[dict, AnyConfiguration]])
 
-slots.subset = Slot(uri=EX.subset, name="subset", curie=EX.curie('subset'),
-                   model_uri=EX.subset, domain=None, range=Optional[str])
+slots.type = Slot(uri=KGVIZ.type, name="type", curie=KGVIZ.curie('type'),
+                   model_uri=KGVIZ.type, domain=None, range=Optional[str])
 
-slots.graphviz_slot = Slot(uri=GV.graphviz_slot, name="graphviz slot", curie=GV.curie('graphviz_slot'),
-                   model_uri=EX.graphviz_slot, domain=None, range=Optional[str])
+slots.subset = Slot(uri=KGVIZ.subset, name="subset", curie=KGVIZ.curie('subset'),
+                   model_uri=KGVIZ.subset, domain=None, range=Optional[str])
 
-slots.edge_property = Slot(uri=GV.edge_property, name="edge property", curie=GV.curie('edge_property'),
-                   model_uri=EX.edge_property, domain=None, range=Optional[str])
+slots.graphvizSlot = Slot(uri=GV.graphvizSlot, name="graphvizSlot", curie=GV.curie('graphvizSlot'),
+                   model_uri=KGVIZ.graphvizSlot, domain=None, range=Optional[str])
 
-slots.node_property = Slot(uri=GV.node_property, name="node property", curie=GV.curie('node_property'),
-                   model_uri=EX.node_property, domain=None, range=Optional[str])
+slots.edgeProperty = Slot(uri=GV.edgeProperty, name="edgeProperty", curie=GV.curie('edgeProperty'),
+                   model_uri=KGVIZ.edgeProperty, domain=None, range=Optional[str])
 
-slots.graph_property = Slot(uri=GV.graph_property, name="graph property", curie=GV.curie('graph_property'),
-                   model_uri=EX.graph_property, domain=None, range=Optional[str])
+slots.nodeProperty = Slot(uri=GV.nodeProperty, name="nodeProperty", curie=GV.curie('nodeProperty'),
+                   model_uri=KGVIZ.nodeProperty, domain=None, range=Optional[str])
 
-slots.subgraph_property = Slot(uri=GV.subgraph_property, name="subgraph property", curie=GV.curie('subgraph_property'),
-                   model_uri=EX.subgraph_property, domain=None, range=Optional[str])
+slots.graphProperty = Slot(uri=GV.graphProperty, name="graphProperty", curie=GV.curie('graphProperty'),
+                   model_uri=KGVIZ.graphProperty, domain=None, range=Optional[str])
 
-slots.cluster_property = Slot(uri=GV.cluster_property, name="cluster property", curie=GV.curie('cluster_property'),
-                   model_uri=EX.cluster_property, domain=None, range=Optional[str])
+slots.subgraphProperty = Slot(uri=GV.subgraphProperty, name="subgraphProperty", curie=GV.curie('subgraphProperty'),
+                   model_uri=KGVIZ.subgraphProperty, domain=None, range=Optional[str])
+
+slots.clusterProperty = Slot(uri=GV.clusterProperty, name="clusterProperty", curie=GV.curie('clusterProperty'),
+                   model_uri=KGVIZ.clusterProperty, domain=None, range=Optional[str])
 
 slots.color = Slot(uri="str(uriorcurie)", name="color", curie=None,
-                   model_uri=EX.color, domain=None, range=Optional[str])
+                   model_uri=KGVIZ.color, domain=None, range=Optional[str])
 
 slots.fontcolor = Slot(uri=GV.fontcolor, name="fontcolor", curie=GV.curie('fontcolor'),
-                   model_uri=EX.fontcolor, domain=None, range=Optional[str])
+                   model_uri=KGVIZ.fontcolor, domain=None, range=Optional[str])
 
 slots.penwidth = Slot(uri="str(uriorcurie)", name="penwidth", curie=None,
-                   model_uri=EX.penwidth, domain=None, range=Optional[int])
+                   model_uri=KGVIZ.penwidth, domain=None, range=Optional[int])
 
 slots.label = Slot(uri=GV.label, name="label", curie=GV.curie('label'),
-                   model_uri=EX.label, domain=None, range=Optional[str])
+                   model_uri=KGVIZ.label, domain=None, range=Optional[str])
 
 slots.arrowhead = Slot(uri=GV.arrowhead, name="arrowhead", curie=GV.curie('arrowhead'),
-                   model_uri=EX.arrowhead, domain=None, range=Optional[Union[str, "ArrowType"]])
+                   model_uri=KGVIZ.arrowhead, domain=None, range=Optional[Union[str, "ArrowType"]])
 
 slots.arrowtail = Slot(uri=GV.arrowtail, name="arrowtail", curie=GV.curie('arrowtail'),
-                   model_uri=EX.arrowtail, domain=None, range=Optional[Union[str, "ArrowType"]])
+                   model_uri=KGVIZ.arrowtail, domain=None, range=Optional[Union[str, "ArrowType"]])
 
 slots.styles = Slot(uri=GV.styles, name="styles", curie=GV.curie('styles'),
-                   model_uri=EX.styles, domain=None, range=Optional[Union[Union[str, "StyleType"], List[Union[str, "StyleType"]]]])
+                   model_uri=KGVIZ.styles, domain=None, range=Optional[Union[Union[str, "StyleType"], List[Union[str, "StyleType"]]]])
 
 slots.style = Slot(uri=GV.style, name="style", curie=GV.curie('style'),
-                   model_uri=EX.style, domain=None, range=Optional[Union[str, "StyleType"]])
+                   model_uri=KGVIZ.style, domain=None, range=Optional[Union[str, "StyleType"]])
 
 slots.fillcolor = Slot(uri=GV.fillcolor, name="fillcolor", curie=GV.curie('fillcolor'),
-                   model_uri=EX.fillcolor, domain=None, range=Optional[str])
+                   model_uri=KGVIZ.fillcolor, domain=None, range=Optional[str])
 
 slots.labelFrom = Slot(uri=GV.labelFrom, name="labelFrom", curie=GV.curie('labelFrom'),
-                   model_uri=EX.labelFrom, domain=None, range=Optional[str])
+                   model_uri=KGVIZ.labelFrom, domain=None, range=Optional[str])

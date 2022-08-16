@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:arrowtail](https://w3id.org/kgviz/arrowtail)
+URI: [kgviz:arrowtail](https://w3id.org/kgviz/arrowtail)
 
 
 ## Domain and Range

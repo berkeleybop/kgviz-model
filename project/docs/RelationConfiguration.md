@@ -24,7 +24,9 @@ specifies a collection of RelationConfigurations keyed by property.
 }
 ```
 
-URI: [ex:RelationConfiguration](https://w3id.org/kgviz/RelationConfiguration)
+This will render
+
+URI: [kgviz:RelationConfiguration](https://w3id.org/kgviz/RelationConfiguration)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[StyleSheet]++-%20relationProperties%200..*>[RelationConfiguration&#124;id:Node;color:Color%20%3F;penwidth:integer%20%3F;label:string%20%3F;fontcolor:Color%20%3F;arrowhead:ArrowType%20%3F;arrowtail:ArrowType%20%3F],[RelationConfiguration]uses%20-.->[EdgeProperty],[ElementConfiguration]^-[RelationConfiguration],[StyleSheet],[ElementConfiguration],[EdgeProperty])](https://yuml.me/diagram/nofunky;dir:TB/class/[StyleSheet]++-%20relationProperties%200..*>[RelationConfiguration&#124;id:Node;color:Color%20%3F;penwidth:integer%20%3F;label:string%20%3F;fontcolor:Color%20%3F;arrowhead:ArrowType%20%3F;arrowtail:ArrowType%20%3F],[RelationConfiguration]uses%20-.->[EdgeProperty],[ElementConfiguration]^-[RelationConfiguration],[StyleSheet],[ElementConfiguration],[EdgeProperty])

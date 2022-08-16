@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:arrowhead](https://w3id.org/kgviz/arrowhead)
+URI: [kgviz:arrowhead](https://w3id.org/kgviz/arrowhead)
 
 
 ## Domain and Range

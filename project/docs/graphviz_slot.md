@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:graphviz_slot](https://w3id.org/kgviz/graphviz_slot)
+URI: [kgviz:graphviz_slot](https://w3id.org/kgviz/graphviz_slot)
 
 
 ## Domain and Range
@@ -16,11 +16,11 @@ None &#8594;  <sub>0..1</sub> [String](types/String.md)
 
 ## Children
 
- *  [cluster property](cluster_property.md)
- *  [edge property](edge_property.md)
- *  [graph property](graph_property.md)
- *  [node property](node_property.md)
- *  [subgraph property](subgraph_property.md)
+ *  [clusterProperty](clusterProperty.md)
+ *  [edgeProperty](edgeProperty.md)
+ *  [graphProperty](graphProperty.md)
+ *  [nodeProperty](nodeProperty.md)
+ *  [subgraphProperty](subgraphProperty.md)
 
 ## Used by
 

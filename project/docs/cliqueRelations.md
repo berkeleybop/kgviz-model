@@ -2,9 +2,9 @@
 # Slot: cliqueRelations
 
 
-Set of properties that indicate identity relations and can be used in a clique
+Set of properties that indicate identity relations whose symmetric reflexive transitive closure form a clique
 
-URI: [ex:cliqueRelations](https://w3id.org/kgviz/cliqueRelations)
+URI: [kgviz:cliqueRelations](https://w3id.org/kgviz/cliqueRelations)
 
 
 ## Domain and Range

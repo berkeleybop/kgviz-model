@@ -4,7 +4,7 @@
 
 Collection of styles keyed by predicate ID
 
-URI: [ex:relationProperties](https://w3id.org/kgviz/relationProperties)
+URI: [kgviz:relationProperties](https://w3id.org/kgviz/relationProperties)
 
 
 ## Domain and Range

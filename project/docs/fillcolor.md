@@ -4,7 +4,7 @@
 
 
 
-URI: [ex:fillcolor](https://w3id.org/kgviz/fillcolor)
+URI: [kgviz:fillcolor](https://w3id.org/kgviz/fillcolor)
 
 
 ## Domain and Range

@@ -4,7 +4,7 @@
 
 the logical type, eg INDIVIDUAL, CLASS, etc
 
-URI: [ex:type](https://w3id.org/kgviz/type)
+URI: [kgviz:type](https://w3id.org/kgviz/type)
 
 
 ## Domain and Range

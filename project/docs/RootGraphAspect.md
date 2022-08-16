@@ -1,10 +1,10 @@
 
-# Class: root graph aspect
+# Class: RootGraphAspect
 
 
 
 
-URI: [ex:RootGraphAspect](https://w3id.org/kgviz/RootGraphAspect)
+URI: [kgviz:RootGraphAspect](https://w3id.org/kgviz/RootGraphAspect)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[GraphvizAspect]^-[RootGraphAspect],[GraphvizAspect])](https://yuml.me/diagram/nofunky;dir:TB/class/[GraphvizAspect]^-[RootGraphAspect],[GraphvizAspect])

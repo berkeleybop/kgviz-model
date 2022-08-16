@@ -4,7 +4,7 @@
 
 Display annotations for these selected properties
 
-URI: [ex:displayAnnotations](https://w3id.org/kgviz/displayAnnotations)
+URI: [kgviz:displayAnnotations](https://w3id.org/kgviz/displayAnnotations)
 
 
 ## Domain and Range
