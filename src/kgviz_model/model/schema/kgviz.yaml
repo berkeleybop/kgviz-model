@@ -50,6 +50,7 @@ classes:
       - prefixProperties
       - conditionalProperties
       - nodeFilter
+      - includeIdInLabel
       
   ElementConfiguration:
     abstract: true
@@ -62,7 +63,7 @@ classes:
       style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).
 
       Example of usage, where [relationProperties](relationProperties.md)
-      specifies a collection of RelationConfigurations keyed by property.
+      specifies a collection of RelationConfigurations keyed by property
 
       ```json
       {
@@ -78,8 +79,8 @@ classes:
                   "color": "blue"
               }
           }
-      }
-      ```
+      }```
+
     mixins:
       - EdgeProperty
     slots:
@@ -114,7 +115,6 @@ classes:
     slots:
       - type
       - subset
-        
 
   GeneralProperty:
     description: abstract grouping for properties/configs
@@ -211,4 +211,6 @@ slots:
     range: string
     description: >-
       the subset to which the node belongs
+  includeIdInLabel:
+    range: boolean
     

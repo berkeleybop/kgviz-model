@@ -1,0 +1,1009 @@
+{
+   "type": "Schema",
+   "@context": [
+      "http://www.w3.org/ns/shex.jsonld",
+      {
+         "@base": "https://w3id.org/kgviz/"
+      }
+   ],
+   "shapes": [
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/kgviz/Node",
+         "datatype": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/String",
+         "datatype": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Integer",
+         "datatype": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Boolean",
+         "datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Float",
+         "datatype": "http://www.w3.org/2001/XMLSchema#float"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Double",
+         "datatype": "http://www.w3.org/2001/XMLSchema#double"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Decimal",
+         "datatype": "http://www.w3.org/2001/XMLSchema#decimal"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Time",
+         "datatype": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Date",
+         "datatype": "http://www.w3.org/2001/XMLSchema#date"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Datetime",
+         "datatype": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Uriorcurie",
+         "nodeKind": "iri"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Uri",
+         "nodeKind": "iri"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Ncname",
+         "datatype": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Objectidentifier",
+         "nodeKind": "iri"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/linkml/Nodeidentifier",
+         "nodeKind": "nonliteral"
+      },
+      {
+         "type": "NodeConstraint",
+         "id": "https://w3id.org/kgviz/graphvizColor",
+         "datatype": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/AnyConfiguration",
+         "closed": true,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/AnyConfiguration_tes",
+                  "expressions": [
+                     "https://w3id.org/kgviz/ElementConfiguration_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/ElementConfiguration"
+                           ]
+                        },
+                        "min": 0
+                     },
+                     "https://w3id.org/kgviz/NodeProperty_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/NodeProperty"
+                           ]
+                        },
+                        "min": 0
+                     },
+                     "https://w3id.org/kgviz/EdgeProperty_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/EdgeProperty"
+                           ]
+                        },
+                        "min": 0
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://graphviz.org/doc/info/attrs.html#d:penwidth",
+                        "valueExpr": "https://w3id.org/linkml/Integer",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizlabel",
+                        "valueExpr": "https://w3id.org/linkml/String",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://graphviz.org/doc/info/attrs.html#d:color",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizColor",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizfontcolor",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizColor",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizarrowhead",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizArrowType",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizarrowtail",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizArrowType",
+                        "min": 0,
+                        "max": 1
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/AnyConfiguration"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/graphvizClusterSubgraphAspect",
+         "closed": false,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/graphvizClusterSubgraphAspect_tes",
+                  "expressions": [
+                     "https://w3id.org/kgviz/graphvizGraphvizAspect_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/graphvizGraphvizAspect"
+                           ]
+                        },
+                        "min": 0
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/graphvizClusterSubgraphAspect"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/Condition",
+         "closed": true,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/Condition_tes",
+                  "expressions": [
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/type",
+                        "valueExpr": "https://w3id.org/linkml/String",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/subset",
+                        "valueExpr": "https://w3id.org/linkml/String",
+                        "min": 0,
+                        "max": 1
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/Condition"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/ConditionalProperty",
+         "closed": true,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/ConditionalProperty_tes",
+                  "expressions": [
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizfillcolor",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizColor",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/conditions",
+                        "valueExpr": "https://w3id.org/kgviz/Condition",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/properties",
+                        "valueExpr": "https://w3id.org/kgviz/AnyConfiguration",
+                        "min": 0,
+                        "max": 1
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/ConditionalProperty"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/graphvizEdgeAspect",
+         "closed": false,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/graphvizEdgeAspect_tes",
+                  "expressions": [
+                     "https://w3id.org/kgviz/graphvizGraphvizAspect_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/graphvizGraphvizAspect"
+                           ]
+                        },
+                        "min": 0
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/graphvizEdgeAspect"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/EdgeProperty",
+         "closed": false,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/EdgeProperty_tes",
+                  "expressions": [
+                     "https://w3id.org/kgviz/GeneralProperty_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/GeneralProperty"
+                           ]
+                        },
+                        "min": 0
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizarrowhead",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizArrowType",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizarrowtail",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizArrowType",
+                        "min": 0,
+                        "max": 1
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/EdgeProperty"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "ShapeOr",
+         "id": "https://w3id.org/kgviz/ElementConfiguration",
+         "shapeExprs": [
+            "https://w3id.org/kgviz/AnyConfiguration",
+            "https://w3id.org/kgviz/PrefixConfiguration",
+            "https://w3id.org/kgviz/RelationConfiguration"
+         ]
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/ElementConfiguration_struct",
+         "closed": false,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "TripleConstraint",
+                  "id": "https://w3id.org/kgviz/ElementConfiguration_tes",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "min": 0,
+                  "max": -1
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/ElementConfiguration"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "ShapeOr",
+         "id": "https://w3id.org/kgviz/GeneralProperty",
+         "shapeExprs": [
+            "https://w3id.org/kgviz/EdgeProperty",
+            "https://w3id.org/kgviz/NodeProperty"
+         ]
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/GeneralProperty_struct",
+         "closed": false,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/GeneralProperty_tes",
+                  "expressions": [
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://graphviz.org/doc/info/attrs.html#d:penwidth",
+                        "valueExpr": "https://w3id.org/linkml/Integer",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizlabel",
+                        "valueExpr": "https://w3id.org/linkml/String",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizfontcolor",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizColor",
+                        "min": 0,
+                        "max": 1
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/GeneralProperty"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "ShapeOr",
+         "id": "https://w3id.org/kgviz/graphvizGraphvizAspect",
+         "shapeExprs": [
+            "https://w3id.org/kgviz/graphvizClusterSubgraphAspect",
+            "https://w3id.org/kgviz/graphvizEdgeAspect",
+            "https://w3id.org/kgviz/graphvizNodeAspect",
+            "https://w3id.org/kgviz/graphvizRootGraphAspect",
+            "https://w3id.org/kgviz/graphvizSubgraphAspect"
+         ]
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/graphvizGraphvizAspect_struct",
+         "closed": false,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "TripleConstraint",
+                  "id": "https://w3id.org/kgviz/graphvizGraphvizAspect_tes",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "min": 0,
+                  "max": -1
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/graphvizGraphvizAspect"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/graphvizNodeAspect",
+         "closed": false,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/graphvizNodeAspect_tes",
+                  "expressions": [
+                     "https://w3id.org/kgviz/graphvizGraphvizAspect_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/graphvizGraphvizAspect"
+                           ]
+                        },
+                        "min": 0
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/graphvizNodeAspect"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/NodeProperty",
+         "closed": false,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/NodeProperty_tes",
+                  "expressions": [
+                     "https://w3id.org/kgviz/GeneralProperty_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/GeneralProperty"
+                           ]
+                        },
+                        "min": 0
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://graphviz.org/doc/info/attrs.html#d:color",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizColor",
+                        "min": 0,
+                        "max": 1
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/NodeProperty"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/PrefixConfiguration",
+         "closed": true,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/PrefixConfiguration_tes",
+                  "expressions": [
+                     "https://w3id.org/kgviz/ElementConfiguration_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/ElementConfiguration"
+                           ]
+                        },
+                        "min": 0
+                     },
+                     "https://w3id.org/kgviz/NodeProperty_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/NodeProperty"
+                           ]
+                        },
+                        "min": 0
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizfillcolor",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizColor",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://graphviz.org/doc/info/attrs.html#d:penwidth",
+                        "valueExpr": "https://w3id.org/linkml/Integer",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizlabel",
+                        "valueExpr": "https://w3id.org/linkml/String",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://graphviz.org/doc/info/attrs.html#d:color",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizColor",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizfontcolor",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizColor",
+                        "min": 0,
+                        "max": 1
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/PrefixConfiguration"
+                     ]
+                  },
+                  "min": 1
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/RelationConfiguration",
+         "closed": true,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/RelationConfiguration_tes",
+                  "expressions": [
+                     "https://w3id.org/kgviz/ElementConfiguration_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/ElementConfiguration"
+                           ]
+                        },
+                        "min": 0
+                     },
+                     "https://w3id.org/kgviz/EdgeProperty_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/EdgeProperty"
+                           ]
+                        },
+                        "min": 0
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://graphviz.org/doc/info/attrs.html#d:color",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizColor",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://graphviz.org/doc/info/attrs.html#d:penwidth",
+                        "valueExpr": "https://w3id.org/linkml/Integer",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizlabel",
+                        "valueExpr": "https://w3id.org/linkml/String",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizfontcolor",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizColor",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizarrowhead",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizArrowType",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizarrowtail",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizArrowType",
+                        "min": 0,
+                        "max": 1
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/RelationConfiguration"
+                     ]
+                  },
+                  "min": 1
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/graphvizRootGraphAspect",
+         "closed": false,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/graphvizRootGraphAspect_tes",
+                  "expressions": [
+                     "https://w3id.org/kgviz/graphvizGraphvizAspect_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/graphvizGraphvizAspect"
+                           ]
+                        },
+                        "min": 0
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/graphvizRootGraphAspect"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/StyleSheet",
+         "closed": true,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/StyleSheet_tes",
+                  "expressions": [
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizstyle",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizStyleType",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizstyles",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizStyleType",
+                        "min": 0,
+                        "max": -1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizfillcolor",
+                        "valueExpr": "https://w3id.org/kgviz/graphvizColor",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/graphvizlabelFrom",
+                        "valueExpr": "https://w3id.org/linkml/String",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/highlightIds",
+                        "valueExpr": "https://w3id.org/kgviz/Node",
+                        "min": 0,
+                        "max": -1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/displayAnnotations",
+                        "valueExpr": "https://w3id.org/kgviz/Node",
+                        "min": 0,
+                        "max": -1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/cliqueRelations",
+                        "valueExpr": "https://w3id.org/kgviz/Node",
+                        "min": 0,
+                        "max": -1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/reasoning",
+                        "valueExpr": "https://w3id.org/kgviz/ReasoningType",
+                        "min": 0,
+                        "max": -1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/excludeSingletons",
+                        "valueExpr": "https://w3id.org/linkml/Boolean",
+                        "min": 0,
+                        "max": 1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/relationProperties",
+                        "valueExpr": "https://w3id.org/kgviz/RelationConfiguration",
+                        "min": 0,
+                        "max": -1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/prefixProperties",
+                        "valueExpr": "https://w3id.org/kgviz/PrefixConfiguration",
+                        "min": 0,
+                        "max": -1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/conditionalProperties",
+                        "valueExpr": "https://w3id.org/kgviz/ConditionalProperty",
+                        "min": 0,
+                        "max": -1
+                     },
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "https://w3id.org/kgviz/nodeFilter",
+                        "valueExpr": "https://w3id.org/kgviz/Condition",
+                        "min": 0,
+                        "max": 1
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/StyleSheet"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      },
+      {
+         "type": "Shape",
+         "id": "https://w3id.org/kgviz/graphvizSubgraphAspect",
+         "closed": false,
+         "expression": {
+            "type": "EachOf",
+            "expressions": [
+               {
+                  "type": "EachOf",
+                  "id": "https://w3id.org/kgviz/graphvizSubgraphAspect_tes",
+                  "expressions": [
+                     "https://w3id.org/kgviz/graphvizGraphvizAspect_tes",
+                     {
+                        "type": "TripleConstraint",
+                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                        "valueExpr": {
+                           "type": "NodeConstraint",
+                           "values": [
+                              "https://w3id.org/kgviz/graphvizGraphvizAspect"
+                           ]
+                        },
+                        "min": 0
+                     }
+                  ]
+               },
+               {
+                  "type": "TripleConstraint",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "valueExpr": {
+                     "type": "NodeConstraint",
+                     "values": [
+                        "https://w3id.org/kgviz/graphvizSubgraphAspect"
+                     ]
+                  },
+                  "min": 0
+               }
+            ]
+         }
+      }
+   ]
+}
+

@@ -1,0 +1,9 @@
+{
+   "$id": "https://w3id.org/kgviz/graphviz",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "definitions": {},
+   "properties": {},
+   "title": "GraphViz",
+   "type": "object"
+}
+

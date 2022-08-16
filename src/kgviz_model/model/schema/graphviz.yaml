@@ -23,12 +23,14 @@ types:
   Color:
     uri: xsd:string
     base: str
-    description: e.g. red, green
+    description: >-
+      Color names are resolved in the context of a color scheme. Graphviz currently supports the X11 scheme, the SVG scheme, and the Brewer schemes, with X11 being the default.
     todos:
       - Could be replaced by an enum
     see_also:
       - https://graphviz.org/doc/info/colors.html
-
+      - https://graphviz.org/doc/info/attrs.html#d:color
+      
 classes:
   graphviz aspect:
     abstract: true

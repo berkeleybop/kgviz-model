@@ -1,0 +1,136 @@
+{
+   "_comments": "Auto generated from kgviz.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2021-05-15 16:06\n    Schema: kgviz\n    \n    id: https://w3id.org/kgviz/\n    description: A data model for describing configurations / stylesheets for visualzing graphs, and in particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels, node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.\nAn example of a use of this is https://github.com/cmungall/obographviz\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "@context": {
+      "ex": "https://w3id.org/kgviz/",
+      "gv": {
+         "@id": "https://w3id.org/kgviz/graphviz",
+         "@prefix": true
+      },
+      "linkml": "https://w3id.org/linkml/",
+      "sdo": "https://schema.org/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "@vocab": "https://w3id.org/kgviz/",
+      "arrowhead": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "gv:arrowhead"
+      },
+      "arrowtail": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "gv:arrowtail"
+      },
+      "cluster_property": {
+         "@id": "gv:cluster_property"
+      },
+      "color": {
+         "@id": "https://graphviz.org/doc/info/attrs.html#d:color"
+      },
+      "conditionalProperties": {
+         "@type": "@id"
+      },
+      "conditions": {
+         "@type": "@id"
+      },
+      "edge_property": {
+         "@id": "gv:edge_property"
+      },
+      "excludeSingletons": {
+         "@type": "xsd:boolean"
+      },
+      "fillcolor": {
+         "@id": "gv:fillcolor"
+      },
+      "fontcolor": {
+         "@id": "gv:fontcolor"
+      },
+      "graph_property": {
+         "@id": "gv:graph_property"
+      },
+      "graphviz_slot": {
+         "@id": "gv:graphviz_slot"
+      },
+      "id": "@id",
+      "label": {
+         "@id": "gv:label"
+      },
+      "labelFrom": {
+         "@id": "gv:labelFrom"
+      },
+      "node_property": {
+         "@id": "gv:node_property"
+      },
+      "nodeFilter": {
+         "@type": "@id"
+      },
+      "penwidth": {
+         "@type": "xsd:integer",
+         "@id": "https://graphviz.org/doc/info/attrs.html#d:penwidth"
+      },
+      "prefixProperties": {
+         "@type": "@id"
+      },
+      "properties": {
+         "@type": "@id"
+      },
+      "reasoning": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "relationProperties": {
+         "@type": "@id"
+      },
+      "style": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "gv:style"
+      },
+      "styles": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "gv:styles"
+      },
+      "subgraph_property": {
+         "@id": "gv:subgraph_property"
+      },
+      "ClusterSubgraphAspect": {
+         "@id": "gv:ClusterSubgraphAspect"
+      },
+      "EdgeAspect": {
+         "@id": "gv:EdgeAspect"
+      },
+      "GraphvizAspect": {
+         "@id": "gv:GraphvizAspect"
+      },
+      "NodeAspect": {
+         "@id": "gv:NodeAspect"
+      },
+      "RootGraphAspect": {
+         "@id": "gv:RootGraphAspect"
+      },
+      "SubgraphAspect": {
+         "@id": "gv:SubgraphAspect"
+      }
+   }
+}
+

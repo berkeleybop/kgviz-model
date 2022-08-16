@@ -1,0 +1,629 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/kgviz/> a owl:Ontology ;
+    rdfs:label "kgviz" ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    dcterms:title "Knowledge Graph Visualization Configuration" ;
+    rdfs:seeAlso "https://github.com/cmungall/obographviz" ;
+    skos:definition """A data model for describing configurations / stylesheets for visualzing graphs, and in particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels, node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.
+An example of a use of this is https://github.com/cmungall/obographviz""" ;
+    linkml:generation_date "2021-05-14 18:22" ;
+    linkml:metamodel_version "1.7.0" ;
+    linkml:source_file "kgviz.yaml" ;
+    linkml:source_file_date "Fri May 14 18:21:54 2021" ;
+    linkml:source_file_size 4595 .
+
+<https://w3id.org/kgviz/StyleSheet> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "StyleSheet" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/kgviz/Node> ;
+            owl:onProperty <https://w3id.org/kgviz/displayAnnotations> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <http://UNKNOWN.org/StyleType> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizstyles> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <http://UNKNOWN.org/ReasoningType> ;
+            owl:onProperty <https://w3id.org/kgviz/reasoning> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/graphvizColor> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizfillcolor> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/kgviz/ConditionalProperty> ;
+            owl:onProperty <https://w3id.org/kgviz/conditionalProperties> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/kgviz/PrefixConfiguration> ;
+            owl:onProperty <https://w3id.org/kgviz/prefixProperties> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/kgviz/Node> ;
+            owl:onProperty <https://w3id.org/kgviz/cliqueRelations> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/Condition> ;
+            owl:onProperty <https://w3id.org/kgviz/nodeFilter> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/kgviz/RelationConfiguration> ;
+            owl:onProperty <https://w3id.org/kgviz/relationProperties> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/kgviz/Node> ;
+            owl:onProperty <https://w3id.org/kgviz/highlightIds> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Boolean ;
+            owl:onProperty <https://w3id.org/kgviz/excludeSingletons> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/StyleType> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizstyle> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizlabelFrom> ] ;
+    skos:definition "A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically" .
+
+<https://w3id.org/kgviz/graphvizClusterSubgraphAspect> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "cluster subgraph aspect" ;
+    rdfs:subClassOf <https://w3id.org/kgviz/graphvizGraphvizAspect>,
+        linkml:mixin ;
+    skos:altLabel "C" .
+
+<https://w3id.org/kgviz/graphvizEdgeAspect> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "edge aspect" ;
+    rdfs:subClassOf <https://w3id.org/kgviz/graphvizGraphvizAspect>,
+        linkml:mixin ;
+    skos:altLabel "E" .
+
+<https://w3id.org/kgviz/graphvizNodeAspect> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "node aspect" ;
+    rdfs:subClassOf <https://w3id.org/kgviz/graphvizGraphvizAspect>,
+        linkml:mixin ;
+    skos:altLabel "N" .
+
+<https://w3id.org/kgviz/graphvizRootGraphAspect> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "root graph aspect" ;
+    rdfs:subClassOf <https://w3id.org/kgviz/graphvizGraphvizAspect>,
+        linkml:mixin ;
+    skos:altLabel "G" .
+
+<https://w3id.org/kgviz/graphvizSubgraphAspect> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "subgraph aspect" ;
+    rdfs:subClassOf <https://w3id.org/kgviz/graphvizGraphvizAspect>,
+        linkml:mixin ;
+    skos:altLabel "S" .
+
+<https://w3id.org/kgviz/graphvizsubgraph_property> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "subgraph property" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://w3id.org/kgviz/graphvizgraphviz_slot> .
+
+linkml:Date a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "date" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:date ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "a date (year, month and day) in an idealized calendar" ;
+    skos:editorialNote "URI is dateTime because OWL reasoners don't work with straight date or time" .
+
+linkml:Datetime a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "datetime" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "The combination of a date and time" .
+
+linkml:Decimal a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "decimal" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:decimal ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A real number with arbitrary precision that conforms to the xsd:decimal specification" .
+
+linkml:Double a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "double" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A real number that conforms to the xsd:double specification" .
+
+linkml:Float a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "float" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:float ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A real number that conforms to the xsd:float specification" .
+
+linkml:Ncname a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "ncname" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "Prefix part of CURIE" .
+
+linkml:Nodeidentifier a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "nodeidentifier" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange <http://www.w3.org/ns/shex#nonLiteral> ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A URI, CURIE or BNODE that represents a node in a model." .
+
+linkml:Objectidentifier a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "objectidentifier" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange <http://www.w3.org/ns/shex#iri> ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A URI or CURIE that represents an object in the model." ;
+    skos:note "Used for inheritence and type checking" .
+
+linkml:SubsetDefinition a owl:Class ;
+    rdfs:label "subset_definition" ;
+    skos:definition "the name and description of a subset" .
+
+linkml:Time a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "time" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A time object represents a (local) time of day, independent of any particular day" ;
+    skos:editorialNote "URI is dateTime because OWL reasoners don't work with straight date or time" .
+
+linkml:Uri a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "uri" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:anyURI ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "a complete URI" .
+
+linkml:Uriorcurie a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "uriorcurie" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:anyURI ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "a URI or a CURIE" .
+
+<https://w3id.org/kgviz/cliqueRelations> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cliqueRelations" ;
+    rdfs:range <https://w3id.org/kgviz/Node> ;
+    skos:definition "Set of properties that indicate identity relations and can be used in a clique" ;
+    linkml:examples "Example(value='owl:equivalentClass', description=None)",
+        "Example(value='skos:exactMatch', description=None)" .
+
+<https://w3id.org/kgviz/conditionalProperties> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "conditionalProperties" ;
+    rdfs:range <https://w3id.org/kgviz/ConditionalProperty> .
+
+<https://w3id.org/kgviz/conditions> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "conditions" ;
+    rdfs:range <https://w3id.org/kgviz/Condition> .
+
+<https://w3id.org/kgviz/displayAnnotations> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "displayAnnotations" ;
+    rdfs:range <https://w3id.org/kgviz/Node> ;
+    skos:definition "Display annotations for these selected properties" .
+
+<https://w3id.org/kgviz/excludeSingletons> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "excludeSingletons" ;
+    rdfs:range linkml:Boolean ;
+    skos:definition "Remove nodes that have no incoming or outgoing edges" .
+
+<https://w3id.org/kgviz/graphvizgraph_property> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "graph property" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://w3id.org/kgviz/graphvizgraphviz_slot> .
+
+<https://w3id.org/kgviz/graphvizlabelFrom> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "labelFrom" ;
+    rdfs:range linkml:String .
+
+<https://w3id.org/kgviz/graphvizstyle> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "style" ;
+    rdfs:range <http://UNKNOWN.org/StyleType> .
+
+<https://w3id.org/kgviz/graphvizstyles> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "styles" ;
+    rdfs:range <http://UNKNOWN.org/StyleType> ;
+    rdfs:subPropertyOf <https://w3id.org/kgviz/graphvizcluster_property>,
+        <https://w3id.org/kgviz/graphvizedge_property>,
+        <https://w3id.org/kgviz/graphvizgraph_property>,
+        <https://w3id.org/kgviz/graphviznode_property> .
+
+<https://w3id.org/kgviz/highlightIds> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "highlightIds" ;
+    rdfs:range <https://w3id.org/kgviz/Node> ;
+    skos:definition "List of nodes to be visually demarcated" .
+
+<https://w3id.org/kgviz/nodeFilter> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "nodeFilter" ;
+    rdfs:range <https://w3id.org/kgviz/Condition> .
+
+<https://w3id.org/kgviz/prefixProperties> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "prefixProperties" ;
+    rdfs:range <https://w3id.org/kgviz/PrefixConfiguration> ;
+    skos:definition "Collection of styles keyed by ID prefix" .
+
+<https://w3id.org/kgviz/properties> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "properties" ;
+    rdfs:range <https://w3id.org/kgviz/AnyConfiguration> .
+
+<https://w3id.org/kgviz/reasoning> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "reasoning" ;
+    rdfs:range <http://UNKNOWN.org/ReasoningType> ;
+    skos:definition "Set of reasoning or processing steps to be applied to graph" .
+
+<https://w3id.org/kgviz/relationProperties> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "relationProperties" ;
+    rdfs:range <https://w3id.org/kgviz/RelationConfiguration> ;
+    skos:definition "Collection of styles keyed by predicate ID" .
+
+<https://w3id.org/kgviz/subset> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "subset" ;
+    rdfs:range linkml:String ;
+    skos:definition "the subset to which the node belongs" .
+
+<https://w3id.org/kgviz/type> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "type" ;
+    rdfs:range linkml:String ;
+    skos:definition "the logical type, eg INDIVIDUAL, CLASS, etc" .
+
+<https://w3id.org/kgviz/AnyConfiguration> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "AnyConfiguration" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/graphvizColor> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizcolor> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Integer ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizpenwidth> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizlabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/ArrowType> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizarrowtail> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/ArrowType> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizarrowhead> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/graphvizColor> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizfontcolor> ],
+        <https://w3id.org/kgviz/EdgeProperty>,
+        <https://w3id.org/kgviz/ElementConfiguration>,
+        <https://w3id.org/kgviz/NodeProperty> ;
+    skos:definition "Generic configuration that inherits all aspects of both node and edge configurations" .
+
+<https://w3id.org/kgviz/ConditionalProperty> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "ConditionalProperty" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/AnyConfiguration> ;
+            owl:onProperty <https://w3id.org/kgviz/properties> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/graphvizColor> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizfillcolor> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/Condition> ;
+            owl:onProperty <https://w3id.org/kgviz/conditions> ] ;
+    skos:definition "conditionally applied properties based on filters" .
+
+<https://w3id.org/kgviz/EdgeProperty> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "EdgeProperty" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/ArrowType> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizarrowtail> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/ArrowType> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizarrowhead> ],
+        <https://w3id.org/kgviz/GeneralProperty>,
+        linkml:mixin ;
+    skos:definition "a property object for an edge/relation" .
+
+<https://w3id.org/kgviz/GeneralProperty> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "GeneralProperty" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/graphvizColor> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizfontcolor> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Integer ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizpenwidth> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizlabel> ],
+        linkml:mixin ;
+    skos:definition "abstract grouping for properties/configs" .
+
+<https://w3id.org/kgviz/NodeProperty> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "NodeProperty" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/graphvizColor> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizcolor> ],
+        <https://w3id.org/kgviz/GeneralProperty>,
+        linkml:mixin .
+
+<https://w3id.org/kgviz/PrefixConfiguration> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "PrefixConfiguration" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/graphvizColor> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizfontcolor> ],
+        [ a owl:Restriction ;
+            owl:onClass <https://w3id.org/kgviz/Node> ;
+            owl:onProperty <https://w3id.org/kgviz/id> ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/graphvizColor> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizfillcolor> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Integer ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizpenwidth> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizlabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/graphvizColor> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizcolor> ],
+        <https://w3id.org/kgviz/ElementConfiguration>,
+        <https://w3id.org/kgviz/NodeProperty> ;
+    skos:definition "style for a particular prefix (e.g. GO)" .
+
+<https://w3id.org/kgviz/RelationConfiguration> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "RelationConfiguration" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Integer ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizpenwidth> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizlabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/ArrowType> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizarrowhead> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/graphvizColor> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizcolor> ],
+        [ a owl:Restriction ;
+            owl:onClass <https://w3id.org/kgviz/Node> ;
+            owl:onProperty <https://w3id.org/kgviz/id> ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/ArrowType> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizarrowtail> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/kgviz/graphvizColor> ;
+            owl:onProperty <https://w3id.org/kgviz/graphvizfontcolor> ],
+        <https://w3id.org/kgviz/EdgeProperty>,
+        <https://w3id.org/kgviz/ElementConfiguration> ;
+    skos:definition "style for a particular relation (e.g. part-of)" .
+
+<https://w3id.org/kgviz/graphvizcluster_property> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cluster property" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://w3id.org/kgviz/graphvizgraphviz_slot> .
+
+<https://w3id.org/kgviz/graphvizedge_property> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "edge property" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://w3id.org/kgviz/graphvizgraphviz_slot> .
+
+<https://w3id.org/kgviz/graphviznode_property> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "node property" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://w3id.org/kgviz/graphvizgraphviz_slot> .
+
+<https://w3id.org/kgviz/id> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "id" ;
+    rdfs:range <https://w3id.org/kgviz/Node> .
+
+linkml:Boolean a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "boolean" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A binary (true or false) value" .
+
+<https://w3id.org/kgviz/ElementConfiguration> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "ElementConfiguration" ;
+    skos:definition "Abstract parent for all coniguration classes" .
+
+<https://w3id.org/kgviz/graphvizarrowhead> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "arrowhead" ;
+    rdfs:range <http://UNKNOWN.org/ArrowType> .
+
+<https://w3id.org/kgviz/graphvizarrowtail> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "arrowtail" ;
+    rdfs:range <http://UNKNOWN.org/ArrowType> .
+
+<https://w3id.org/kgviz/graphvizfillcolor> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "fillcolor" ;
+    rdfs:range <https://w3id.org/kgviz/graphvizColor> .
+
+<https://w3id.org/kgviz/Condition> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Condition" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://w3id.org/kgviz/subset> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://w3id.org/kgviz/type> ] ;
+    skos:definition "a constraint or condition to be applied, e.g. type=Class" .
+
+<https://w3id.org/kgviz/graphvizcolor> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "color" ;
+    rdfs:range <https://w3id.org/kgviz/graphvizColor> ;
+    rdfs:subPropertyOf <https://w3id.org/kgviz/graphvizcluster_property>,
+        <https://w3id.org/kgviz/graphvizedge_property>,
+        <https://w3id.org/kgviz/graphviznode_property> ;
+    skos:definition "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute." .
+
+<https://w3id.org/kgviz/graphvizfontcolor> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "fontcolor" ;
+    rdfs:range <https://w3id.org/kgviz/graphvizColor> .
+
+<https://w3id.org/kgviz/graphvizlabel> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "label" ;
+    rdfs:range linkml:String .
+
+<https://w3id.org/kgviz/graphvizpenwidth> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "penwidth" ;
+    rdfs:range linkml:Integer .
+
+<https://w3id.org/kgviz/graphvizGraphvizAspect> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "graphviz aspect" ;
+    rdfs:seeAlso "https://graphviz.org/doc/info/attrs.html#h:uses" ;
+    rdfs:subClassOf linkml:mixin .
+
+<https://w3id.org/kgviz/graphvizgraphviz_slot> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "graphviz slot" ;
+    rdfs:range linkml:String ;
+    rdfs:seeAlso "https://graphviz.org/doc/info/attrs.html#h:uses" .
+
+linkml:Integer a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "integer" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "An integer" .
+
+<https://w3id.org/kgviz/Node> a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "Node" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "e.g. UBERON:0002101" .
+
+<https://w3id.org/kgviz/graphvizColor> a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "Color" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "e.g. red, green" .
+
+linkml:ClassDefinition a owl:Class ;
+    rdfs:label "class_definition" ;
+    skos:definition "the definition of a class or interface" .
+
+linkml:TypeDefinition a owl:Class ;
+    rdfs:label "type_definition" ;
+    skos:definition "A data type definition." .
+
+linkml:topValue a owl:DatatypeProperty ;
+    rdfs:label "value" .
+
+linkml:String a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "string" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A character string" .
+
+linkml:SlotDefinition a owl:Class ;
+    rdfs:label "slot_definition" ;
+    skos:definition "the definition of a property or a slot" .
+
+
+
