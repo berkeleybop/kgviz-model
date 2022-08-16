@@ -21,7 +21,7 @@ ex: a owl:Ontology ;
     dcterms:title "Knowledge Graph Visualization Configuration" ;
     pav:version "0.0.1" ;
     rdfs:seeAlso "https://github.com/cmungall/obographviz" ;
-    linkml:generation_date "2022-08-16T16:13:25" ;
+    linkml:generation_date "2022-08-16T16:23:06" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "kgviz.yaml" ;
     linkml:source_file_date "2022-08-16T15:34:46" ;
@@ -76,49 +76,49 @@ ex:StyleSheet a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "StyleSheet" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom ex:graphvizStyleType ;
-            owl:onProperty ex:graphvizstyles ],
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass ex:graphvizStyleType ;
+            owl:onProperty ex:graphvizstyle ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass ex:Condition ;
             owl:onProperty ex:nodeFilter ],
         [ a owl:Restriction ;
-            owl:allValuesFrom ex:Node ;
-            owl:onProperty ex:highlightIds ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass ex:graphvizColor ;
-            owl:onProperty ex:graphvizfillcolor ],
-        [ a owl:Restriction ;
             owl:allValuesFrom ex:ConditionalProperty ;
             owl:onProperty ex:conditionalProperties ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass ex:graphvizStyleType ;
-            owl:onProperty ex:graphvizstyle ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ex:PrefixConfiguration ;
-            owl:onProperty ex:prefixProperties ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ex:RelationConfiguration ;
-            owl:onProperty ex:relationProperties ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ex:Node ;
-            owl:onProperty ex:displayAnnotations ],
+            owl:allValuesFrom ex:ReasoningType ;
+            owl:onProperty ex:reasoning ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Boolean ;
             owl:onProperty ex:excludeSingletons ],
         [ a owl:Restriction ;
+            owl:allValuesFrom ex:PrefixConfiguration ;
+            owl:onProperty ex:prefixProperties ],
+        [ a owl:Restriction ;
             owl:allValuesFrom ex:Node ;
-            owl:onProperty ex:cliqueRelations ],
+            owl:onProperty ex:displayAnnotations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ex:graphvizStyleType ;
+            owl:onProperty ex:graphvizstyles ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty ex:graphvizlabelFrom ],
         [ a owl:Restriction ;
-            owl:allValuesFrom ex:ReasoningType ;
-            owl:onProperty ex:reasoning ] ;
+            owl:allValuesFrom ex:Node ;
+            owl:onProperty ex:cliqueRelations ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass ex:graphvizColor ;
+            owl:onProperty ex:graphvizfillcolor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ex:Node ;
+            owl:onProperty ex:highlightIds ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ex:RelationConfiguration ;
+            owl:onProperty ex:relationProperties ] ;
     skos:definition "A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically" .
 
 ex:cliqueRelations a owl:ObjectProperty,
@@ -241,7 +241,7 @@ ex:AnyConfiguration a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass ex:graphvizColor ;
-            owl:onProperty ex:graphvizfontcolor ],
+            owl:onProperty <https://graphviz.org/doc/info/attrs.html#d:color> ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass ex:graphvizArrowType ;
@@ -249,7 +249,7 @@ ex:AnyConfiguration a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass ex:graphvizColor ;
-            owl:onProperty <https://graphviz.org/doc/info/attrs.html#d:color> ],
+            owl:onProperty ex:graphvizfontcolor ],
         ex:EdgeProperty,
         ex:ElementConfiguration,
         ex:NodeProperty ;
@@ -261,11 +261,11 @@ ex:EdgeProperty a owl:Class,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass ex:graphvizArrowType ;
-            owl:onProperty ex:graphvizarrowhead ],
+            owl:onProperty ex:graphvizarrowtail ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass ex:graphvizArrowType ;
-            owl:onProperty ex:graphvizarrowtail ],
+            owl:onProperty ex:graphvizarrowhead ],
         ex:GeneralProperty,
         linkml:mixin ;
     skos:definition "a property object for an edge/relation" .
@@ -284,9 +284,21 @@ ex:PrefixConfiguration a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "PrefixConfiguration" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass ex:graphvizColor ;
+            owl:onProperty ex:graphvizfillcolor ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass ex:graphvizColor ;
+            owl:onProperty ex:graphvizfontcolor ],
+        [ a owl:Restriction ;
             owl:onClass ex:Node ;
             owl:onProperty ex:id ;
             owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Integer ;
+            owl:onProperty <https://graphviz.org/doc/info/attrs.html#d:penwidth> ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass ex:graphvizColor ;
@@ -295,18 +307,6 @@ ex:PrefixConfiguration a owl:Class,
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty ex:graphvizlabel ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass ex:graphvizColor ;
-            owl:onProperty ex:graphvizfillcolor ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
-            owl:onProperty <https://graphviz.org/doc/info/attrs.html#d:penwidth> ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass ex:graphvizColor ;
-            owl:onProperty ex:graphvizfontcolor ],
         ex:ElementConfiguration,
         ex:NodeProperty ;
     skos:definition "style for a particular prefix (e.g. GO)" .
@@ -324,32 +324,32 @@ ex:RelationConfiguration a owl:Class,
     rdfs:label "RelationConfiguration" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass ex:graphvizColor ;
-            owl:onProperty ex:graphvizfontcolor ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass ex:graphvizArrowType ;
-            owl:onProperty ex:graphvizarrowtail ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
-            owl:onProperty <https://graphviz.org/doc/info/attrs.html#d:penwidth> ],
+            owl:onClass linkml:String ;
+            owl:onProperty ex:graphvizlabel ],
         [ a owl:Restriction ;
             owl:onClass ex:Node ;
             owl:onProperty ex:id ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty ex:graphvizlabel ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass ex:graphvizArrowType ;
             owl:onProperty ex:graphvizarrowhead ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Integer ;
+            owl:onProperty <https://graphviz.org/doc/info/attrs.html#d:penwidth> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
             owl:onClass ex:graphvizColor ;
             owl:onProperty <https://graphviz.org/doc/info/attrs.html#d:color> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass ex:graphvizArrowType ;
+            owl:onProperty ex:graphvizarrowtail ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass ex:graphvizColor ;
+            owl:onProperty ex:graphvizfontcolor ],
         ex:EdgeProperty,
         ex:ElementConfiguration ;
     skos:definition """style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).
@@ -535,12 +535,12 @@ ex:ConditionalProperty a owl:Class,
             owl:onProperty ex:conditions ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass ex:AnyConfiguration ;
-            owl:onProperty ex:properties ],
+            owl:onClass ex:graphvizColor ;
+            owl:onProperty ex:graphvizfillcolor ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass ex:graphvizColor ;
-            owl:onProperty ex:graphvizfillcolor ] ;
+            owl:onClass ex:AnyConfiguration ;
+            owl:onProperty ex:properties ] ;
     skos:definition "conditionally applied properties based on filters" .
 
 ex:GeneralProperty a owl:Class,
@@ -548,12 +548,12 @@ ex:GeneralProperty a owl:Class,
     rdfs:label "GeneralProperty" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass ex:graphvizColor ;
-            owl:onProperty ex:graphvizfontcolor ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Integer ;
             owl:onProperty <https://graphviz.org/doc/info/attrs.html#d:penwidth> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass ex:graphvizColor ;
+            owl:onProperty ex:graphvizfontcolor ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;

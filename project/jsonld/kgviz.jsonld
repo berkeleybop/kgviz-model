@@ -1037,7 +1037,7 @@
   "source_file": "kgviz.yaml",
   "source_file_date": "2022-08-16T15:34:46",
   "source_file_size": 5180,
-  "generation_date": "2022-08-16T16:13:24",
+  "generation_date": "2022-08-16T16:23:05",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/kgviz.context.jsonld",

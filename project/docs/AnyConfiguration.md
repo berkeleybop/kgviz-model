@@ -41,12 +41,12 @@ URI: [ex:AnyConfiguration](https://w3id.org/kgviz/AnyConfiguration)
      * Description: Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.
      * Range: [Color](types/Color.md)
 
-### Mixed in from GeneralProperty:
+### Mixed in from NodeProperty:
 
  * [fontcolor](fontcolor.md)  <sub>0..1</sub>
      * Range: [Color](types/Color.md)
 
-### Mixed in from NodeProperty:
+### Mixed in from GeneralProperty:
 
  * [fontcolor](fontcolor.md)  <sub>0..1</sub>
      * Range: [Color](types/Color.md)

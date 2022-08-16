@@ -1,5 +1,5 @@
 # Auto generated from kgviz.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-08-16T16:13:29
+# Generation date: 2022-08-16T16:23:10
 # Schema: kgviz
 #
 # id: https://w3id.org/kgviz/
