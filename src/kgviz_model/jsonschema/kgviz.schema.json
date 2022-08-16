@@ -1,0 +1,214 @@
+{
+   "$id": "https://w3id.org/kgviz/",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "definitions": {
+      "AnyConfiguration": {
+         "additionalProperties": false,
+         "description": "Generic configuration that inherits all aspects of both node and edge configurations",
+         "properties": {
+            "arrowhead": {
+               "type": "string"
+            },
+            "arrowtail": {
+               "type": "string"
+            },
+            "color": {
+               "description": "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.",
+               "type": "string"
+            },
+            "fontcolor": {
+               "type": "string"
+            },
+            "label": {
+               "type": "string"
+            },
+            "penwidth": {
+               "type": "integer"
+            }
+         },
+         "required": [],
+         "title": "AnyConfiguration",
+         "type": "object"
+      },
+      "Condition": {
+         "additionalProperties": false,
+         "description": "a constraint or condition to be applied, e.g. type=Class",
+         "properties": {
+            "subset": {
+               "type": "string"
+            },
+            "type": {
+               "description": "the logical type, eg INDIVIDUAL, CLASS, etc",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "Condition",
+         "type": "object"
+      },
+      "ConditionalProperty": {
+         "additionalProperties": false,
+         "description": "conditionally applied properties based on filters",
+         "properties": {
+            "conditions": {
+               "$ref": "#/definitions/Condition"
+            },
+            "fillcolor": {
+               "type": "string"
+            },
+            "properties": {
+               "$ref": "#/definitions/AnyConfiguration"
+            }
+         },
+         "required": [],
+         "title": "ConditionalProperty",
+         "type": "object"
+      },
+      "PrefixConfiguration": {
+         "additionalProperties": false,
+         "description": "style for a particular prefix (e.g. GO)",
+         "properties": {
+            "color": {
+               "description": "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.",
+               "type": "string"
+            },
+            "fillcolor": {
+               "type": "string"
+            },
+            "fontcolor": {
+               "type": "string"
+            },
+            "id": {
+               "type": "string"
+            },
+            "label": {
+               "type": "string"
+            },
+            "penwidth": {
+               "type": "integer"
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "PrefixConfiguration",
+         "type": "object"
+      },
+      "RelationConfiguration": {
+         "additionalProperties": false,
+         "description": "style for a particular relation (e.g. part-of)",
+         "properties": {
+            "arrowhead": {
+               "type": "string"
+            },
+            "arrowtail": {
+               "type": "string"
+            },
+            "color": {
+               "description": "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.",
+               "type": "string"
+            },
+            "fontcolor": {
+               "type": "string"
+            },
+            "id": {
+               "type": "string"
+            },
+            "label": {
+               "type": "string"
+            },
+            "penwidth": {
+               "type": "integer"
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "RelationConfiguration",
+         "type": "object"
+      },
+      "StyleSheet": {
+         "additionalProperties": false,
+         "description": "A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically",
+         "properties": {
+            "cliqueRelations": {
+               "description": "Set of properties that indicate identity relations and can be used in a clique",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "conditionalProperties": {
+               "items": {
+                  "$ref": "#/definitions/ConditionalProperty"
+               },
+               "type": "array"
+            },
+            "displayAnnotations": {
+               "description": "Display annotations for these selected properties",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "excludeSingletons": {
+               "description": "Remove nodes that have no incoming or outgoing edges",
+               "type": "boolean"
+            },
+            "fillcolor": {
+               "type": "string"
+            },
+            "highlightIds": {
+               "description": "List of nodes to be visually demarcated",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "labelFrom": {
+               "type": "string"
+            },
+            "nodeFilter": {
+               "$ref": "#/definitions/Condition"
+            },
+            "prefixProperties": {
+               "description": "Collection of styles keyed by ID prefix",
+               "items": {
+                  "$ref": "#/definitions/PrefixConfiguration"
+               },
+               "type": "array"
+            },
+            "reasoning": {
+               "description": "Set of reasoning or processing steps to be applied to graph",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "relationProperties": {
+               "description": "Collection of styles keyed by predicate ID",
+               "items": {
+                  "$ref": "#/definitions/RelationConfiguration"
+               },
+               "type": "array"
+            },
+            "style": {
+               "type": "string"
+            },
+            "styles": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "StyleSheet",
+         "type": "object"
+      }
+   },
+   "properties": {},
+   "title": "kgviz",
+   "type": "object"
+}
+

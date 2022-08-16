@@ -1,0 +1,19 @@
+site_name: kgviz-model
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-2SYBSJVZ23
+#  palette:
+#    scheme: slate
+#    primary: cyan
+  features:
+    - content.tabs.link
+plugins:
+  - search
+  - mermaid2
+nav:
+#  - Home: home.md
+  - Index: index.md
+  - About: about.md
+site_url: https://my-org.github.io/my-datamodel/
+repo_url: https://github.com/my-org/my-datamodel/

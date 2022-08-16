@@ -1,0 +1,219 @@
+BASE <https://w3id.org/kgviz/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+
+
+<Node> xsd:string
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:dateTime
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+<graphvizColor> xsd:string
+
+<AnyConfiguration> CLOSED {
+    (  $<AnyConfiguration_tes> (  &<ElementConfiguration_tes> ;
+          rdf:type [ <ElementConfiguration> ] ? ;
+          &<NodeProperty_tes> ;
+          rdf:type [ <NodeProperty> ] ? ;
+          &<EdgeProperty_tes> ;
+          rdf:type [ <EdgeProperty> ] ? ;
+          <https://graphviz.org/doc/info/attrs.html#d:penwidth> @linkml:Integer ? ;
+          <graphvizlabel> @linkml:String ? ;
+          <https://graphviz.org/doc/info/attrs.html#d:color> @<graphvizColor> ? ;
+          <graphvizfontcolor> @<graphvizColor> ? ;
+          <graphvizarrowhead> @<graphvizArrowType> ? ;
+          <graphvizarrowtail> @<graphvizArrowType> ?
+       ) ;
+       rdf:type [ <AnyConfiguration> ] ?
+    )
+}
+
+<graphvizClusterSubgraphAspect> {
+    (  $<graphvizClusterSubgraphAspect_tes> (  &<graphvizGraphvizAspect_tes> ;
+          rdf:type [ <graphvizGraphvizAspect> ] ?
+       ) ;
+       rdf:type [ <graphvizClusterSubgraphAspect> ] ?
+    )
+}
+
+<Condition> CLOSED {
+    (  $<Condition_tes> (  <type> @linkml:String ? ;
+          <subset> @linkml:String ?
+       ) ;
+       rdf:type [ <Condition> ] ?
+    )
+}
+
+<ConditionalProperty> CLOSED {
+    (  $<ConditionalProperty_tes> (  <graphvizfillcolor> @<graphvizColor> ? ;
+          <conditions> @<Condition> ? ;
+          <properties> @<AnyConfiguration> ?
+       ) ;
+       rdf:type [ <ConditionalProperty> ] ?
+    )
+}
+
+<graphvizEdgeAspect> {
+    (  $<graphvizEdgeAspect_tes> (  &<graphvizGraphvizAspect_tes> ;
+          rdf:type [ <graphvizGraphvizAspect> ] ?
+       ) ;
+       rdf:type [ <graphvizEdgeAspect> ] ?
+    )
+}
+
+<EdgeProperty> {
+    (  $<EdgeProperty_tes> (  &<GeneralProperty_tes> ;
+          rdf:type [ <GeneralProperty> ] ? ;
+          <graphvizarrowhead> @<graphvizArrowType> ? ;
+          <graphvizarrowtail> @<graphvizArrowType> ?
+       ) ;
+       rdf:type [ <EdgeProperty> ] ?
+    )
+}
+
+<ElementConfiguration>  (
+    @<AnyConfiguration> OR @<PrefixConfiguration> OR @<RelationConfiguration>
+)
+
+<ElementConfiguration_struct> {
+    (  $<ElementConfiguration_tes> rdf:type . * ;
+       rdf:type [ <ElementConfiguration> ] ?
+    )
+}
+
+<GeneralProperty>  (
+    @<EdgeProperty> OR @<NodeProperty>
+)
+
+<GeneralProperty_struct> {
+    (  $<GeneralProperty_tes> (  <https://graphviz.org/doc/info/attrs.html#d:penwidth> @linkml:Integer ? ;
+          <graphvizlabel> @linkml:String ? ;
+          <graphvizfontcolor> @<graphvizColor> ?
+       ) ;
+       rdf:type [ <GeneralProperty> ] ?
+    )
+}
+
+<graphvizGraphvizAspect>  (
+    @<graphvizClusterSubgraphAspect> OR @<graphvizEdgeAspect> OR @<graphvizNodeAspect> OR @<graphvizRootGraphAspect> OR
+    @<graphvizSubgraphAspect>
+)
+
+<graphvizGraphvizAspect_struct> {
+    (  $<graphvizGraphvizAspect_tes> rdf:type . * ;
+       rdf:type [ <graphvizGraphvizAspect> ] ?
+    )
+}
+
+<graphvizNodeAspect> {
+    (  $<graphvizNodeAspect_tes> (  &<graphvizGraphvizAspect_tes> ;
+          rdf:type [ <graphvizGraphvizAspect> ] ?
+       ) ;
+       rdf:type [ <graphvizNodeAspect> ] ?
+    )
+}
+
+<NodeProperty> {
+    (  $<NodeProperty_tes> (  &<GeneralProperty_tes> ;
+          rdf:type [ <GeneralProperty> ] ? ;
+          <https://graphviz.org/doc/info/attrs.html#d:color> @<graphvizColor> ?
+       ) ;
+       rdf:type [ <NodeProperty> ] ?
+    )
+}
+
+<PrefixConfiguration> CLOSED {
+    (  $<PrefixConfiguration_tes> (  &<ElementConfiguration_tes> ;
+          rdf:type [ <ElementConfiguration> ] ? ;
+          &<NodeProperty_tes> ;
+          rdf:type [ <NodeProperty> ] ? ;
+          <graphvizfillcolor> @<graphvizColor> ? ;
+          <https://graphviz.org/doc/info/attrs.html#d:penwidth> @linkml:Integer ? ;
+          <graphvizlabel> @linkml:String ? ;
+          <https://graphviz.org/doc/info/attrs.html#d:color> @<graphvizColor> ? ;
+          <graphvizfontcolor> @<graphvizColor> ?
+       ) ;
+       rdf:type [ <PrefixConfiguration> ]
+    )
+}
+
+<RelationConfiguration> CLOSED {
+    (  $<RelationConfiguration_tes> (  &<ElementConfiguration_tes> ;
+          rdf:type [ <ElementConfiguration> ] ? ;
+          &<EdgeProperty_tes> ;
+          rdf:type [ <EdgeProperty> ] ? ;
+          <https://graphviz.org/doc/info/attrs.html#d:color> @<graphvizColor> ? ;
+          <https://graphviz.org/doc/info/attrs.html#d:penwidth> @linkml:Integer ? ;
+          <graphvizlabel> @linkml:String ? ;
+          <graphvizfontcolor> @<graphvizColor> ? ;
+          <graphvizarrowhead> @<graphvizArrowType> ? ;
+          <graphvizarrowtail> @<graphvizArrowType> ?
+       ) ;
+       rdf:type [ <RelationConfiguration> ]
+    )
+}
+
+<graphvizRootGraphAspect> {
+    (  $<graphvizRootGraphAspect_tes> (  &<graphvizGraphvizAspect_tes> ;
+          rdf:type [ <graphvizGraphvizAspect> ] ?
+       ) ;
+       rdf:type [ <graphvizRootGraphAspect> ] ?
+    )
+}
+
+<StyleSheet> CLOSED {
+    (  $<StyleSheet_tes> (  <graphvizstyle> @<graphvizStyleType> ? ;
+          <graphvizstyles> @<graphvizStyleType> * ;
+          <graphvizfillcolor> @<graphvizColor> ? ;
+          <graphvizlabelFrom> @linkml:String ? ;
+          <highlightIds> @<Node> * ;
+          <displayAnnotations> @<Node> * ;
+          <cliqueRelations> @<Node> * ;
+          <reasoning> @<ReasoningType> * ;
+          <excludeSingletons> @linkml:Boolean ? ;
+          <relationProperties> @<RelationConfiguration> * ;
+          <prefixProperties> @<PrefixConfiguration> * ;
+          <conditionalProperties> @<ConditionalProperty> * ;
+          <nodeFilter> @<Condition> ?
+       ) ;
+       rdf:type [ <StyleSheet> ] ?
+    )
+}
+
+<graphvizSubgraphAspect> {
+    (  $<graphvizSubgraphAspect_tes> (  &<graphvizGraphvizAspect_tes> ;
+          rdf:type [ <graphvizGraphvizAspect> ] ?
+       ) ;
+       rdf:type [ <graphvizSubgraphAspect> ] ?
+    )
+}
+
+

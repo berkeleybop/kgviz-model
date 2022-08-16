@@ -1,0 +1,24 @@
+{
+   "ex": "https://w3id.org/kgviz/",
+   "gv": "https://w3id.org/kgviz/graphviz",
+   "linkml": "https://w3id.org/linkml/",
+   "sdo": "https://schema.org/",
+   "ClusterSubgraphAspect": {
+      "@id": "gv:ClusterSubgraphAspect"
+   },
+   "EdgeAspect": {
+      "@id": "gv:EdgeAspect"
+   },
+   "GraphvizAspect": {
+      "@id": "gv:GraphvizAspect"
+   },
+   "NodeAspect": {
+      "@id": "gv:NodeAspect"
+   },
+   "RootGraphAspect": {
+      "@id": "gv:RootGraphAspect"
+   },
+   "SubgraphAspect": {
+      "@id": "gv:SubgraphAspect"
+   }
+}

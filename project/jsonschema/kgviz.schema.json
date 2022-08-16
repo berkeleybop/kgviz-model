@@ -1,0 +1,328 @@
+{
+   "$defs": {
+      "AnyConfiguration": {
+         "additionalProperties": false,
+         "description": "Generic configuration that inherits all aspects of both node and edge configurations",
+         "properties": {
+            "arrowhead": {
+               "$ref": "#/$defs/ArrowType"
+            },
+            "arrowtail": {
+               "$ref": "#/$defs/ArrowType"
+            },
+            "color": {
+               "description": "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.",
+               "type": "string"
+            },
+            "fontcolor": {
+               "type": "string"
+            },
+            "label": {
+               "type": "string"
+            },
+            "penwidth": {
+               "type": "integer"
+            }
+         },
+         "required": [],
+         "title": "AnyConfiguration",
+         "type": "object"
+      },
+      "ArrowType": {
+         "description": "",
+         "enum": [
+            "normal",
+            "inv",
+            "dot",
+            "invdot",
+            "odot",
+            "invodot",
+            "none",
+            "tee",
+            "empty",
+            "invempty",
+            "diamond",
+            "odiamond",
+            "ediamond",
+            "crow",
+            "box",
+            "obox",
+            "open",
+            "halfopen",
+            "vee"
+         ],
+         "title": "ArrowType",
+         "type": "string"
+      },
+      "Condition": {
+         "additionalProperties": false,
+         "description": "a constraint or condition to be applied, e.g. type=Class",
+         "properties": {
+            "subset": {
+               "description": "the subset to which the node belongs",
+               "type": "string"
+            },
+            "type": {
+               "description": "the logical type, eg INDIVIDUAL, CLASS, etc",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "Condition",
+         "type": "object"
+      },
+      "ConditionalProperty": {
+         "additionalProperties": false,
+         "description": "conditionally applied properties based on filters",
+         "properties": {
+            "conditions": {
+               "$ref": "#/$defs/Condition"
+            },
+            "fillcolor": {
+               "type": "string"
+            },
+            "properties": {
+               "$ref": "#/$defs/AnyConfiguration"
+            }
+         },
+         "required": [],
+         "title": "ConditionalProperty",
+         "type": "object"
+      },
+      "PrefixConfiguration": {
+         "additionalProperties": false,
+         "description": "style for a particular prefix (e.g. GO)",
+         "properties": {
+            "color": {
+               "description": "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.",
+               "type": "string"
+            },
+            "fillcolor": {
+               "type": "string"
+            },
+            "fontcolor": {
+               "type": "string"
+            },
+            "id": {
+               "type": "string"
+            },
+            "label": {
+               "type": "string"
+            },
+            "penwidth": {
+               "type": "integer"
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "PrefixConfiguration",
+         "type": "object"
+      },
+      "PrefixConfiguration__identifier_optional": {
+         "additionalProperties": false,
+         "description": "style for a particular prefix (e.g. GO)",
+         "properties": {
+            "color": {
+               "description": "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.",
+               "type": "string"
+            },
+            "fillcolor": {
+               "type": "string"
+            },
+            "fontcolor": {
+               "type": "string"
+            },
+            "id": {
+               "type": "string"
+            },
+            "label": {
+               "type": "string"
+            },
+            "penwidth": {
+               "type": "integer"
+            }
+         },
+         "required": [],
+         "title": "PrefixConfiguration",
+         "type": "object"
+      },
+      "ReasoningType": {
+         "description": "",
+         "enum": [
+            "transitive_reduction",
+            "todo"
+         ],
+         "title": "ReasoningType",
+         "type": "string"
+      },
+      "RelationConfiguration": {
+         "additionalProperties": false,
+         "description": "style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).\n\nExample of usage, where [relationProperties](relationProperties.md)\nspecifies a collection of RelationConfigurations keyed by property.\n\n```json\n{\n    \"relationProperties\": {\n        \"rdfs:subClassOf\": {\n            \"color\": \"black\",\n            \"penwith\": 3,\n            \"arrowhead\": \"open\",\n            \"label\": \"\"\n        },\n        \"BFO:0000050\": {\n            \"arrowhead\": \"tee\",\n            \"color\": \"blue\"\n        }\n    }\n}\n```",
+         "properties": {
+            "arrowhead": {
+               "$ref": "#/$defs/ArrowType"
+            },
+            "arrowtail": {
+               "$ref": "#/$defs/ArrowType"
+            },
+            "color": {
+               "description": "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.",
+               "type": "string"
+            },
+            "fontcolor": {
+               "type": "string"
+            },
+            "id": {
+               "type": "string"
+            },
+            "label": {
+               "type": "string"
+            },
+            "penwidth": {
+               "type": "integer"
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "RelationConfiguration",
+         "type": "object"
+      },
+      "RelationConfiguration__identifier_optional": {
+         "additionalProperties": false,
+         "description": "style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).\n\nExample of usage, where [relationProperties](relationProperties.md)\nspecifies a collection of RelationConfigurations keyed by property.\n\n```json\n{\n    \"relationProperties\": {\n        \"rdfs:subClassOf\": {\n            \"color\": \"black\",\n            \"penwith\": 3,\n            \"arrowhead\": \"open\",\n            \"label\": \"\"\n        },\n        \"BFO:0000050\": {\n            \"arrowhead\": \"tee\",\n            \"color\": \"blue\"\n        }\n    }\n}\n```",
+         "properties": {
+            "arrowhead": {
+               "$ref": "#/$defs/ArrowType"
+            },
+            "arrowtail": {
+               "$ref": "#/$defs/ArrowType"
+            },
+            "color": {
+               "description": "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.",
+               "type": "string"
+            },
+            "fontcolor": {
+               "type": "string"
+            },
+            "id": {
+               "type": "string"
+            },
+            "label": {
+               "type": "string"
+            },
+            "penwidth": {
+               "type": "integer"
+            }
+         },
+         "required": [],
+         "title": "RelationConfiguration",
+         "type": "object"
+      },
+      "StyleSheet": {
+         "additionalProperties": false,
+         "description": "A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically",
+         "properties": {
+            "cliqueRelations": {
+               "description": "Set of properties that indicate identity relations and can be used in a clique",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "conditionalProperties": {
+               "items": {
+                  "$ref": "#/$defs/ConditionalProperty"
+               },
+               "type": "array"
+            },
+            "displayAnnotations": {
+               "description": "Display annotations for these selected properties",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "excludeSingletons": {
+               "description": "Remove nodes that have no incoming or outgoing edges",
+               "type": "boolean"
+            },
+            "fillcolor": {
+               "type": "string"
+            },
+            "highlightIds": {
+               "description": "List of nodes to be visually demarcated",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "labelFrom": {
+               "type": "string"
+            },
+            "nodeFilter": {
+               "$ref": "#/$defs/Condition"
+            },
+            "prefixProperties": {
+               "additionalProperties": {
+                  "$ref": "#/$defs/PrefixConfiguration__identifier_optional"
+               },
+               "description": "Collection of styles keyed by ID prefix"
+            },
+            "reasoning": {
+               "description": "Set of reasoning or processing steps to be applied to graph",
+               "items": {
+                  "$ref": "#/$defs/ReasoningType"
+               },
+               "type": "array"
+            },
+            "relationProperties": {
+               "additionalProperties": {
+                  "$ref": "#/$defs/RelationConfiguration__identifier_optional"
+               },
+               "description": "Collection of styles keyed by predicate ID"
+            },
+            "style": {
+               "$ref": "#/$defs/StyleType"
+            },
+            "styles": {
+               "items": {
+                  "$ref": "#/$defs/StyleType"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "StyleSheet",
+         "type": "object"
+      },
+      "StyleType": {
+         "description": "",
+         "enum": [
+            "dashed",
+            "dotted",
+            "solid",
+            "invis",
+            "bold",
+            "tapered",
+            "filled",
+            "striped",
+            "wedged",
+            "diagonals",
+            "rounded"
+         ],
+         "title": "StyleType",
+         "type": "string"
+      }
+   },
+   "$id": "https://w3id.org/kgviz/",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": true,
+   "metamodel_version": "1.7.0",
+   "properties": {},
+   "required": [],
+   "title": "kgviz",
+   "type": "object",
+   "version": "0.0.1"
+}

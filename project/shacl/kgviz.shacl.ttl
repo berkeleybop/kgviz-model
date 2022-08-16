@@ -1,0 +1,287 @@
+@prefix ex: <https://w3id.org/kgviz/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:EdgeProperty a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "a property object for an edge/relation" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:in ( "normal" "inv" "dot" "invdot" "odot" "invodot" "none" "tee" "empty" "invempty" "diamond" "odiamond" "ediamond" "crow" "box" "obox" "open" "halfopen" "vee" ) ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path ex:graphvizarrowhead ],
+        [ sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path ex:graphvizfontcolor ],
+        [ sh:in ( "normal" "inv" "dot" "invdot" "odot" "invodot" "none" "tee" "empty" "invempty" "diamond" "odiamond" "ediamond" "crow" "box" "obox" "open" "halfopen" "vee" ) ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path ex:graphvizarrowtail ],
+        [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path <https://graphviz.org/doc/info/attrs.html#d:penwidth> ],
+        [ sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path ex:graphvizlabel ] ;
+    sh:targetClass ex:EdgeProperty .
+
+ex:ElementConfiguration a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Abstract parent for all coniguration classes" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass ex:ElementConfiguration .
+
+ex:GeneralProperty a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "abstract grouping for properties/configs" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path ex:graphvizlabel ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <https://graphviz.org/doc/info/attrs.html#d:penwidth> ],
+        [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path ex:graphvizfontcolor ] ;
+    sh:targetClass ex:GeneralProperty .
+
+ex:NodeProperty a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path <https://graphviz.org/doc/info/attrs.html#d:penwidth> ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path ex:graphvizfontcolor ],
+        [ sh:description "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <https://graphviz.org/doc/info/attrs.html#d:color> ],
+        [ sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path ex:graphvizlabel ] ;
+    sh:targetClass ex:NodeProperty .
+
+ex:StyleSheet a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Display annotations for these selected properties" ;
+            sh:order 5 ;
+            sh:path ex:displayAnnotations ],
+        [ sh:class ex:RelationConfiguration ;
+            sh:description "Collection of styles keyed by predicate ID" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 9 ;
+            sh:path ex:relationProperties ],
+        [ sh:class ex:ConditionalProperty ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path ex:conditionalProperties ],
+        [ sh:description "List of nodes to be visually demarcated" ;
+            sh:order 4 ;
+            sh:path ex:highlightIds ],
+        [ sh:description "Set of properties that indicate identity relations and can be used in a clique" ;
+            sh:order 6 ;
+            sh:path ex:cliqueRelations ],
+        [ sh:class ex:Condition ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 12 ;
+            sh:path ex:nodeFilter ],
+        [ sh:description "Remove nodes that have no incoming or outgoing edges" ;
+            sh:maxCount 1 ;
+            sh:order 8 ;
+            sh:path ex:excludeSingletons ],
+        [ sh:in ( "dashed" "dotted" "solid" "invis" "bold" "tapered" "filled" "striped" "wedged" "diagonals" "rounded" ) ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path ex:graphvizstyle ],
+        [ sh:description "Set of reasoning or processing steps to be applied to graph" ;
+            sh:in ( "transitive_reduction" "todo" ) ;
+            sh:order 7 ;
+            sh:path ex:reasoning ],
+        [ sh:in ( "dashed" "dotted" "solid" "invis" "bold" "tapered" "filled" "striped" "wedged" "diagonals" "rounded" ) ;
+            sh:order 1 ;
+            sh:path ex:graphvizstyles ],
+        [ sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path ex:graphvizlabelFrom ],
+        [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path ex:graphvizfillcolor ],
+        [ sh:class ex:PrefixConfiguration ;
+            sh:description "Collection of styles keyed by ID prefix" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 10 ;
+            sh:path ex:prefixProperties ] ;
+    sh:targetClass ex:StyleSheet .
+
+ex:graphvizClusterSubgraphAspect a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass ex:graphvizClusterSubgraphAspect .
+
+ex:graphvizEdgeAspect a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass ex:graphvizEdgeAspect .
+
+ex:graphvizGraphvizAspect a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass ex:graphvizGraphvizAspect .
+
+ex:graphvizNodeAspect a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass ex:graphvizNodeAspect .
+
+ex:graphvizRootGraphAspect a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass ex:graphvizRootGraphAspect .
+
+ex:graphvizSubgraphAspect a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass ex:graphvizSubgraphAspect .
+
+ex:AnyConfiguration a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Generic configuration that inherits all aspects of both node and edge configurations" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path ex:graphvizlabel ],
+        [ sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path <https://graphviz.org/doc/info/attrs.html#d:penwidth> ],
+        [ sh:in ( "normal" "inv" "dot" "invdot" "odot" "invodot" "none" "tee" "empty" "invempty" "diamond" "odiamond" "ediamond" "crow" "box" "obox" "open" "halfopen" "vee" ) ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path ex:graphvizarrowhead ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path ex:graphvizfontcolor ],
+        [ sh:in ( "normal" "inv" "dot" "invdot" "odot" "invodot" "none" "tee" "empty" "invempty" "diamond" "odiamond" "ediamond" "crow" "box" "obox" "open" "halfopen" "vee" ) ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path ex:graphvizarrowtail ],
+        [ sh:description "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <https://graphviz.org/doc/info/attrs.html#d:color> ] ;
+    sh:targetClass ex:AnyConfiguration .
+
+ex:ConditionalProperty a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "conditionally applied properties based on filters" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class ex:Condition ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path ex:conditions ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path ex:graphvizfillcolor ],
+        [ sh:class ex:AnyConfiguration ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path ex:properties ] ;
+    sh:targetClass ex:ConditionalProperty .
+
+ex:PrefixConfiguration a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "style for a particular prefix (e.g. GO)" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path ex:graphvizlabel ],
+        [ sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path <https://graphviz.org/doc/info/attrs.html#d:penwidth> ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path ex:graphvizfillcolor ],
+        [ sh:description "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute." ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path <https://graphviz.org/doc/info/attrs.html#d:color> ],
+        [ sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path ex:graphvizfontcolor ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path ex:id ] ;
+    sh:targetClass ex:PrefixConfiguration .
+
+ex:RelationConfiguration a sh:NodeShape ;
+    sh:closed true ;
+    sh:description """style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).
+
+Example of usage, where [relationProperties](relationProperties.md)
+specifies a collection of RelationConfigurations keyed by property.
+
+```json
+{
+    "relationProperties": {
+        "rdfs:subClassOf": {
+            "color": "black",
+            "penwith": 3,
+            "arrowhead": "open",
+            "label": ""
+        },
+        "BFO:0000050": {
+            "arrowhead": "tee",
+            "color": "blue"
+        }
+    }
+}
+```""" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <https://graphviz.org/doc/info/attrs.html#d:color> ],
+        [ sh:in ( "normal" "inv" "dot" "invdot" "odot" "invodot" "none" "tee" "empty" "invempty" "diamond" "odiamond" "ediamond" "crow" "box" "obox" "open" "halfopen" "vee" ) ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path ex:graphvizarrowtail ],
+        [ sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path ex:graphvizfontcolor ],
+        [ sh:in ( "normal" "inv" "dot" "invdot" "odot" "invodot" "none" "tee" "empty" "invempty" "diamond" "odiamond" "ediamond" "crow" "box" "obox" "open" "halfopen" "vee" ) ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path ex:graphvizarrowhead ],
+        [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path <https://graphviz.org/doc/info/attrs.html#d:penwidth> ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path ex:id ],
+        [ sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path ex:graphvizlabel ] ;
+    sh:targetClass ex:RelationConfiguration .
+
+ex:Condition a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "a constraint or condition to be applied, e.g. type=Class" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "the subset to which the node belongs" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path ex:subset ],
+        [ sh:description "the logical type, eg INDIVIDUAL, CLASS, etc" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path ex:type ] ;
+    sh:targetClass ex:Condition .
+
