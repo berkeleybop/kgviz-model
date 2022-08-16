@@ -1,0 +1,81 @@
+// Generic configuration that inherits all aspects of both node and edge configurations
+message AnyConfiguration
+ {
+  integer penwidth = 0
+  string label = 0
+  color color = 0
+  color fontcolor = 0
+  arrowType arrowhead = 0
+  arrowType arrowtail = 0
+ }
+// a constraint or condition to be applied, e.g. type=Class
+message Condition
+ {
+  string type = 0
+  string subset = 0
+ }
+// conditionally applied properties based on filters
+message ConditionalProperty
+ {
+  color fillcolor = 0
+  condition conditions = 0
+  anyConfiguration properties = 0
+ }
+// style for a particular prefix (e.g. GO)
+message PrefixConfiguration
+ {
+  node id = 0
+  color fillcolor = 0
+  integer penwidth = 0
+  string label = 0
+  color color = 0
+  color fontcolor = 0
+ }
+// style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).
+// 
+// Example of usage, where [relationProperties](relationProperties.md)
+// specifies a collection of RelationConfigurations keyed by property.
+// 
+// ```json
+// {
+//     "relationProperties": {
+//         "rdfs:subClassOf": {
+//             "color": "black",
+//             "penwith": 3,
+//             "arrowhead": "open",
+//             "label": ""
+//         },
+//         "BFO:0000050": {
+//             "arrowhead": "tee",
+//             "color": "blue"
+//         }
+//     }
+// }
+// ```
+message RelationConfiguration
+ {
+  node id = 0
+  color color = 0
+  integer penwidth = 0
+  string label = 0
+  color fontcolor = 0
+  arrowType arrowhead = 0
+  arrowType arrowtail = 0
+ }
+// A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically
+message StyleSheet
+ {
+  styleType style = 0
+ repeated  styleType styles = 0
+  color fillcolor = 0
+  string labelFrom = 0
+ repeated  node highlightIds = 0
+ repeated  node displayAnnotations = 0
+ repeated  node cliqueRelations = 0
+ repeated  reasoningType reasoning = 0
+  boolean excludeSingletons = 0
+ repeated  relationConfiguration relationProperties = 0
+ repeated  prefixConfiguration prefixProperties = 0
+ repeated  conditionalProperty conditionalProperties = 0
+  condition nodeFilter = 0
+ }

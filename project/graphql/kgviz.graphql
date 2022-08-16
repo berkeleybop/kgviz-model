@@ -1,0 +1,113 @@
+type AnyConfiguration implements NodeProperty, EdgeProperty
+  {
+    penwidth: Integer
+    label: String
+    color: Color
+    fontcolor: Color
+    arrowhead: ArrowType
+    arrowtail: ArrowType
+  }
+
+interface ClusterSubgraphAspect
+  {
+  }
+
+type Condition
+  {
+    type: String
+    subset: String
+  }
+
+type ConditionalProperty
+  {
+    fillcolor: Color
+    conditions: Condition
+    properties: AnyConfiguration
+  }
+
+interface EdgeAspect
+  {
+  }
+
+interface EdgeProperty
+  {
+    penwidth: Integer
+    label: String
+    fontcolor: Color
+    arrowhead: ArrowType
+    arrowtail: ArrowType
+  }
+
+interface ElementConfiguration
+  {
+  }
+
+interface GeneralProperty
+  {
+    penwidth: Integer
+    label: String
+    fontcolor: Color
+  }
+
+interface GraphvizAspect
+  {
+  }
+
+interface NodeAspect
+  {
+  }
+
+interface NodeProperty
+  {
+    penwidth: Integer
+    label: String
+    color: Color
+    fontcolor: Color
+  }
+
+type PrefixConfiguration implements NodeProperty
+  {
+    id: Node!
+    fillcolor: Color
+    penwidth: Integer
+    label: String
+    color: Color
+    fontcolor: Color
+  }
+
+type RelationConfiguration implements EdgeProperty
+  {
+    id: Node!
+    color: Color
+    penwidth: Integer
+    label: String
+    fontcolor: Color
+    arrowhead: ArrowType
+    arrowtail: ArrowType
+  }
+
+interface RootGraphAspect
+  {
+  }
+
+type StyleSheet
+  {
+    style: StyleType
+    styles: [StyleType]
+    fillcolor: Color
+    labelFrom: String
+    highlightIds: [Node]
+    displayAnnotations: [Node]
+    cliqueRelations: [Node]
+    reasoning: [ReasoningType]
+    excludeSingletons: Boolean
+    relationProperties: [RelationConfiguration]
+    prefixProperties: [PrefixConfiguration]
+    conditionalProperties: [ConditionalProperty]
+    nodeFilter: Condition
+  }
+
+interface SubgraphAspect
+  {
+  }
+
