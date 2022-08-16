@@ -1,219 +1,414 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="canonical" href="https://berkeleybop.github.io/kgviz-model/StyleSheet/">
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Class: StyleSheet - Configuration for visualization of KGs and Ontologies</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://my-org.github.io/my-datamodel/StyleSheet/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Class: StyleSheet - kgviz-model</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" rel="stylesheet"/>
+<script>
+        // Current page data
+        var mkdocs_page_name = "Class: StyleSheet";
+        var mkdocs_page_input_path = "StyleSheet.md";
+        var mkdocs_page_url = "/my-datamodel/StyleSheet/";
+      </script>
+<script defer="" src="../js/jquery-3.6.0.min.js"></script>
+<!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2SYBSJVZ23"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Class: StyleSheet";
-    var mkdocs_page_input_path = "StyleSheet.md";
-    var mkdocs_page_url = "/kgviz-model/StyleSheet/";
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SYBSJVZ23"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-2SYBSJVZ23');
-  </script>
+        gtag('config', 'G-2SYBSJVZ23');
+      </script>
 </head>
-
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Configuration for visualization of KGs and Ontologies</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href=".."> kgviz-model
+        </a><div role="search">
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../home/">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Index</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Configuration for visualization of KGs and Ontologies</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Class: StyleSheet</li>
-    <li class="wy-breadcrumbs-aside">
-      
-        <a href="https://github.com/berkeleybop/kgviz-model/edit/master/docs/StyleSheet.md"
-          class="icon icon-github"> Edit on GitHub</a>
-      
-    </li>
-  </ul>
-  
-  <hr/>
 </div>
-
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="class-stylesheet">Class: StyleSheet</h1>
-<p>A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically</p>
-<p>URI: <a href="https://w3id.org/kgviz/StyleSheet">ex:StyleSheet</a></p>
-<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[Condition]&lt;nodeFilter%200..1-++[StyleSheet&#124;style:StyleType%20%3F;styles:StyleType%20*;fillcolor:Color%20%3F;labelFrom:string%20%3F;highlightIds:Node%20*;displayAnnotations:Node%20*;cliqueRelations:Node%20*;reasoning:ReasoningType%20*;excludeSingletons:boolean%20%3F],[ConditionalProperty]&lt;conditionalProperties%200..*-++[StyleSheet],[PrefixConfiguration]&lt;prefixProperties%200..*-++[StyleSheet],[RelationConfiguration]&lt;relationProperties%200..*-++[StyleSheet],[RelationConfiguration],[PrefixConfiguration],[ConditionalProperty],[Condition]" /></p>
-<h2 id="attributes">Attributes</h2>
-<h3 id="own">Own</h3>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
 <ul>
-<li><a href="../cliqueRelations/">cliqueRelations</a>  <sub>0..*</sub><ul>
-<li>Description: Set of properties that indicate identity relations and can be used in a clique</li>
-<li>range: <a href="../Node/">Node</a></li>
-<li>Example: owl:equivalentClass None</li>
-<li>Example: skos:exactMatch None</li>
-</ul>
-</li>
-<li><a href="../conditionalProperties/">conditionalProperties</a>  <sub>0..*</sub><ul>
-<li>range: <a href="../ConditionalProperty/">ConditionalProperty</a></li>
-</ul>
-</li>
-<li><a href="../displayAnnotations/">displayAnnotations</a>  <sub>0..*</sub><ul>
-<li>Description: Display annotations for these selected properties</li>
-<li>range: <a href="../Node/">Node</a></li>
-</ul>
-</li>
-<li><a href="../excludeSingletons/">excludeSingletons</a>  <sub>OPT</sub><ul>
-<li>Description: Remove nodes that have no incoming or outgoing edges</li>
-<li>range: <a href="../Boolean/">Boolean</a></li>
-</ul>
-</li>
-<li><a href="../fillcolor/">fillcolor</a>  <sub>OPT</sub><ul>
-<li>range: <a href="../Color/">Color</a></li>
-</ul>
-</li>
-<li><a href="../highlightIds/">highlightIds</a>  <sub>0..*</sub><ul>
-<li>Description: List of nodes to be visually demarcated</li>
-<li>range: <a href="../Node/">Node</a></li>
-</ul>
-</li>
-<li><a href="../labelFrom/">labelFrom</a>  <sub>OPT</sub><ul>
-<li>range: <a href="../String/">String</a></li>
-</ul>
-</li>
-<li><a href="../nodeFilter/">nodeFilter</a>  <sub>OPT</sub><ul>
-<li>range: <a href="../Condition/">Condition</a></li>
-</ul>
-</li>
-<li><a href="../prefixProperties/">prefixProperties</a>  <sub>0..*</sub><ul>
-<li>Description: Collection of styles keyed by ID prefix</li>
-<li>range: <a href="../PrefixConfiguration/">PrefixConfiguration</a></li>
-</ul>
-</li>
-<li><a href="../reasoning/">reasoning</a>  <sub>0..*</sub><ul>
-<li>Description: Set of reasoning or processing steps to be applied to graph</li>
-<li>range: </li>
-</ul>
-</li>
-<li><a href="../relationProperties/">relationProperties</a>  <sub>0..*</sub><ul>
-<li>Description: Collection of styles keyed by predicate ID</li>
-<li>range: <a href="../RelationConfiguration/">RelationConfiguration</a></li>
-</ul>
-</li>
-<li><a href="../style/">style</a>  <sub>OPT</sub><ul>
-<li>range: </li>
-</ul>
-</li>
-<li><a href="../styles/">styles</a>  <sub>0..*</sub><ul>
-<li>range: </li>
-</ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Index</a>
 </li>
 </ul>
-              
-            </div>
-          </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/berkeleybop/kgviz-model/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-    
-  </span>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+</li>
+</ul>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">kgviz-model</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a alt="Docs" class="icon icon-home" href=".."></a> »</li>
+<li>Class: StyleSheet</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/my-org/my-datamodel/edit/master/docs/StyleSheet.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="class-stylesheet">Class: StyleSheet</h1>
+<p><em>A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically</em></p>
+<p>URI: <a href="https://w3id.org/kgviz/StyleSheet">ex:StyleSheet</a></p>
+<div class="mermaid"> classDiagram
+    class StyleSheet
+      StyleSheet : cliqueRelations
+      StyleSheet : conditionalProperties
+      StyleSheet : displayAnnotations
+      StyleSheet : excludeSingletons
+      StyleSheet : fillcolor
+      StyleSheet : highlightIds
+      StyleSheet : labelFrom
+      StyleSheet : nodeFilter
+      StyleSheet : prefixProperties
+      StyleSheet : reasoning
+      StyleSheet : relationProperties
+      StyleSheet : style
+      StyleSheet : styles
+
+</div>
+<!-- no inheritance hierarchy -->
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../style/">style</a></td>
+<td>0..1 <br/> <a href="../StyleType/">StyleType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../styles/">styles</a></td>
+<td>0..* <br/> <a href="../StyleType/">StyleType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../fillcolor/">fillcolor</a></td>
+<td>0..1 <br/> <a href="Color.md">Color</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../labelFrom/">labelFrom</a></td>
+<td>0..1 <br/> NONE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../highlightIds/">highlightIds</a></td>
+<td>0..* <br/> <a href="../Node/">Node</a></td>
+<td>List of nodes to be visually demarcated</td>
+</tr>
+<tr>
+<td><a href="../displayAnnotations/">displayAnnotations</a></td>
+<td>0..* <br/> <a href="../Node/">Node</a></td>
+<td>Display annotations for these selected properties</td>
+</tr>
+<tr>
+<td><a href="../cliqueRelations/">cliqueRelations</a></td>
+<td>0..* <br/> <a href="../Node/">Node</a></td>
+<td>Set of properties that indicate identity relations and can be used in a cliqu...</td>
+</tr>
+<tr>
+<td><a href="../reasoning/">reasoning</a></td>
+<td>0..* <br/> <a href="../ReasoningType/">ReasoningType</a></td>
+<td>Set of reasoning or processing steps to be applied to graph</td>
+</tr>
+<tr>
+<td><a href="../excludeSingletons/">excludeSingletons</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></td>
+<td>Remove nodes that have no incoming or outgoing edges</td>
+</tr>
+<tr>
+<td><a href="../relationProperties/">relationProperties</a></td>
+<td>0..* <br/> <a href="../RelationConfiguration/">RelationConfiguration</a></td>
+<td>Collection of styles keyed by predicate ID</td>
+</tr>
+<tr>
+<td><a href="../prefixProperties/">prefixProperties</a></td>
+<td>0..* <br/> <a href="../PrefixConfiguration/">PrefixConfiguration</a></td>
+<td>Collection of styles keyed by ID prefix</td>
+</tr>
+<tr>
+<td><a href="../conditionalProperties/">conditionalProperties</a></td>
+<td>0..* <br/> <a href="../ConditionalProperty/">ConditionalProperty</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../nodeFilter/">nodeFilter</a></td>
+<td>0..1 <br/> <a href="../Condition/">Condition</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="usages">Usages</h2>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: https://w3id.org/kgviz/</li>
+</ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>['ex:StyleSheet']</td>
+</tr>
+<tr>
+<td>native</td>
+<td>['ex:StyleSheet']</td>
+</tr>
+</tbody>
+</table>
+<h2 id="linkml-specification">LinkML Specification</h2>
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+<h3 id="direct">Direct</h3>
+<details>
+<pre><code class="language-yaml">name: StyleSheet
+description: A configuration for both global graph-level properties and element-level
+  properties indicating how a KG should be rendered graphically
+from_schema: https://w3id.org/kgviz/
+rank: 1000
+slots:
+- style
+- styles
+- fillcolor
+- labelFrom
+- highlightIds
+- displayAnnotations
+- cliqueRelations
+- reasoning
+- excludeSingletons
+- relationProperties
+- prefixProperties
+- conditionalProperties
+- nodeFilter
+
+</code></pre>
+</details>
+<h3 id="induced">Induced</h3>
+<details>
+<pre><code class="language-yaml">name: StyleSheet
+description: A configuration for both global graph-level properties and element-level
+  properties indicating how a KG should be rendered graphically
+from_schema: https://w3id.org/kgviz/
+rank: 1000
+attributes:
+  style:
+    name: style
+    deprecated: use styles
+    from_schema: https://w3id.org/kgviz/graphviz
+    deprecated_element_has_possible_replacement: styles
+    rank: 1000
+    alias: style
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    range: StyleType
+  styles:
+    name: styles
+    from_schema: https://w3id.org/kgviz/graphviz
+    rank: 1000
+    mixins:
+    - edge property
+    - node property
+    - graph property
+    - cluster property
+    multivalued: true
+    alias: styles
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    range: StyleType
+  fillcolor:
+    name: fillcolor
+    from_schema: https://w3id.org/kgviz/graphviz
+    rank: 1000
+    alias: fillcolor
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    - PrefixConfiguration
+    - ConditionalProperty
+    range: Color
+  labelFrom:
+    name: labelFrom
+    from_schema: https://w3id.org/kgviz/graphviz
+    rank: 1000
+    alias: labelFrom
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+  highlightIds:
+    name: highlightIds
+    description: List of nodes to be visually demarcated
+    from_schema: https://w3id.org/kgviz/
+    rank: 1000
+    multivalued: true
+    alias: highlightIds
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    range: Node
+  displayAnnotations:
+    name: displayAnnotations
+    description: Display annotations for these selected properties
+    from_schema: https://w3id.org/kgviz/
+    rank: 1000
+    multivalued: true
+    alias: displayAnnotations
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    range: Node
+  cliqueRelations:
+    name: cliqueRelations
+    description: Set of properties that indicate identity relations and can be used
+      in a clique
+    examples:
+    - value: owl:equivalentClass
+    - value: skos:exactMatch
+    from_schema: https://w3id.org/kgviz/
+    rank: 1000
+    multivalued: true
+    alias: cliqueRelations
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    range: Node
+  reasoning:
+    name: reasoning
+    description: Set of reasoning or processing steps to be applied to graph
+    from_schema: https://w3id.org/kgviz/
+    rank: 1000
+    multivalued: true
+    alias: reasoning
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    range: ReasoningType
+  excludeSingletons:
+    name: excludeSingletons
+    description: Remove nodes that have no incoming or outgoing edges
+    from_schema: https://w3id.org/kgviz/
+    rank: 1000
+    alias: excludeSingletons
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    range: boolean
+  relationProperties:
+    name: relationProperties
+    description: Collection of styles keyed by predicate ID
+    from_schema: https://w3id.org/kgviz/
+    rank: 1000
+    multivalued: true
+    alias: relationProperties
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    range: RelationConfiguration
+    inlined: true
+  prefixProperties:
+    name: prefixProperties
+    description: Collection of styles keyed by ID prefix
+    from_schema: https://w3id.org/kgviz/
+    rank: 1000
+    multivalued: true
+    alias: prefixProperties
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    range: PrefixConfiguration
+    inlined: true
+  conditionalProperties:
+    name: conditionalProperties
+    from_schema: https://w3id.org/kgviz/
+    rank: 1000
+    multivalued: true
+    alias: conditionalProperties
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    range: ConditionalProperty
+    inlined: true
+  nodeFilter:
+    name: nodeFilter
+    from_schema: https://w3id.org/kgviz/
+    rank: 1000
+    alias: nodeFilter
+    owner: StyleSheet
+    domain_of:
+    - StyleSheet
+    range: Condition
+    inlined: true
+
+</code></pre>
+</details>
+</div>
+</div><footer>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+</div>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/my-org/my-datamodel/" style="color: #fcfcfc"> GitHub</a>
+</span>
+</span>
+</div>
+<script>var base_url = '..';</script>
+<script defer="" src="../js/theme_extra.js"></script>
+<script defer="" src="../js/theme.js"></script>
+<script defer="" src="../search/main.js"></script>
+<script defer="">
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
         };
     </script>
-
-</body>
+<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>

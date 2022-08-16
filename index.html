@@ -1,265 +1,442 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="None">
-  
-  <link rel="canonical" href="https://berkeleybop.github.io/kgviz-model/">
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Configuration for visualization of KGs and Ontologies</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><link rel="canonical" href="https://my-org.github.io/my-datamodel/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>kgviz-model</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Index";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/my-datamodel/";
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SYBSJVZ23"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Index";
-    var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = "/kgviz-model/";
-  </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SYBSJVZ23"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-2SYBSJVZ23');
-  </script>
+        gtag('config', 'G-2SYBSJVZ23');
+      </script>
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Configuration for visualization of KGs and Ontologies</a>
-        <div role="search">
+          <a href="." class="icon icon-home"> kgviz-model
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="home/">Home</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Index</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Index</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mixins">Mixins</a>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#slots">Slots</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#enums">Enums</a>
+    <li class="toctree-l2"><a class="reference internal" href="#enumerations">Enumerations</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#types">Types</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#built-in">Built in</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#defined">Defined</a>
-    </li>
-        </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#subsets">Subsets</a>
     </li>
     </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="credits/">Credits</a>
-                    </li>
-                </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="about/">About</a>
+                </li>
+              </ul>
       </div>
     </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Configuration for visualization of KGs and Ontologies</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">kgviz-model</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Index</li>
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Index</li>
     <li class="wy-breadcrumbs-aside">
-      
-        <a href="https://github.com/berkeleybop/kgviz-model/edit/master/docs/index.md"
+        <a href="https://github.com/my-org/my-datamodel/edit/master/docs/index.md"
           class="icon icon-github"> Edit on GitHub</a>
-      
     </li>
   </ul>
-  
   <hr/>
 </div>
-
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
-                <h1 id="kgviz-schema">Kgviz schema</h1>
+                <h1 id="knowledge-graph-visualization-configuration">Knowledge Graph Visualization Configuration</h1>
 <p>A data model for describing configurations / stylesheets for visualzing graphs, and in particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels, node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.
 An example of a use of this is https://github.com/cmungall/obographviz</p>
-<h3 id="classes">Classes</h3>
-<ul>
-<li><a href="Condition/">Condition</a> - a constraint or condition to be applied, e.g. type=Class</li>
-<li><a href="ConditionalProperty/">ConditionalProperty</a> - conditionally applied properties based on filters</li>
-<li><a href="ElementConfiguration/">ElementConfiguration</a> - Abstract parent for all coniguration classes<ul>
-<li><a href="AnyConfiguration/">AnyConfiguration</a> - Generic configuration that inherits all aspects of both node and edge configurations</li>
-<li><a href="PrefixConfiguration/">PrefixConfiguration</a> - style for a particular prefix (e.g. GO)</li>
-<li><a href="RelationConfiguration/">RelationConfiguration</a> - style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).</li>
-</ul>
-</li>
-<li><a href="StyleSheet/">StyleSheet</a> - A configuration for both global graph-level properties and element-level properties indicating how a KG should be rendered graphically</li>
-</ul>
-<h3 id="mixins">Mixins</h3>
-<ul>
-<li><a href="EdgeProperty/">EdgeProperty</a> - a property object for an edge/relation</li>
-<li><a href="GeneralProperty/">GeneralProperty</a> - abstract grouping for properties/configs<ul>
-<li><a href="EdgeProperty/">EdgeProperty</a> - a property object for an edge/relation</li>
-<li><a href="NodeProperty/">NodeProperty</a></li>
-</ul>
-</li>
-<li><a href="NodeProperty/">NodeProperty</a></li>
-<li><a href="ClusterSubgraphAspect/">ClusterSubgraphAspect</a></li>
-<li><a href="EdgeAspect/">EdgeAspect</a></li>
-<li><a href="GraphvizAspect/">GraphvizAspect</a><ul>
-<li><a href="ClusterSubgraphAspect/">ClusterSubgraphAspect</a></li>
-<li><a href="EdgeAspect/">EdgeAspect</a></li>
-<li><a href="NodeAspect/">NodeAspect</a></li>
-<li><a href="RootGraphAspect/">RootGraphAspect</a></li>
-<li><a href="SubgraphAspect/">SubgraphAspect</a></li>
-</ul>
-</li>
-<li><a href="NodeAspect/">NodeAspect</a></li>
-<li><a href="RootGraphAspect/">RootGraphAspect</a></li>
-<li><a href="SubgraphAspect/">SubgraphAspect</a></li>
-</ul>
-<h3 id="slots">Slots</h3>
-<ul>
-<li><a href="arrowhead/">arrowhead</a></li>
-<li><a href="arrowtail/">arrowtail</a></li>
-<li><a href="cliqueRelations/">cliqueRelations</a> - Set of properties that indicate identity relations and can be used in a clique</li>
-<li><a href="color.md">color</a> - Basic drawing color for graphics, not text. For the latter, use the fontcolor attribute.</li>
-<li><a href="conditionalProperties/">conditionalProperties</a></li>
-<li><a href="conditions/">conditions</a></li>
-<li><a href="displayAnnotations/">displayAnnotations</a> - Display annotations for these selected properties</li>
-<li><a href="excludeSingletons/">excludeSingletons</a> - Remove nodes that have no incoming or outgoing edges</li>
-<li><a href="fillcolor/">fillcolor</a></li>
-<li><a href="fontcolor/">fontcolor</a></li>
-<li><a href="graphviz_slot/">graphviz slot</a><ul>
-<li><a href="cluster_property/">cluster property</a></li>
-<li><a href="edge_property/">edge property</a></li>
-<li><a href="graph_property/">graph property</a></li>
-<li><a href="node_property/">node property</a></li>
-<li><a href="subgraph_property/">subgraph property</a></li>
-</ul>
-</li>
-<li><a href="highlightIds/">highlightIds</a> - List of nodes to be visually demarcated</li>
-<li><a href="id/">id</a></li>
-<li><a href="label/">label</a></li>
-<li><a href="labelFrom/">labelFrom</a></li>
-<li><a href="nodeFilter/">nodeFilter</a></li>
-<li><a href="penwidth/">penwidth</a></li>
-<li><a href="prefixProperties/">prefixProperties</a> - Collection of styles keyed by ID prefix</li>
-<li><a href="properties/">properties</a></li>
-<li><a href="reasoning/">reasoning</a> - Set of reasoning or processing steps to be applied to graph</li>
-<li><a href="relationProperties/">relationProperties</a> - Collection of styles keyed by predicate ID</li>
-<li><a href="style/">style</a></li>
-<li><a href="styles/">styles</a></li>
-<li><a href="subset/">subset</a> - the subset to which the node belongs</li>
-<li><a href="type/">type</a> - the logical type, eg INDIVIDUAL, CLASS, etc</li>
-</ul>
-<h3 id="enums">Enums</h3>
-<ul>
-<li><a href="ArrowType/">ArrowType</a></li>
-<li><a href="ReasoningType/">ReasoningType</a></li>
-<li><a href="StyleType/">StyleType</a></li>
-</ul>
-<h3 id="types">Types</h3>
-<h4 id="built-in">Built in</h4>
-<ul>
-<li><strong>Bool</strong></li>
-<li><strong>Decimal</strong></li>
-<li><strong>ElementIdentifier</strong></li>
-<li><strong>NCName</strong></li>
-<li><strong>NodeIdentifier</strong></li>
-<li><strong>URI</strong></li>
-<li><strong>URIorCURIE</strong></li>
-<li><strong>XSDDate</strong></li>
-<li><strong>XSDDateTime</strong></li>
-<li><strong>XSDTime</strong></li>
-<li><strong>float</strong></li>
-<li><strong>int</strong></li>
-<li><strong>str</strong></li>
-</ul>
-<h4 id="defined">Defined</h4>
-<ul>
-<li><a href="Color/">Color</a>  (<strong>str</strong>)  - e.g. red, green</li>
-<li><a href="Node/">Node</a>  (<strong>str</strong>)  - e.g. UBERON:0002101</li>
-<li><a href="Boolean/">Boolean</a>  (<strong>Bool</strong>)  - A binary (true or false) value</li>
-<li><a href="Date/">Date</a>  (<strong>XSDDate</strong>)  - a date (year, month and day) in an idealized calendar</li>
-<li><a href="Datetime/">Datetime</a>  (<strong>XSDDateTime</strong>)  - The combination of a date and time</li>
-<li><a href="Decimal/">Decimal</a>  (<strong>Decimal</strong>)  - A real number with arbitrary precision that conforms to the xsd:decimal specification</li>
-<li><a href="Double/">Double</a>  (<strong>float</strong>)  - A real number that conforms to the xsd:double specification</li>
-<li><a href="Float/">Float</a>  (<strong>float</strong>)  - A real number that conforms to the xsd:float specification</li>
-<li><a href="Integer/">Integer</a>  (<strong>int</strong>)  - An integer</li>
-<li><a href="Ncname/">Ncname</a>  (<strong>NCName</strong>)  - Prefix part of CURIE</li>
-<li><a href="Nodeidentifier/">Nodeidentifier</a>  (<strong>NodeIdentifier</strong>)  - A URI, CURIE or BNODE that represents a node in a model.</li>
-<li><a href="Objectidentifier/">Objectidentifier</a>  (<strong>ElementIdentifier</strong>)  - A URI or CURIE that represents an object in the model.</li>
-<li><a href="String/">String</a>  (<strong>str</strong>)  - A character string</li>
-<li><a href="Time/">Time</a>  (<strong>XSDTime</strong>)  - A time object represents a (local) time of day, independent of any particular day</li>
-<li><a href="Uri/">Uri</a>  (<strong>URI</strong>)  - a complete URI</li>
-<li><a href="Uriorcurie/">Uriorcurie</a>  (<strong>URIorCURIE</strong>)  - a URI or a CURIE</li>
-</ul>
+<p>URI: https://w3id.org/kgviz/
+Name: kgviz</p>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AnyConfiguration/">AnyConfiguration</a></td>
+<td>Generic configuration that inherits all aspects of both node and edge configu...</td>
+</tr>
+<tr>
+<td><a href="ClusterSubgraphAspect/">ClusterSubgraphAspect</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Condition/">Condition</a></td>
+<td>a constraint or condition to be applied, e</td>
+</tr>
+<tr>
+<td><a href="ConditionalProperty/">ConditionalProperty</a></td>
+<td>conditionally applied properties based on filters</td>
+</tr>
+<tr>
+<td><a href="EdgeAspect/">EdgeAspect</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="EdgeProperty/">EdgeProperty</a></td>
+<td>a property object for an edge/relation</td>
+</tr>
+<tr>
+<td><a href="ElementConfiguration/">ElementConfiguration</a></td>
+<td>Abstract parent for all coniguration classes</td>
+</tr>
+<tr>
+<td><a href="GeneralProperty/">GeneralProperty</a></td>
+<td>abstract grouping for properties/configs</td>
+</tr>
+<tr>
+<td><a href="GraphvizAspect/">GraphvizAspect</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="NodeAspect/">NodeAspect</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="NodeProperty/">NodeProperty</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="PrefixConfiguration/">PrefixConfiguration</a></td>
+<td>style for a particular prefix (e</td>
+</tr>
+<tr>
+<td><a href="RelationConfiguration/">RelationConfiguration</a></td>
+<td>style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf)</td>
+</tr>
+<tr>
+<td><a href="RootGraphAspect/">RootGraphAspect</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="StyleSheet/">StyleSheet</a></td>
+<td>A configuration for both global graph-level properties and element-level prop...</td>
+</tr>
+<tr>
+<td><a href="SubgraphAspect/">SubgraphAspect</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="arrowhead/">arrowhead</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="arrowtail/">arrowtail</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="cliqueRelations/">cliqueRelations</a></td>
+<td>Set of properties that indicate identity relations and can be used in a cliqu...</td>
+</tr>
+<tr>
+<td><a href="cluster_property/">cluster_property</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="color/">color</a></td>
+<td>Basic drawing color for graphics, not text</td>
+</tr>
+<tr>
+<td><a href="conditionalProperties/">conditionalProperties</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="conditions/">conditions</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="displayAnnotations/">displayAnnotations</a></td>
+<td>Display annotations for these selected properties</td>
+</tr>
+<tr>
+<td><a href="edge_property/">edge_property</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="excludeSingletons/">excludeSingletons</a></td>
+<td>Remove nodes that have no incoming or outgoing edges</td>
+</tr>
+<tr>
+<td><a href="fillcolor/">fillcolor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="fontcolor/">fontcolor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="graph_property/">graph_property</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="graphviz_slot/">graphviz_slot</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="highlightIds/">highlightIds</a></td>
+<td>List of nodes to be visually demarcated</td>
+</tr>
+<tr>
+<td><a href="id/">id</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="label/">label</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="labelFrom/">labelFrom</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="node_property/">node_property</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="nodeFilter/">nodeFilter</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="penwidth/">penwidth</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="prefixProperties/">prefixProperties</a></td>
+<td>Collection of styles keyed by ID prefix</td>
+</tr>
+<tr>
+<td><a href="properties/">properties</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="reasoning/">reasoning</a></td>
+<td>Set of reasoning or processing steps to be applied to graph</td>
+</tr>
+<tr>
+<td><a href="relationProperties/">relationProperties</a></td>
+<td>Collection of styles keyed by predicate ID</td>
+</tr>
+<tr>
+<td><a href="style/">style</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="styles/">styles</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="subgraph_property/">subgraph_property</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="subset/">subset</a></td>
+<td>the subset to which the node belongs</td>
+</tr>
+<tr>
+<td><a href="type/">type</a></td>
+<td>the logical type, eg INDIVIDUAL, CLASS, etc</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enumerations">Enumerations</h2>
+<table>
+<thead>
+<tr>
+<th>Enumeration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ArrowType/">ArrowType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ReasoningType/">ReasoningType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="StyleType/">StyleType</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></td>
+<td>A binary (true or false) value</td>
+</tr>
+<tr>
+<td><a href="Color.md">Color</a></td>
+<td>e</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
+<td>a date (year, month and day) in an idealized calendar</td>
+</tr>
+<tr>
+<td><a href="https://w3id.org/linkml/DateOrDatetime">linkml:DateOrDatetime</a></td>
+<td>Either a date or a datetime</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
+<td>The combination of a date and time</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></td>
+<td>A real number with arbitrary precision that conforms to the xsd:decimal speci...</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a></td>
+<td>A real number that conforms to the xsd:double specification</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a></td>
+<td>A real number that conforms to the xsd:float specification</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td>
+<td>An integer</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>Prefix part of CURIE</td>
+</tr>
+<tr>
+<td><a href="Node/">Node</a></td>
+<td>e</td>
+</tr>
+<tr>
+<td><a href="shex:nonLiteral">shex:nonLiteral</a></td>
+<td>A URI, CURIE or BNODE that represents a node in a model</td>
+</tr>
+<tr>
+<td><a href="shex:iri">shex:iri</a></td>
+<td>A URI or CURIE that represents an object in the model</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A character string</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
+<td>A time object represents a (local) time of day, independent of any particular...</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>a complete URI</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>a URI or a CURIE</td>
+</tr>
+</tbody>
+</table>
+<h2 id="subsets">Subsets</h2>
+<table>
+<thead>
+<tr>
+<th>Subset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="credits/" class="btn btn-neutral float-right" title="Credits">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="home/" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -267,18 +444,16 @@ An example of a use of this is https://github.com/cmungall/obographviz</p>
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
+  <div class="rst-versions" role="note" aria-label="Versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/berkeleybop/kgviz-model/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/my-org/my-datamodel/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     
-      <span><a href="home/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="credits/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -296,6 +471,6 @@ An example of a use of this is https://github.com/cmungall/obographviz</p>
 </html>
 
 <!--
-MkDocs version : 1.2.3
-Build Date UTC : 2021-11-09 04:35:33.434801+00:00
+MkDocs version : 1.3.1
+Build Date UTC : 2022-08-16 23:23:18.355606+00:00
 -->

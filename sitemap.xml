@@ -1,338 +1,288 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/AnyConfiguration/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/AnyConfiguration/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/ArrowType/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/ArrowType/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Boolean/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/ClusterSubgraphAspect/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/ClusterSubgraphAspect/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/Condition/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Color/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/ConditionalProperty/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Condition/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/EdgeAspect/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/ConditionalProperty/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/EdgeProperty/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Date/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/ElementConfiguration/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Datetime/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/GeneralProperty/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Decimal/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/GraphViz/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Double/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/GraphvizAspect/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/EdgeAspect/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/Node/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/EdgeProperty/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/NodeAspect/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/ElementConfiguration/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/NodeProperty/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Float/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/PrefixConfiguration/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/GeneralProperty/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/ReasoningType/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/GraphvizAspect/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/RelationConfiguration/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Integer/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/RootGraphAspect/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Ncname/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/StyleSheet/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Node/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/StyleType/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/NodeAspect/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/SubgraphAspect/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/NodeProperty/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/about/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Nodeidentifier/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/arrowhead/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Objectidentifier/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/arrowtail/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/PrefixConfiguration/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/cliqueRelations/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/ReasoningType/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/cluster_property/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/RelationConfiguration/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/color/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/RootGraphAspect/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/conditionalProperties/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/String/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/conditions/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/StyleSheet/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/credits/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/StyleType/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/displayAnnotations/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/SubgraphAspect/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/edge_property/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Time/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/excludeSingletons/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Uri/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/fillcolor/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/Uriorcurie/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/fontcolor/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/arrowhead/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/graph_property/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/arrowtail/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/graphviz_slot/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/cliqueRelations/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/highlightIds/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/cluster_property/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/home/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/conditionalProperties/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/id/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/conditions/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/kgviz/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/credits/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/label/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/displayAnnotations/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/labelFrom/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/edge_property/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/nodeFilter/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/excludeSingletons/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/node_property/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/fillcolor/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/penwidth/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/fontcolor/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/prefixProperties/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/graph_property/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/properties/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/graphviz_slot/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/reasoning/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/highlightIds/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/relationProperties/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/home/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/style/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/id/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/styles/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/label/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/subgraph_property/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/labelFrom/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/subset/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/nodeFilter/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/type/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/node_property/</loc>
-         <lastmod>2021-11-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/penwidth/</loc>
-         <lastmod>2021-11-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/prefixProperties/</loc>
-         <lastmod>2021-11-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/properties/</loc>
-         <lastmod>2021-11-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/reasoning/</loc>
-         <lastmod>2021-11-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/relationProperties/</loc>
-         <lastmod>2021-11-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/style/</loc>
-         <lastmod>2021-11-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/styles/</loc>
-         <lastmod>2021-11-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/subgraph_property/</loc>
-         <lastmod>2021-11-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/subset/</loc>
-         <lastmod>2021-11-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://berkeleybop.github.io/kgviz-model/type/</loc>
-         <lastmod>2021-11-09</lastmod>
+         <loc>https://my-org.github.io/my-datamodel/types/</loc>
+         <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

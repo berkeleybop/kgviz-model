@@ -1,191 +1,269 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="canonical" href="https://berkeleybop.github.io/kgviz-model/EdgeProperty/">
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Class: EdgeProperty - Configuration for visualization of KGs and Ontologies</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://my-org.github.io/my-datamodel/EdgeProperty/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Class: EdgeProperty - kgviz-model</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" rel="stylesheet"/>
+<script>
+        // Current page data
+        var mkdocs_page_name = "Class: EdgeProperty";
+        var mkdocs_page_input_path = "EdgeProperty.md";
+        var mkdocs_page_url = "/my-datamodel/EdgeProperty/";
+      </script>
+<script defer="" src="../js/jquery-3.6.0.min.js"></script>
+<!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2SYBSJVZ23"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Class: EdgeProperty";
-    var mkdocs_page_input_path = "EdgeProperty.md";
-    var mkdocs_page_url = "/kgviz-model/EdgeProperty/";
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SYBSJVZ23"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-2SYBSJVZ23');
-  </script>
+        gtag('config', 'G-2SYBSJVZ23');
+      </script>
 </head>
-
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Configuration for visualization of KGs and Ontologies</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href=".."> kgviz-model
+        </a><div role="search">
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../home/">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Index</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Configuration for visualization of KGs and Ontologies</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Class: EdgeProperty</li>
-    <li class="wy-breadcrumbs-aside">
-      
-        <a href="https://github.com/berkeleybop/kgviz-model/edit/master/docs/EdgeProperty.md"
-          class="icon icon-github"> Edit on GitHub</a>
-      
-    </li>
-  </ul>
-  
-  <hr/>
 </div>
-
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="class-edgeproperty">Class: EdgeProperty</h1>
-<p>a property object for an edge/relation</p>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Index</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">kgviz-model</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a alt="Docs" class="icon icon-home" href=".."></a> »</li>
+<li>Class: EdgeProperty</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/my-org/my-datamodel/edit/master/docs/EdgeProperty.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="class-edgeproperty">Class: EdgeProperty</h1>
+<p><em>a property object for an edge/relation</em></p>
+<ul>
+<li><strong>NOTE</strong>: this is a mixin class intended to be used in combination with other classes, and not used directly</li>
+</ul>
 <p>URI: <a href="https://w3id.org/kgviz/EdgeProperty">ex:EdgeProperty</a></p>
-<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[GeneralProperty],[RelationConfiguration]uses%20-.-&gt;[EdgeProperty&#124;arrowhead:ArrowType%20%3F;arrowtail:ArrowType%20%3F;penwidth(i):integer%20%3F;label(i):string%20%3F;fontcolor(i):Color%20%3F],[AnyConfiguration]uses%20-.-&gt;[EdgeProperty],[GeneralProperty]^-[EdgeProperty],[RelationConfiguration],[AnyConfiguration]" /></p>
-<h2 id="parents">Parents</h2>
-<ul>
-<li>is_a: <a href="../GeneralProperty/">GeneralProperty</a> - abstract grouping for properties/configs</li>
-</ul>
-<h2 id="mixin-for">Mixin for</h2>
-<ul>
-<li><a href="../AnyConfiguration/">AnyConfiguration</a> (mixin)  - Generic configuration that inherits all aspects of both node and edge configurations</li>
-<li><a href="../RelationConfiguration/">RelationConfiguration</a> (mixin)  - style for a particular relation (for example, BFO:0000050 or rdfs:subClassOf).</li>
-</ul>
-<h2 id="referenced-by-class">Referenced by class</h2>
-<h2 id="attributes">Attributes</h2>
-<h3 id="own">Own</h3>
-<ul>
-<li><a href="../arrowhead/">arrowhead</a>  <sub>OPT</sub><ul>
-<li>range: </li>
-</ul>
-</li>
-<li><a href="../arrowtail/">arrowtail</a>  <sub>OPT</sub><ul>
-<li>range: </li>
-</ul>
-</li>
-</ul>
-<h3 id="inherited-from-generalproperty">Inherited from GeneralProperty:</h3>
-<ul>
-<li><a href="../fontcolor/">fontcolor</a>  <sub>OPT</sub><ul>
-<li>range: <a href="../Color/">Color</a></li>
-</ul>
-</li>
-<li><a href="../label/">label</a>  <sub>OPT</sub><ul>
-<li>range: <a href="../String/">String</a></li>
-</ul>
-</li>
-<li><a href="../penwidth/">penwidth</a>  <sub>OPT</sub><ul>
-<li>range: <a href="../Integer/">Integer</a></li>
-</ul>
-</li>
-</ul>
-              
-            </div>
-          </div>
-          <footer>
-  
+<div class="mermaid"> classDiagram
+      GeneralProperty &lt;|-- EdgeProperty
 
-  <hr/>
+      EdgeProperty : arrowhead
+      EdgeProperty : arrowtail
+      EdgeProperty : fontcolor
+      EdgeProperty : label
+      EdgeProperty : penwidth
 
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/berkeleybop/kgviz-model/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-    
-  </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../GeneralProperty/">GeneralProperty</a><ul>
+<li><strong>EdgeProperty</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../arrowhead/">arrowhead</a></td>
+<td>0..1 <br/> <a href="../ArrowType/">ArrowType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../arrowtail/">arrowtail</a></td>
+<td>0..1 <br/> <a href="../ArrowType/">ArrowType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../penwidth/">penwidth</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../label/">label</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../fontcolor/">fontcolor</a></td>
+<td>0..1 <br/> <a href="Color.md">Color</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="usages">Usages</h2>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: https://w3id.org/kgviz/</li>
+</ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>['ex:EdgeProperty']</td>
+</tr>
+<tr>
+<td>native</td>
+<td>['ex:EdgeProperty']</td>
+</tr>
+</tbody>
+</table>
+<h2 id="linkml-specification">LinkML Specification</h2>
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+<h3 id="direct">Direct</h3>
+<details>
+<pre><code class="language-yaml">name: EdgeProperty
+description: a property object for an edge/relation
+from_schema: https://w3id.org/kgviz/
+rank: 1000
+is_a: GeneralProperty
+mixin: true
+slots:
+- arrowhead
+- arrowtail
+
+</code></pre>
+</details>
+<h3 id="induced">Induced</h3>
+<details>
+<pre><code class="language-yaml">name: EdgeProperty
+description: a property object for an edge/relation
+from_schema: https://w3id.org/kgviz/
+rank: 1000
+is_a: GeneralProperty
+mixin: true
+attributes:
+  arrowhead:
+    name: arrowhead
+    from_schema: https://w3id.org/kgviz/graphviz
+    rank: 1000
+    alias: arrowhead
+    owner: EdgeProperty
+    domain_of:
+    - EdgeProperty
+    range: ArrowType
+  arrowtail:
+    name: arrowtail
+    from_schema: https://w3id.org/kgviz/graphviz
+    rank: 1000
+    alias: arrowtail
+    owner: EdgeProperty
+    domain_of:
+    - EdgeProperty
+    range: ArrowType
+  penwidth:
+    name: penwidth
+    from_schema: https://w3id.org/kgviz/graphviz
+    rank: 1000
+    slot_uri: https://graphviz.org/doc/info/attrs.html#d:penwidth
+    alias: penwidth
+    owner: EdgeProperty
+    domain_of:
+    - RelationConfiguration
+    - GeneralProperty
+    range: integer
+  label:
+    name: label
+    from_schema: https://w3id.org/kgviz/graphviz
+    rank: 1000
+    alias: label
+    owner: EdgeProperty
+    domain_of:
+    - RelationConfiguration
+    - GeneralProperty
+    range: string
+  fontcolor:
+    name: fontcolor
+    from_schema: https://w3id.org/kgviz/graphviz
+    rank: 1000
+    alias: fontcolor
+    owner: EdgeProperty
+    domain_of:
+    - GeneralProperty
+    - NodeProperty
+    range: Color
+
+</code></pre>
+</details>
+</div>
+</div><footer>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+</div>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/my-org/my-datamodel/" style="color: #fcfcfc"> GitHub</a>
+</span>
+</span>
+</div>
+<script>var base_url = '..';</script>
+<script defer="" src="../js/theme_extra.js"></script>
+<script defer="" src="../js/theme.js"></script>
+<script defer="" src="../search/main.js"></script>
+<script defer="">
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
         };
     </script>
-
-</body>
+<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>
