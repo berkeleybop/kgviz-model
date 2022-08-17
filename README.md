@@ -2,4 +2,11 @@
 
 Schema for configurations / stylesheets for visualizing ontology and KGs
 
-## [Documentation](https://berkeleybop.github.io/kgviz-model/)
+## Documentation:
+
+ - [Documentation](https://berkeleybop.github.io/kgviz-model/)
+ 
+ ## Examples
+ 
+  - [OAK Config](https://github.com/INCATools/ontology-access-kit/blob/main/src/oaklib/conf/obograph-style.json)
+  - [obographviz](https://github.com/INCATools/obographviz/)
